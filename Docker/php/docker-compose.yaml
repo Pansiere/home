@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  php_apache:
+    image: php:8.3.7-apache-bookworm
+    ports:
+      - "80:80"
+    volumes:
+      - ./projeto:/var/www/html
+    restart: always
