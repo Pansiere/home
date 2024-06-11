@@ -34,6 +34,8 @@ volumes:
 # it will ask password of MYSQL_ROOT_PASSWORD
 
 # after accessing mysql, run command:
+# (AQUI TEM Q SER O USUARIO DO > PMA_USER= < E A SENHA DO > PMA_PASSWORD=${MYSQL_ROOT_PASSWORD} <)
+
 # CREATE USER 'root'@'172.21.0.3' IDENTIFIED BY 'password';
 # GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.21.0.3' WITH GRANT OPTION;
 # FLUSH PRIVILEGES;
