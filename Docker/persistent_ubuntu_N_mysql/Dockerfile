@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-RUN apt-get update && apt-get install -y \
-    vim \
-    git \
-    curl \
-    && apt-get clean
+RUN apt-get update && \
+    apt-get install -y mysql-client && \
+    apt-get clean
