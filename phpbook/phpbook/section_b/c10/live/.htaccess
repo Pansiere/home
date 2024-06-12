@@ -1,0 +1,8 @@
+php_flag   display_errors      Off
+php_flag   log_errors          On
+php_value  error_reporting     -1
+
+# Next two lines added on p379
+# The paths these files point to must match where the code is installed on your computer
+ErrorDocument 404 /phpbook/section_b/c10/live/page-not-found.php
+ErrorDocument 500 /phpbook/section_b/c10/live/error.php

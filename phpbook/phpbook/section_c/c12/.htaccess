@@ -1,0 +1,13 @@
+php_value  default_charset     "UTF-8"
+php_value  max_execution_time  30
+php_value  memory_limit        128M
+php_flag   file_uploads        On
+php_value  post_max_size       32M
+php_value  upload_max_filesize 1M
+php_value  error_reporting     -1
+php_flag   display_errors      On
+php_flag   log_errors          On
+
+# The paths for the following entries must match the paths on your computer
+ErrorDocument 404 /phpbook/section_c/c12/cms/page-not-found.php
+ErrorDocument 500 /phpbook/section_c/c12/cms/error.php

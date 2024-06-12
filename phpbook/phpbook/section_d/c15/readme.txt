@@ -1,0 +1,2 @@
+PLEASE NOTE:
+On the admin page for articles, the editor may show a notice saying that the domain is not registered with Tiny Cloud. To remove this notice, sign up for your own API key here: https://www.tiny.cloud/
