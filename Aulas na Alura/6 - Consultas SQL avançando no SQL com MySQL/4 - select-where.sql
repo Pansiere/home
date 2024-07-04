@@ -1,0 +1,1 @@
+SELECT * FROM tabela_de_produtos WHERE CODIGO_DO_PRODUTO = '1000889';
