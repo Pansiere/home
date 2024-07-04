@@ -1,1 +1,2 @@
-SELECT CPF as IDENTIFICADOR, NOME as CLIENTE FROM tabela_de_clientes;
+SELECT CPF as IDENTIFICADOR, NOME as CLIENTE
+FROM tabela_de_clientes;

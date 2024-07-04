@@ -1,1 +1,2 @@
-SELECT * FROM tabela_de_clientes;
+SELECT *
+FROM tabela_de_clientes;
