@@ -1,7 +1,9 @@
-SELECT * FROM tabela_de_produtos;
+SELECT * FROM tabela_de_produtos ORDER BY PRECO_DE_LISTA;
 
-SELECT * FROM tabela_de_produtos LIMIT 5;
+SELECT * FROM tabela_de_produtos ORDER BY PRECO_DE_LISTA DESC;
 
-SELECT * FROM tabela_de_produtos LIMIT 2,3;
+SELECT * FROM tabela_de_produtos ORDER BY NOME_DO_PRODUTO;
 
-SELECT * FROM notas_fiscais  WHERE DATA_VENDA = '2017-01-01' limit 10
+SELECT * FROM tabela_de_produtos ORDER BY EMBALAGEM, NOME_DO_PRODUTO;
+
+SELECT * FROM tabela_de_produtos ORDER BY EMBALAGEM DESC, NOME_DO_PRODUTO ASC;
