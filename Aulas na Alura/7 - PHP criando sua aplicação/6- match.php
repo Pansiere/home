@@ -33,5 +33,7 @@ $genero = match ($nomeFilme) {
     "V&J" => "ação",
     "Victoria" => "super-horaina",
     "Lindona" => "comédia",
-    default => "Nada-a-Declarar"
+    default => "Nada-a-Declarar",
 };
+
+echo "O gênero do filme é: $genero";
