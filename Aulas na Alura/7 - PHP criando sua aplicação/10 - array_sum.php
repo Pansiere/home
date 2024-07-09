@@ -16,15 +16,9 @@ for ($i = 1; $i < $argc; $i++) {
     $notas[] = (float)$argv[$i];
 };
 
-$somaDeNotas = 0;
-
-for ($i = 1; $i < count($notas); $i++) {
-    $somaDeNotas += $notas[$i];
-};
-
 $quantidadeDeNotas = $argc - 1;
 
-$notaFilme = $somaDeNotas / $quantidadeDeNotas;
+$notaFilme = array_sum($notas) / $quantidadeDeNotas;
 
 $planoPrime = true;
 
