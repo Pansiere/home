@@ -8,7 +8,7 @@ $nomeFilme = "Lindona";
 
 $anoLancamento = 2022;
 
-$somaDeNotas = 0;
+$notas = [];
 
 for ($i = 1; $i < $argc; $i++) {
     $somaDeNotas += $argv[$i];
