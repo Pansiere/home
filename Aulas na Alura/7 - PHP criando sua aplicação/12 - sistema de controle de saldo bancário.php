@@ -4,7 +4,7 @@ require_once '12.1funcoes.php';
 
 $cliente = [
     "titular" => "João Pedro V. Pansiere",
-    "saldoAtual" => 0
+    "saldoAtual" => 45.50
 ];
 
 while (true) {

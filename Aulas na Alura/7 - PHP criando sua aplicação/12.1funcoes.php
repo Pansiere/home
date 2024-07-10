@@ -3,7 +3,7 @@ function lista_opcoes($cliente)
 {
     echo "***************************\n";
 
-    echo "Titular: " . $cliente['titular'] . "\nSaldo atual: R$" . $cliente['saldoAtual'] . ",00\n";
+    echo "Titular: " . $cliente['titular'] . "\nSaldo atual: R$" . $cliente['saldoAtual'] . PHP_EOL;
 
     echo "***************************\n";
     echo "1. Consultar saldo atual\n";
