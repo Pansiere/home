@@ -1,42 +1,34 @@
 <?php
-function opcoes($cliente)
-{
-    echo "***************************\n";
 
-    echo "Titular: " . $cliente['titular'] . "\nSaldo atual: " . $cliente['saldoAtual'] . PHP_EOL;
-
-    echo "***************************\n";
-    echo "1. Consultar saldo atual\n";
-    echo "2. Sacar valor\n";
-    echo "3. Depositar valor\n";
-    echo "4. Sair\n";
-
-    $valor = readline("Digite uma opção: ");
-    return $valor;
-}
-
-function consultar_saldo_atual($cliente)
-{
-}
-
-function sacar_valor($cliente)
-{
-}
-
-function depositar_valor($cliente)
-{
-}
+require_once '12.1funcoes.php';
 
 $cliente = [
     "titular" => "João Pedro V. Pansiere",
     "saldoAtual" => 0
 ];
 
-$lista_opcoes = match (opcoes($cliente)) {
-    "1" => consultar_saldo_atual($cliente),
-    "2" => sacar_valor($cliente),
-    "3" => depositar_valor($cliente),
-    "4" => "Saindo...\n",
+while (true) {
 
-    default => "Opção inválida" . opcoes($cliente),
-};
+    $opcao = lista_opcoes($cliente);
+
+    switch ($opcao) {
+        case 1:
+            echo "\nConsultando saldo atual...\n";
+            consultar_saldo_atual($cliente);
+            break;
+        case 2:
+            echo "\nSacar valor\n";
+            sacar_valor($cliente);
+            break;
+        case 3:
+            echo "\nDepositar valor\n";
+            depositar_valor($cliente);
+            break;
+        case 4:
+            echo "\nSaindo...\n";
+            exit;
+        default:
+            echo "\nOpção inválida, por favor tente novamente.\n\n";
+            break;
+    }
+}
