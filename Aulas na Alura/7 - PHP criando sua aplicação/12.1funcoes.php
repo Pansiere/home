@@ -3,7 +3,7 @@ function lista_opcoes($cliente)
 {
     echo "***************************\n";
 
-    echo "Titular: " . $cliente['titular'] . "\nSaldo atual: " . $cliente['saldoAtual'] . PHP_EOL;
+    echo "Titular: " . $cliente['titular'] . "\nSaldo atual: R$" . $cliente['saldoAtual'] . ",00\n";
 
     echo "***************************\n";
     echo "1. Consultar saldo atual\n";
@@ -33,14 +33,11 @@ function sacar_valor(&$cliente)
     }
 }
 
-function depositar_valor($cliente)
+function depositar_valor(&$cliente)
 {
-    $saqueValor = readline("Digite o valor a ser depositado: ");
+    $saqueValor = (float) readline("Digite o valor a ser depositado: ");
 
-    if ($saqueValor > $cliente["saldoAtual"]) {
-        echo "\nSaldo insuficiente\nSaque não concluído.\n\n";
-    } else {
-        $cliente['saldoAtual'] -= $saqueValor;
-        echo "Saque concluído com sucesso.\n\n";
-    }
+    $cliente['saldoAtual'] += $saqueValor;
+
+    echo "Depósito concído com sucesso.\n\n";
 }
