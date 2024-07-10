@@ -4,7 +4,8 @@ require_once '12.1funcoes.php';
 
 $cliente = [
     "titular" => "João Pedro V. Pansiere",
-    "saldoAtual" => 45.50
+    "saldoAtual" => 0,
+    "historico" => []
 ];
 
 while (true) {
@@ -13,16 +14,16 @@ while (true) {
 
     switch ($opcao) {
         case 1:
-            echo "\nConsultando saldo atual...\n";
-            consultar_saldo_atual($cliente);
+            echo "\nConsultando histórico...\n";
+            consultar_historico($cliente);
             break;
         case 2:
-            echo "\nSacar valor\n";
-            sacar_valor($cliente);
-            break;
-        case 3:
             echo "\nDepositar valor\n";
             depositar_valor($cliente);
+            break;
+        case 3:
+            echo "\nSacar valor\n";
+            sacar_valor($cliente);
             break;
         case 4:
             echo "\nSaindo...\n";
