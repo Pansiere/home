@@ -18,7 +18,7 @@ function lista_opcoes($cliente)
 
 function consultar_saldo_atual($cliente)
 {
-    echo "Saldo atual: R$" . $cliente['saldoAtual'] . ",00.\n\n";
+    echo "Saldo atual: R$" . $cliente['saldoAtual'] . "\n\n";
 }
 
 function sacar_valor(&$cliente)
