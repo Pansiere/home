@@ -16,7 +16,7 @@ function lista_opcoes($cliente)
     return $valor;
 }
 
-function consultar_historico($cliente)
+function consultar_historico($cliente): void
 {
     for ($i = 0; $i < count($cliente['historico']); $i++) {
         echo $cliente['historico'][$i] . PHP_EOL;
@@ -24,7 +24,7 @@ function consultar_historico($cliente)
     echo PHP_EOL;
 }
 
-function depositar_valor(&$cliente)
+function depositar_valor(&$cliente): void
 {
     $desitoValor = (float) readline("Digite o valor a ser sacado: ");
 
@@ -39,7 +39,7 @@ function depositar_valor(&$cliente)
     }
 }
 
-function sacar_valor(&$cliente)
+function sacar_valor(&$cliente): void
 {
     $saqueValor = (float) readline("Digite o valor a ser sacado: ");
 
