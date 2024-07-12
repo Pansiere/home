@@ -1,3 +1,0 @@
-SELECT title, category_id 
-  FROM article 
- ORDER BY category_id ASC, title ASC;

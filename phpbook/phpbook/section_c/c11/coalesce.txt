@@ -1,2 +1,0 @@
-SELECT COALESCE(picture, forename, 'friend') AS profile
-  FROM member;

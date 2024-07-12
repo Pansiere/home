@@ -1,2 +1,0 @@
-SELECT COUNT(picture) 
-  FROM member;

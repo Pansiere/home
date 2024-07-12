@@ -1,4 +1,0 @@
-SELECT title
-  FROM article
- ORDER BY id
- LIMIT 3 OFFSET 9;
