@@ -10,12 +10,13 @@ Exercício 04-07-2024 (acho que já terminei essa)
 	-Estruturo dos diretórios: /codifica-mais/SQL-MYSQL/
 	-Branch: jv-cod-sql-mysql-b1-04-07
 
-MUDAR DIRETORIOS NO codifica-mais/SQL-MYSQL:
-	/codifica-mais/SQL-MYSQL/gestao_produtos
-	/codifica-mais/SQL-MYSQL/exercicio-filmes
-
+*******
+	MUDAR DIRETORIOS NO codifica-mais/SQL-MYSQL:
+		/codifica-mais/SQL-MYSQL/gestao_produtos
+		/codifica-mais/SQL-MYSQL/exercicio-filmes
+*******
 
 
 MAP-OS:
-    email: pansiere2001@gmail.com
-    senha: bike123
+    email: teleciclemoises@gmail.com
+    senha: pansiere2215
