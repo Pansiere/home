@@ -2,12 +2,11 @@
 
 class Conta
 {
-    private $titular;
-    private $nomeTitular;
-    private $saldo;
-    private static $numeroDeContas = 0;
+    private Titular $titular;
+    private float $saldo;
+    private static int $numeroDeContas = 0;
 
-    public function __construct(Titular $titular)
+    public function __construct(Titular $titular)/*A variavel $titular é uma uma instância dessa classe (Titular)*/
     {
         $this->titular = $titular;
         $this->saldo = 0;
