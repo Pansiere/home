@@ -2,14 +2,13 @@
 
 class Conta
 {
-    private $cpfTitular;
-    private $nomeTitular;
-    private $saldo = 0;
+    private Titular $titular;
+    private float $saldo;
+    private static int $numeroDeContas = 0;
 
-    public function __construct(string $cpfTitular, string $nomeTitular)
+    public function __construct(Titular $titular)/*A variavel $titular é uma uma instância dessa classe (Titular)*/
     {
-        $this->cpfTitular = $cpfTitular;
-        $this->nomeTitular =  $nomeTitular;
+        $this->titular = $titular;
         $this->saldo = 0;
     }
 
@@ -49,13 +48,24 @@ class Conta
         return $this->saldo;
     }
 
-    public function recuperaCpfTitular(): string
+    public function recuperaNomeTitular(): string
     {
-        return $this->cpfTitular;
+        return $this->titular->recuperaNome();
     }
 
-    public function recuperarNomeTitular(): string
+    public function recuperaCpfTitular(): string
     {
-        return $this->nomeTitular;
+        return $this->titular->recuperaCpf();
+    }
+
+    public static function recuperaNumeroDeContas(): int
+    {
+        return self::$numeroDeContas;
+    }
+
+    public function __destruct()
+    {
+        echo "Menos 1 conta\n";
+        self::$numeroDeContas--;
     }
 }
