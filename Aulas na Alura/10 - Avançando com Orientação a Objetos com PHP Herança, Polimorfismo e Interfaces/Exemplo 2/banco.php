@@ -3,7 +3,7 @@ require_once 'src/Conta.php';
 require_once 'src/Endereco.php';
 require_once 'src/Titular.php';
 require_once 'src/CPF.php';
-
+require_once 'src/Pessoa.php';
 
 $endereco1 = new endereco('Aracruz', 'Coqueiral', 'Ipês', '111');
 $endereco2 = new endereco('Jacaraipe', 'Jatobas', 'Jeranimos', '222');
