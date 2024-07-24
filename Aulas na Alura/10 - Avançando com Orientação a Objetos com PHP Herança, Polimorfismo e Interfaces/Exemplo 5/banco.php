@@ -1,4 +1,6 @@
 <?php
+require_once 'autoload.php';
+
 require_once 'src/Modelo/Conta/Conta.php';
 require_once 'src/Modelo/Endereco.php';
 require_once 'src/Modelo/Pessoa.php';
