@@ -2,6 +2,8 @@
 
 namespace Alura\Banco\Modelo\Conta;
 
+use Alura\Banco\Modelo\Pessoa;
+
 class Titular extends Pessoa
 {
     private Endereco $endereco;
