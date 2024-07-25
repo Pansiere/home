@@ -21,8 +21,6 @@ class Conta
         self::$numeroDeContas--;
     }
 
-    home/Aulas na Alura/10 - Avançando com Orientação a Objetos com PHP Herança, Polimorfismo e Interfaces/Exemplo 5
-
     public function deposita(float $valorADepositar): void
     {
         if ($valorADepositar < 0) {
