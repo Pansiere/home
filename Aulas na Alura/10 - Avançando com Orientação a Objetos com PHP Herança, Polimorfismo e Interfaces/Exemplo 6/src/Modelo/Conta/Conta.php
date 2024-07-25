@@ -21,15 +21,7 @@ class Conta
         self::$numeroDeContas--;
     }
 
-    public function saca(float $valorASacar): void
-    {
-        if ($valorASacar > $this->saldo) {
-            echo "Saldo indisponível";
-            return;
-        }
-
-        $this->saldo -= $valorASacar;
-    }
+    home/Aulas na Alura/10 - Avançando com Orientação a Objetos com PHP Herança, Polimorfismo e Interfaces/Exemplo 5
 
     public function deposita(float $valorADepositar): void
     {
