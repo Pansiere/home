@@ -1,3 +1,8 @@
 <?php
 
-namespace Alura\DesignPattern
+namespace Alura\DesignPattern;
+
+class Orcamento
+{
+    public float $valor;
+}
