@@ -45,4 +45,8 @@ class Student
             ->diff(new \DateTimeImmutable())
             ->y;
     }
+    public function birthDate(): \DateTimeInterface
+    {
+        return $this->birthDate;
+    }
 }
