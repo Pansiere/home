@@ -4,7 +4,7 @@ namespace Alura\Pdo\Infraestructure\Repository;
 
 use Alura\Pdo\Domain\Model\Student;
 use Alura\Pdo\Domain\Repository\StudentRepository;
-#use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+// use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
 use PDO;
 
 class PdoStudentRepository implements StudentRepository
@@ -37,7 +37,7 @@ class PdoStudentRepository implements StudentRepository
 
     private function hydrateStudentList(\PDOStatement $stmt): array
     {
-        $studentDataList = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $studentDataList = $stmt->fetchAll();
         $studentList = [];
 
         foreach ($studentDataList as $studentData) {
@@ -67,7 +67,7 @@ class PdoStudentRepository implements StudentRepository
         $stmt = $this->connection->prepare($query);
 
         if ($stmt === false) {
-            throw new \RuntimeException('Erro na query do banco');
+            throw new \RunTimeException($this->connection->errorInfo()[2]);
         }
 
 
