@@ -55,7 +55,7 @@ class PdoStudentRepository implements StudentRepository
         return $studentList;
     }
 
-    public function fillPhonesOf(Student $student): void
+    private function fillPhonesOf(Student $student): void
     {
         $sqlQuery = 'SELECT id, area_code, number FROM phones WHERE student_id = ?';
         $stmt = $this->connection->prepare($sqlQuery);
@@ -66,7 +66,7 @@ class PdoStudentRepository implements StudentRepository
         foreach ($phoneDataList as $phoneData) {
             $phone = new Phone(
                 $phoneData['id'],
-                $phoneData['area-code'],
+                $phoneData['area_code'],
                 $phoneData['number']
             );
 
@@ -85,7 +85,7 @@ class PdoStudentRepository implements StudentRepository
 
     private function insert(Student $student): bool
     {
-        $query = 'INSERT INTO studentss (name, birth_date) 
+        $query = 'INSERT INTO students (name, birth_date) 
             VALUES (:name, :birth_date);';
         $stmt = $this->connection->prepare($query);
 
