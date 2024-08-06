@@ -123,4 +123,9 @@ class PdoStudentRepository implements StudentRepository
 
         return $stmt->execute();
     }
+    public function studentsWithPhones(): array
+    {
+        $array = [];
+        return $array;
+    }
 }
