@@ -1,0 +1,24 @@
+{
+  "name": "pansiere/buscador-cursos",
+  "description": "Projeto que busco os cursos na Alura",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Joao Pedro V. Pansiere",
+      "email": "ojp027@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.9",
+    "symfony/dom-crawler": "^6.0",
+    "symfony/css-selector": "^7.1"
+  },
+  "autoload": {
+    "classmap": [
+      "./Teste.php"
+    ],
+    "psr-4": {
+      "Alura\\BuscadorDeCursos\\": "src/"
+    }
+  }
+}
