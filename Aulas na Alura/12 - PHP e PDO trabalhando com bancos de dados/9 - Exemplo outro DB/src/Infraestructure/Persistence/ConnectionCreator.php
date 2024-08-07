@@ -8,10 +8,11 @@ class ConnectionCreator
 {
     public static function createConnection(): PDO
     {
+        //php-development-environment's server
         $connection = new PDO(
-            'mysql:host=172.17.0.2;dbname=banco',
+            'mysql:host=172.30.0.2;dbname=DB',
             'root',
-            'senhalura'
+            'password'
         );
 
         $connection->setAttribute(attribute: PDO::ATTR_ERRMODE, value: PDO::ERRMODE_EXCEPTION);
