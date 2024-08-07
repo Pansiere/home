@@ -7,7 +7,8 @@ return [
     'directory_list' => [
         'src',
         'vendor/symfony/dom-crawler',
-        'vendor/guzzlehttp/guzzle'
+        'vendor/guzzlehttp/guzzle',
+        'vendor/psr/http-message'
     ],
 
     "exclude_analysis_directory_list" => [
