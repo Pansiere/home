@@ -65,6 +65,7 @@ class ComposerStaticInit93865369dfd4814510d30437ee19e953
         'M' => 
         array (
             'Microsoft\\PhpParser\\' => 20,
+            'Masterminds\\' => 12,
         ),
         'G' => 
         array (
@@ -94,8 +95,8 @@ class ComposerStaticInit93865369dfd4814510d30437ee19e953
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -181,6 +182,10 @@ class ComposerStaticInit93865369dfd4814510d30437ee19e953
         'Microsoft\\PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/microsoft/tolerant-php-parser/src',
+        ),
+        'Masterminds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

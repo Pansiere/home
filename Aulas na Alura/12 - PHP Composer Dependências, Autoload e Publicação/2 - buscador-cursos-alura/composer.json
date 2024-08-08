@@ -30,13 +30,20 @@
     "test": "phpunit tests/TestBuscadorDeCursos.php",
     "cs": "phpcs --standard=PSR12 src/",
     "phan": "phan --allow-polyfill-parser",
+    "commands": "Alura\\BuscadorDeCursos\\ExecutaScripPeloComposer::mensagem",
     "check": [
       "@phan",
       "@cs",
       "@test"
+    ],
+    "post-update-cmd": [
+      "@commands",
+      "echo Mensagem do ZSH, mtu top isso. Posso dar um 'apt update por exemplo'.",
+      "echo $PWD"
     ]
   },
   "scripts-descriptions": {
-    "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT",
+    "commands": "Executa método de classe definidos no Composer"
   }
 }
