@@ -1,4 +1,4 @@
-<?php include 'code.php'; ?>
+<?php include 'src/code.php'; ?>
 
 <!doctype html>
 <html lang="pt-br">
