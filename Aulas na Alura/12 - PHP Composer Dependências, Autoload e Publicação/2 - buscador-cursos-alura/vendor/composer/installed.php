@@ -3,7 +3,7 @@
         'name' => 'pansiere/buscador-cursos',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'aca0f39dfed718fdd8b7792e8677ab5d6873ca32',
+        'reference' => 'b55362a1d99ee25f50fbd56e332f25d67d1db100',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -130,7 +130,7 @@
         'pansiere/buscador-cursos' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'aca0f39dfed718fdd8b7792e8677ab5d6873ca32',
+            'reference' => 'b55362a1d99ee25f50fbd56e332f25d67d1db100',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
