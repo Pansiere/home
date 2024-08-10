@@ -1,4 +1,8 @@
 {
+  "license": "GPL-3.0",
+  "bin": [
+    "buscar-cursos.php"
+  ],
   "name": "pansiere/buscador-cursos",
   "description": "Projeto que busco os cursos na Alura",
   "type": "library",
