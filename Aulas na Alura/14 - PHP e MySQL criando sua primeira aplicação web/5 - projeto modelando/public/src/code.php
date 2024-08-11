@@ -1,27 +1,14 @@
 <?php
 
-require_once "conexcao-db.php";
 require_once "Modelos/Produto.php";
+require_once "Repositorio/ProdutoRepositorio.php";
 
-use Pansiere\Alura\Modelos\Produto;
+use Panseiere\Alura\Repositorio\ProdutoRepositorio;
 
-# Produtos Almoço >>>
-$sql2 = "SELECT * FROM produtos WHERE tipo = 'Almoço' ORDER BY preco";
+$produtudoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
 
-$statement2 = $pdo->query($sql2);
-$produtoAlmoco = $statement2->fetchAll(PDO::FETCH_ASSOC);
+$dadosCafe = $produtudoRepositorio->opcoesCafe();
 
-function funcAlmoco($almoco)
-{
-    return new Produto(
-        $almoco['id'],
-        $almoco['tipo'],
-        $almoco['nome'],
-        $almoco['descricao'],
-        $almoco['imagem'],
-        $almoco['preco']
-    );
-};
+$dadosAlmoco = $produtudoRepositorio->opcoesAlmoco();
 
-$dadosAlmoco = array_map('funcAlmoco', $produtoAlmoco);
-# Produtos Almoço <<<
+var_dump($produtos = $produtudoRepositorio->buscarTodos());

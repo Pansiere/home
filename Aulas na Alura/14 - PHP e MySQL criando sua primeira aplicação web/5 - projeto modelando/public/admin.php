@@ -1,3 +1,5 @@
+<?php include 'src/code.php'; ?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -51,30 +53,6 @@
               </form>
             </td>
 
-          </tr>
-          <tr>
-            <td>Frango</td>
-            <td>Almoço</td>
-            <td>Delicioso prato</td>
-            <td>R$ 25.00</td>
-            <td><a class="botao-editar" href="editar-produto.html">Editar</a></td>
-            <td>
-              <form>
-                <input type="button" class="botao-excluir" value="Excluir">
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>Café Gelado</td>
-            <td>Café</td>
-            <td>Delicioso prato</td>
-            <td>R$ 25.00</td>
-            <td><a class="botao-editar" href="editar-produto.html">Editar</a></td>
-            <td>
-              <form>
-                <input type="button" class="botao-excluir" value="Excluir">
-              </form>
-            </td>
           </tr>
         </tbody>
       </table>
