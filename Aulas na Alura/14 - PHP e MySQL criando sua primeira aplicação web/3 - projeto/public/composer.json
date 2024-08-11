@@ -1,0 +1,16 @@
+{
+    "name": "pansiere/alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pansiere\\Alura\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Pedro V. Pansiere",
+            "email": "ojp027@gmail.com"
+        }
+    ],
+    "require": {}
+}
