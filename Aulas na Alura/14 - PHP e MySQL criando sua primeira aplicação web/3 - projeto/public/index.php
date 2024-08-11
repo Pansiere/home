@@ -42,7 +42,7 @@
                 <?php foreach ($produtosCafe as $cafe): ?>
                     <div class="container-produto">
                         <div class="container-foto">
-                            <img src="<?= $cafe['imagem'] ?>">
+                            <img src="<?= "img/" . $cafe['imagem'] ?>">
                         </div>
                         <p><?= $cafe['nome'] ?></p>
                         <p><?= $cafe['descricao'] ?></p>
@@ -60,7 +60,7 @@
                 <?php foreach ($produtoAlmoco as $almoco): ?>
                     <div class="container-produto">
                         <div class="container-foto">
-                            <img src="<?= $almoco['imagem'] ?>">
+                            <img src="<?= "img/" . $almoco['imagem'] ?>">
                         </div>
                         <p><?= $almoco['nome'] ?></p>
                         <p><?= $almoco['descricao'] ?></p>
