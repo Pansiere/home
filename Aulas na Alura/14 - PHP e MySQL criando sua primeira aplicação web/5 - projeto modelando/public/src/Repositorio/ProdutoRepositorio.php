@@ -14,7 +14,7 @@ class ProdutoRepositorio
         private PDO $pdo
     ) {}
 
-    private function formarObjeto($dados)
+    private function formarObjeto($dados): Produto
     {
         return new Produto(
             $dados['id'],
@@ -52,7 +52,7 @@ class ProdutoRepositorio
         return $dadosAlmoco;
     }
 
-    public function buscarTodos()
+    public function buscarTodos(): array
     {
         $sql = "SELECT * FROM produtos ORDER BY preco";
         $statement = $this->pdo->query($sql);
@@ -63,5 +63,13 @@ class ProdutoRepositorio
         }, $dados);
 
         return $todosOsDados;
+    }
+
+    public function deletar(int $id): void
+    {
+        $sql = "DELETE FROM produtos WHERE id = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->binDvalue(1, $id);
+        $statement->execute();
     }
 }

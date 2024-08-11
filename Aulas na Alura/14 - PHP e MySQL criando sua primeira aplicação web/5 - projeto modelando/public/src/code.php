@@ -10,5 +10,3 @@ $produtudoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;db
 $dadosCafe = $produtudoRepositorio->opcoesCafe();
 
 $dadosAlmoco = $produtudoRepositorio->opcoesAlmoco();
-
-$produtos = $produtudoRepositorio->buscarTodos();
