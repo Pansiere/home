@@ -41,19 +41,20 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Bife</td>
-            <td>Almoço</td>
-            <td>Delicioso prato</td>
-            <td>R$ 25.00</td>
-            <td><a class="botao-editar" href="editar-produto.html">Editar</a></td>
-            <td>
-              <form>
-                <input type="button" class="botao-excluir" value="Excluir">
-              </form>
-            </td>
-
-          </tr>
+          <?php foreach ($produtos as $produto): ?>
+            <tr>
+              <td><?= $produto->getNome() ?></td>
+              <td><?= $produto->getTipo() ?></td>
+              <td><?= $produto->getDescricao() ?></td>
+              <td><?= $produto->getPreco() ?></td>
+              <td><a class="botao-editar" href="editar-produto.html">Editar</a></td>
+              <td>
+                <form>
+                  <input type="button" class="botao-excluir" value="Excluir">
+                </form>
+              </td>
+            </tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
       <a class="botao-cadastrar" href="cadastrar-produto.html">Cadastrar produto</a>

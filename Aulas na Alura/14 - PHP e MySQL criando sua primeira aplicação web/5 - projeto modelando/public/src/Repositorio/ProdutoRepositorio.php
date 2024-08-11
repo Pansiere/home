@@ -21,8 +21,8 @@ class ProdutoRepositorio
             $dados['tipo'],
             $dados['nome'],
             $dados['descricao'],
-            $dados['preco'],
-            $dados['imagem']
+            $dados['imagem'],
+            (float) $dados['preco']
         );
     }
 

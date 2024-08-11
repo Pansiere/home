@@ -11,4 +11,4 @@ $dadosCafe = $produtudoRepositorio->opcoesCafe();
 
 $dadosAlmoco = $produtudoRepositorio->opcoesAlmoco();
 
-var_dump($produtos = $produtudoRepositorio->buscarTodos());
+$produtos = $produtudoRepositorio->buscarTodos();
