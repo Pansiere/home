@@ -1,0 +1,20 @@
+{
+  "name": "pansiere/alura",
+  "type": "library",
+  "autoload": {
+    "files": [
+      "src/code.php",
+      "src/conexcao-db.php"
+    ],
+    "psr-4": {
+      "Pansiere\\Alura\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "João Pedro V. Pansiere",
+      "email": "ojp027@gmail.com"
+    }
+  ],
+  "require": {}
+}
