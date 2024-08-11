@@ -39,14 +39,14 @@
                 <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
             </div>
             <div class="container-cafe-manha-produtos">
-                <?php foreach ($produtosCafe as $cafe): ?>
+                <?php foreach ($dadosCafe as $cafe): ?>
                     <div class="container-produto">
                         <div class="container-foto">
-                            <img src="<?= "img/" . $cafe['imagem'] ?>">
+                            <img src="<?= "img/" . $cafe->getImagem() ?>">
                         </div>
-                        <p><?= $cafe['nome'] ?></p>
-                        <p><?= $cafe['descricao'] ?></p>
-                        <p><?= "R$ " . $cafe['preco'] ?></p>
+                        <p><?= $cafe->getNome() ?></p>
+                        <p><?= $cafe->getDescricao() ?></p>
+                        <p><?= "R$ " . number_format($cafe->getPreco(), 2) ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -57,14 +57,14 @@
                 <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
             </div>
             <div class="container-almoco-produtos">
-                <?php foreach ($produtoAlmoco as $almoco): ?>
+                <?php foreach ($dadosAlmoco as $almoco): ?>
                     <div class="container-produto">
                         <div class="container-foto">
-                            <img src="<?= "img/" . $almoco['imagem'] ?>">
+                            <img src="<?= "img/" . $almoco->getImagem() ?>">
                         </div>
-                        <p><?= $almoco['nome'] ?></p>
-                        <p><?= $almoco['descricao'] ?></p>
-                        <p><?= "R$ " . $almoco['preco'] ?></p>
+                        <p><?= $almoco->getNome() ?></p>
+                        <p><?= $almoco->getDescricao() ?></p>
+                        <p><?= "R$ " . number_format($almoco->getPreco(), 2) ?> </p>
                     </div>
                 <?php endforeach; ?>
             </div>
