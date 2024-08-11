@@ -8,3 +8,5 @@ use Panseiere\Alura\Repositorio\ProdutoRepositorio;
 $produtudoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
 
 $produtudoRepositorio->deletar($_GET['id']);
+
+$produtos = $produtudoRepositorio->buscarTodos();
