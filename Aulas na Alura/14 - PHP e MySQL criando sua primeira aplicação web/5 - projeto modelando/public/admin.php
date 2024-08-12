@@ -1,4 +1,18 @@
-<?php include 'excluir-produto.php'; ?>
+<!--
+  Usar a função 'include' neste arquivo resultaria na inclusão do
+  conteúdo de 'excluir-produto.php' no ponto em que a declaração é feita.
+  No entanto, isso pode causar problemas, como a inclusão múltipla do mesmo
+  arquivo em diferentes partes do código, o que pode resultar em erros.
+
+  Para evitar essa situação, usaremos 'require_once'. Isso garante que
+  o arquivo 'excluir-produto.php' seja incluído uma única vez, permitindo
+  que as variáveis e funções definidas nele estejam disponíveis para uso
+  neste arquivo, sem o risco de causar quebras de código.
+-->
+<?php
+//include 'excluir-produto.php';
+require_once 'src/code.php';
+?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -49,6 +63,7 @@
               <td><?= $produto->getPrecoFormatado() ?></td>
               <td><a class="botao-editar" href="editar-produto.html">Editar</a></td>
               <td>
+                <!-- O action manda a requisição e a váriavel ($_GET) para 'excluir-produto.php' -->
                 <form action="excluir-produto.php">
                   <input type="hidden" name="id" value="<?= $produto->getId() ?>">
                   <input type="submit" class="botao-excluir" value="Excluir">
