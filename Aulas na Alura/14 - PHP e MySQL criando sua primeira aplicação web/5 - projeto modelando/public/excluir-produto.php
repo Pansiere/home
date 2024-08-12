@@ -3,3 +3,5 @@
 require_once 'src/code.php';
 
 $produtudoRepositorio->deletar($_GET['id']);
+
+$a = 'a';
