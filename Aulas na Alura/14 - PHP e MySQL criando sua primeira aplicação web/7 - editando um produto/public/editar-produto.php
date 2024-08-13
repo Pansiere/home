@@ -1,14 +1,4 @@
-<?php
-
-require_once 'src/code.php';
-
-use Pansiere\Alura\Repositorio\ProdutoRepositorio;
-
-$produtoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
-
-$produto = $produtoRepositorio->buscar((int)$_GET['id']);
-
-?>
+<?php require_once 'src/code.php'; ?>
 
 <!doctype html>
 <html lang="pt-br">

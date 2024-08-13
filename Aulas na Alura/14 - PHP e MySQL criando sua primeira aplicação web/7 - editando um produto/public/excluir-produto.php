@@ -2,6 +2,6 @@
 
 require_once 'src/code.php';
 
-$produtudoRepositorio->deletar($_POST['id']);
+$produtoRepositorio->deletar($_POST['id']);
 
 header("Location: admin.php");

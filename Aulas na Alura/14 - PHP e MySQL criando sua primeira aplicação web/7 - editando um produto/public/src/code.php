@@ -6,13 +6,14 @@ require_once "Repositorio/ProdutoRepositorio.php";
 use Pansiere\Alura\Repositorio\ProdutoRepositorio;
 use Pansiere\Alura\Modelos\Produto;
 
-$produtudoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
+$produtoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
+$produtoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
 
-$dadosCafe = $produtudoRepositorio->opcoesCafe();
+$dadosCafe = $produtoRepositorio->opcoesCafe();
 
-$dadosAlmoco = $produtudoRepositorio->opcoesAlmoco();
+$dadosAlmoco = $produtoRepositorio->opcoesAlmoco();
 
-$produtos = $produtudoRepositorio->buscarTodos();
+$produtos = $produtoRepositorio->buscarTodos();
 
 if (isset($_POST['cadastro'])) {
     $produto = new Produto(
@@ -24,7 +25,12 @@ if (isset($_POST['cadastro'])) {
         $_POST['preco'],
     );
 
-    $produtudoRepositorio->salvar($produto);
+    $produtoRepositorio->salvar($produto);
 
     header("Location: admin.php");
+}
+
+
+if (isset($_GET['id'])) {
+    $produto = $produtoRepositorio->buscar((int)$_GET['id']);
 }
