@@ -72,4 +72,16 @@ class ProdutoRepositorio
         $statement->binDvalue(1, $id);
         $statement->execute();
     }
+
+    public function salvar(Produto $produto)
+    {
+        $sql = "INSERT INTO produtos (tipo, nome, descricao, preco, imagem) VALUES (?,?,?,?,?)";
+        $statment = $this->pdo->prepare($sql);
+        $statment->binDvalue(1, $produto->getTipo());
+        $statment->binDvalue(2, $produto->getNome());
+        $statment->binDvalue(3, $produto->getDescricao());
+        $statment->binDvalue(4, $produto->getPreco());
+        $statment->binDvalue(5, $produto->getImagem());
+        $statment->execute();
+    }
 }
