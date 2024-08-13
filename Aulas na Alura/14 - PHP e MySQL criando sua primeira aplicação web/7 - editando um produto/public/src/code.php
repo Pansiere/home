@@ -34,3 +34,7 @@ if (isset($_POST['cadastro'])) {
 if (isset($_GET['id'])) {
     $produto = $produtoRepositorio->buscar((int)$_GET['id']);
 }
+
+if (isset($_POST['AAAAAAAAAAAAAAAA A FAZER'])) {
+    $produto = $produtoRepositorio->buscar((int)$_GET['id']);
+}
