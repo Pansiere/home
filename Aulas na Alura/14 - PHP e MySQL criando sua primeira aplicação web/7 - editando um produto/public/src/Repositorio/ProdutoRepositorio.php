@@ -84,4 +84,16 @@ class ProdutoRepositorio
         $statment->binDvalue(5, $produto->getImagem());
         $statment->execute();
     }
+
+    public function buscar(int $id)
+    {
+        $sql = "SELECT * FROM produtos WHERE id = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1, $id);
+        $statement->execute();
+
+        $dados = $statement->fetch(PDO::FETCH_ASSOC);
+
+        return $this->formarObjeto($dados);
+    }
 }

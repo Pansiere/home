@@ -61,7 +61,7 @@ require_once 'src/code.php';
                             <td><?= $produto->getTipo() ?></td>
                             <td><?= $produto->getDescricao() ?></td>
                             <td><?= $produto->getPrecoFormatado() ?></td>
-                            <td><a class="botao-editar" href="editar-produto.php">Editar</a></td>
+                            <td><a class="botao-editar" href="editar-produto.php?id=<?= $produto->getId() ?>">Editar</a></td>
                             <td>
                                 <!-- O action manda a requisição e a váriavel ($_POST) para 'excluir-produto.php' -->
                                 <form action="excluir-produto.php" method="post">
