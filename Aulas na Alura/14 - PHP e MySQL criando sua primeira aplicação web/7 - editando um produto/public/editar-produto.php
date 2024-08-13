@@ -39,7 +39,7 @@ $produto = $produtoRepositorio->buscar((int)$_GET['id']);
       <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
     </section>
     <section class="container-form">
-      <form action="#">
+      <form action="#" method="post">
 
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Digite o nome do produto" value="<?= $produto->getNome() ?>">
