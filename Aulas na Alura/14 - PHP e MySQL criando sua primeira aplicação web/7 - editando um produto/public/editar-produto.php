@@ -32,6 +32,7 @@
       <form action="#" method="post">
 
         <label for="nome">Nome</label>
+        <!-- <input type="hidden" name="id" value="<?= $produto->getId() ?>"> -->
         <input type="text" id="nome" name="nome" placeholder="Digite o nome do produto" value="<?= $produto->getNome() ?>">
 
         <div class="container-radio">
