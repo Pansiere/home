@@ -73,7 +73,7 @@ class ProdutoRepositorio
         $statement->execute();
     }
 
-    public function salvar(Produto $produto)
+    public function salvar(Produto $produto): void
     {
         $sql = "INSERT INTO produtos (tipo, nome, descricao, preco, imagem) VALUES (?,?,?,?,?)";
         $statment = $this->pdo->prepare($sql);
@@ -95,5 +95,17 @@ class ProdutoRepositorio
         $dados = $statement->fetch(PDO::FETCH_ASSOC);
 
         return $this->formarObjeto($dados);
+    }
+
+    public function editar(int $id, string $tipo, string $nome, string $descricao, $preco): void
+    {
+        $sql = "UPDATE produtos SET tipo = ?, nome = ?, descricao = ?, preco = ? WHERE id = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1, $tipo);
+        $statement->bindValue(2, $nome);
+        $statement->bindValue(3, $descricao);
+        $statement->bindValue(4, $preco);
+        $statement->bindValue(5, $id);
+        $statement->execute();
     }
 }

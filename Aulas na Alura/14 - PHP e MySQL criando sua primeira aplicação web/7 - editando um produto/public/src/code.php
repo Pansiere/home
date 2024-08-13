@@ -16,6 +16,7 @@ $dadosAlmoco = $produtoRepositorio->opcoesAlmoco();
 $produtos = $produtoRepositorio->buscarTodos();
 
 if (isset($_POST['cadastro'])) {
+
     $produto = new Produto(
         null,
         $_POST['tipo'],
@@ -28,13 +29,25 @@ if (isset($_POST['cadastro'])) {
     $produtoRepositorio->salvar($produto);
 
     header("Location: admin.php");
+    exit();
 }
 
 
 if (isset($_GET['id'])) {
+
     $produto = $produtoRepositorio->buscar((int)$_GET['id']);
 }
 
-if (isset($_POST['AAAAAAAAAAAAAAAA A FAZER'])) {
-    $produto = $produtoRepositorio->buscar((int)$_GET['id']);
+if (isset($_POST['editar'])) {
+
+    $produtoRepositorio->editar(
+        (int) $_GET['id'],
+        (string) $_POST['tipo'],
+        (string) $_POST['nome'],
+        (string) $_POST['descricao'],
+        (float)$_POST['preco']
+    );
+
+    header("Location: admin.php");
+    exit();
 }
