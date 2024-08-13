@@ -1,6 +1,6 @@
 <?php
 
-namespace Panseiere\Alura\Repositorio;
+namespace Pansiere\Alura\Repositorio;
 
 use PDO;
 use Pansiere\Alura\Modelos\Produto;
@@ -22,7 +22,7 @@ class ProdutoRepositorio
             $dados['nome'],
             $dados['descricao'],
             $dados['imagem'],
-            (float) $dados['preco']
+            $dados['preco']
         );
     }
 

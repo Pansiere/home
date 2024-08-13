@@ -1,4 +1,4 @@
-<?php require_once 'src/code.php'; ?>
+<?php include 'src/code.php'; ?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -29,7 +29,7 @@
             <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
         </section>
         <section class="container-form">
-            <form action="#">
+            <form action="#" method="post">
 
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do produto" required>
