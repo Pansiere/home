@@ -6,6 +6,20 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitac2d307f4ed514763a8119f3523066bb
 {
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'Pansiere\\Alura\\' => 15,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Pansiere\\Alura\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+    );
+
     public static $classMap = array (
         'Absolute_Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/absolute_positioner.cls.php',
         'Abstract_Renderer' => __DIR__ . '/..' . '/dompdf/dompdf/include/abstract_renderer.cls.php',
@@ -118,6 +132,8 @@ class ComposerStaticInitac2d307f4ed514763a8119f3523066bb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInitac2d307f4ed514763a8119f3523066bb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitac2d307f4ed514763a8119f3523066bb::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitac2d307f4ed514763a8119f3523066bb::$classMap;
 
         }, null, ClassLoader::class);

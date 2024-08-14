@@ -1,5 +1,10 @@
 {
-    "require": {
-        "dompdf/dompdf": "^0.6.2"
+  "autoload": {
+    "psr-4": {
+      "Pansiere\\Alura\\": "src/"
     }
+  },
+  "require": {
+    "dompdf/dompdf": "^0.6.2"
+  }
 }
