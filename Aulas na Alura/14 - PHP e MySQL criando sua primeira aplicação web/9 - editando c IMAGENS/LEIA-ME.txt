@@ -1,0 +1,6 @@
+Trabalhando com imagens {
+    Nesse ambientem, para as imagens
+    conseguirem ser upadas, dentro do
+    container php-fpm execute o comando:
+    chown www-data:www-data /application/public/img
+}
