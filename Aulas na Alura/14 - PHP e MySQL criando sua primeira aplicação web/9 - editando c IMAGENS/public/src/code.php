@@ -46,11 +46,11 @@ if (isset($_POST['editar'])) {
             (string) $_POST['descricao'],
             (float)$_POST['preco']
         );
-
-        header("Location: admin.php");
-        exit();
     }
+    header("Location: admin.php");
+    exit();
 }
+
 
 if (isset($_POST['cadastro'])) {
 
