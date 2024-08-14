@@ -21,6 +21,21 @@ if (isset($_GET['id'])) {
 
 if (isset($_POST['editar'])) {
 
+    if (isset($_FILES['imagem'])) {
+
+        $produtoRepositorio->editarComImagem(
+            (int) $_GET['id'],
+            (string) $_POST['tipo'],
+            (string) $_POST['nome'],
+            (string) $_POST['descricao'],
+            (float) $_POST['preco'],
+            (string) $_POST['imagem']
+        );
+    }
+    $produto->setImagem(uniqid() . $_FILES['imagem']['name']);
+
+    move_uploaded_file($_FILES['imagem']['tmp_name'], $produto->getImagemDiretorio());
+} else {
     $produtoRepositorio->editar(
         (int) $_GET['id'],
         (string) $_POST['tipo'],
@@ -28,10 +43,11 @@ if (isset($_POST['editar'])) {
         (string) $_POST['descricao'],
         (float)$_POST['preco']
     );
-
     header("Location: admin.php");
     exit();
 }
+
+
 
 if (isset($_POST['cadastro'])) {
 

@@ -111,4 +111,16 @@ class ProdutoRepositorio
         $statement->bindValue(5, $id);
         $statement->execute();
     }
+
+    public function editarComImagem(int $id, string $tipo, string $nome, string $descricao, $preco): void
+    {
+        $sql = "UPDATE produtos SET tipo = ?, nome = ?, descricao = ?, preco = ? WHERE id = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1, $tipo);
+        $statement->bindValue(2, $nome);
+        $statement->bindValue(3, $descricao);
+        $statement->bindValue(4, $preco);
+        $statement->bindValue(5, $id);
+        $statement->execute();
+    }
 }

@@ -29,7 +29,7 @@
       <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
     </section>
     <section class="container-form">
-      <form action="#" method="post">
+      <form action="#" method="post" enctype="multipart/form-data">
 
         <label for="nome">Nome</label>
         <!-- <input type="hidden" name="id" value="<?= $produto->getId() ?>"> -->
