@@ -17,12 +17,14 @@ $produtos = $produtoRepositorio->buscarTodos();
 
 if (isset($_POST['cadastro'])) {
 
+    var_dump($_FILES);
+
     $produto = new Produto(
         null,
         $_POST['tipo'],
         $_POST['nome'],
         $_POST['descricao'],
-        $_POST['imagem'],
+        $_FILES['imagem']['tmp_name'],
         $_POST['preco'],
     );
 
@@ -51,3 +53,5 @@ if (isset($_POST['editar'])) {
     header("Location: admin.php");
     exit();
 }
+
+#var_dump($_FILES);
