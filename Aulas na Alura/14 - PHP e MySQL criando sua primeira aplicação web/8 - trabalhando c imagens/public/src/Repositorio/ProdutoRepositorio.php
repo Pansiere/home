@@ -21,8 +21,8 @@ class ProdutoRepositorio
             $dados['tipo'],
             $dados['nome'],
             $dados['descricao'],
+            $dados['preco'],
             $dados['imagem'],
-            $dados['preco']
         );
     }
 
@@ -45,9 +45,12 @@ class ProdutoRepositorio
         $statement = $this->pdo->query($sql);
         $produtosAlmoco = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        $dadosAlmoco = array_map(function ($almoco) {
-            return $this->formarObjeto($almoco);
-        }, $produtosAlmoco);
+        $dadosAlmoco = array_map(
+            function ($almoco) {
+                return $this->formarObjeto($almoco);
+            },
+            $produtosAlmoco
+        );
 
         return $dadosAlmoco;
     }

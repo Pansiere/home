@@ -9,16 +9,17 @@ class Produto
         private string $tipo,
         private string $nome,
         private string $descricao,
-        private string $imagem,
-        private float $preco
+        private float $preco,
+        private ?string $imagem = null
     ) {
         $this->id = $id;
         $this->tipo = $tipo;
         $this->nome = $nome;
         $this->descricao = $descricao;
-        $this->imagem = $imagem;
         $this->preco = $preco;
+        $this->imagem = $imagem;
     }
+
     public function getId(): int
     {
         return $this->id;
@@ -42,6 +43,12 @@ class Produto
     public function getImagem(): string
     {
         return $this->imagem;
+    }
+
+    public function setImagem(string $imagem): void
+    {
+
+        $this->imagem = $imagem;
     }
 
     public function getImagemDiretorio(): string

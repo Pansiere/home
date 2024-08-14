@@ -7,33 +7,12 @@ use Pansiere\Alura\Repositorio\ProdutoRepositorio;
 use Pansiere\Alura\Modelos\Produto;
 
 $produtoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
-$produtoRepositorio = new ProdutoRepositorio(new PDO('mysql:host=172.30.0.2;dbname=serenatto', 'root', 'password'));
 
 $dadosCafe = $produtoRepositorio->opcoesCafe();
 
 $dadosAlmoco = $produtoRepositorio->opcoesAlmoco();
 
 $produtos = $produtoRepositorio->buscarTodos();
-
-if (isset($_POST['cadastro'])) {
-
-    var_dump($_FILES);
-
-    $produto = new Produto(
-        null,
-        $_POST['tipo'],
-        $_POST['nome'],
-        $_POST['descricao'],
-        $_FILES['imagem']['tmp_name'],
-        $_POST['preco'],
-    );
-
-    $produtoRepositorio->salvar($produto);
-
-    header("Location: admin.php");
-    exit();
-}
-
 
 if (isset($_GET['id'])) {
 
@@ -54,4 +33,36 @@ if (isset($_POST['editar'])) {
     exit();
 }
 
-#var_dump($_FILES);
+if (isset($_POST['cadastro'])) {
+
+    #    header("Location: admin.php");
+
+    $produto = new Produto(
+        null,
+        $_POST['tipo'],
+        $_POST['nome'],
+        $_POST['descricao'],
+        $_POST['preco'],
+        null,
+    );
+
+    if (isset($_FILES['imagem'])) {
+
+        $produto->setImagem(uniqid() . $_FILES['imagem']['name']);
+
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $produto->getImagemDiretorio());
+    }
+
+    $produtoRepositorio->salvar($produto);
+
+    exit();
+}
+
+
+
+/*
+    var_dump($_FILES);
+    var_dump($_POST);
+    var_dump($produto->getImagem());
+    img/66bcbd0d9fb8fcafe.png
+*/
