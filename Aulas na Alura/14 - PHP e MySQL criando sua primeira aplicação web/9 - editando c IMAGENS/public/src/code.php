@@ -21,7 +21,13 @@ if (isset($_GET['id'])) {
 
 if (isset($_POST['editar'])) {
 
-    if (isset($_FILES['imagem'])) {
+    if ($_FILES['imagem']['name'] != '') {
+
+        $nomeDaImagem = uniqid() . $_FILES['imagem']['name'];
+
+        $diretoriaDoImagem = 'img/' . $nomeDaImagem;
+
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $diretoriaDoImagem);
 
         $produtoRepositorio->editarComImagem(
             (int) $_GET['id'],
@@ -29,25 +35,22 @@ if (isset($_POST['editar'])) {
             (string) $_POST['nome'],
             (string) $_POST['descricao'],
             (float) $_POST['preco'],
-            (string) $_POST['imagem']
+            (string) $nomeDaImagem
         );
+    } else {
+
+        $produtoRepositorio->editar(
+            (int) $_GET['id'],
+            (string) $_POST['tipo'],
+            (string) $_POST['nome'],
+            (string) $_POST['descricao'],
+            (float)$_POST['preco']
+        );
+
+        header("Location: admin.php");
+        exit();
     }
-    $produto->setImagem(uniqid() . $_FILES['imagem']['name']);
-
-    move_uploaded_file($_FILES['imagem']['tmp_name'], $produto->getImagemDiretorio());
-} else {
-    $produtoRepositorio->editar(
-        (int) $_GET['id'],
-        (string) $_POST['tipo'],
-        (string) $_POST['nome'],
-        (string) $_POST['descricao'],
-        (float)$_POST['preco']
-    );
-    header("Location: admin.php");
-    exit();
 }
-
-
 
 if (isset($_POST['cadastro'])) {
 
@@ -72,12 +75,3 @@ if (isset($_POST['cadastro'])) {
     header("Location: admin.php");
     exit();
 }
-
-
-
-/*
-    var_dump($_FILES);
-    var_dump($_POST);
-    var_dump($produto->getImagem());
-    img/66bcbd0d9fb8fcafe.png
-*/
