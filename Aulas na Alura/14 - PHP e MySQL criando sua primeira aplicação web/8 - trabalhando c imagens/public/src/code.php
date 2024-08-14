@@ -35,8 +35,6 @@ if (isset($_POST['editar'])) {
 
 if (isset($_POST['cadastro'])) {
 
-    #    header("Location: admin.php");
-
     $produto = new Produto(
         null,
         $_POST['tipo'],
@@ -55,6 +53,7 @@ if (isset($_POST['cadastro'])) {
 
     $produtoRepositorio->salvar($produto);
 
+    header("Location: admin.php");
     exit();
 }
 
