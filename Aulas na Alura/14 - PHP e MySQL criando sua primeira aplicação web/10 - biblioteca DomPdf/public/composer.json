@@ -5,6 +5,6 @@
     }
   },
   "require": {
-    "dompdf/dompdf": "^0.6.2"
+    "dompdf/dompdf": "^3.0"
   }
 }
