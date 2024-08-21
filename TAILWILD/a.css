@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: Roboto Condensed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.corpo {
+  background-color: rgba(0, 0, 0, 0.027);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2vh;
+}
+
+.botoes_novo_item {
+  background-color: rgba(0, 0, 255, 0.29);
+  border: 2px solid black;
+  border-color: blue;
+  border-radius: 5px;
+  color: blue;
+  padding: 4px;
+  margin-right: 20vh;
+}
+
+.botoes_novo_item button {
+  border: none; /* Remove a borda padrão do botão */
+  background-color: transparent; /* Torna o fundo do botão transparente, se desejar */
+  color: #000000c9; /* Cor do texto do botão, ajuste conforme necessário */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  padding: 0; /* Remove o padding padrão, ajuste conforme necessário */
+  font: inherit; /* Mantém a fonte herdada do elemento pai */
+}
+
+.produto {
+  margin: 2vh;
+  background-color: rgba(0, 0, 0, 0.027);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.produto_linha_1_categoria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto_linha_1_categoria_categoria_e_id {
+  display: flex;
+}
+
+.produto_linha_1_espacamento {
+  display: flex;
+  padding-right: 2vh;
+}
+
+.id {
+  color: rgba(0, 0, 0, 0.363);
+}
+
+.sku {
+  padding-right: 16vh;
+}
+
+.Eletrônicos {
+  display: flex;
+  border: 2px solid orange;
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(255, 166, 0, 0.315);
+  color: orange;
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.Eletrodomésticos {
+  display: flex;
+  border: 2px solid rgb(174, 0, 255);
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(174, 0, 255, 0.301);
+  color: rgb(174, 0, 255);
+  padding-left: 1vh;
+}
+.produto_linha_2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+.produto_linha_2_espacamento {
+  display: flex;
+  padding-right: 15vh;
+}
+
+.produto_linha_3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editar {
+  background-color: rgba(77, 66, 66, 0.2);
+  border: 2px solid black;
+  border-color: rgba(77, 66, 66, 0.951);
+  border-radius: 5px;
+  padding: 4px;
+  padding-right: 4vh;
+  padding-left: 4vh;
+}
+
+.editar button {
+  border: none; /* Remove a borda padrão do botão */
+  background-color: transparent; /* Torna o fundo do botão transparente, se desejar */
+  color: #000000c9; /* Cor do texto do botão, ajuste conforme necessário */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  padding: 0; /* Remove o padding padrão, ajuste conforme necessário */
+  font: inherit; /* Mantém a fonte herdada do elemento pai */
+}
+
+.deletar {
+  background-color: rgba(255, 0, 0, 0.29);
+  border: 2px solid black;
+  border-color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  border-radius: 5px;
+  padding: 4px;
+}
