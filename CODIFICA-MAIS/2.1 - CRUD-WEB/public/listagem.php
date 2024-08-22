@@ -1,10 +1,16 @@
 <?php
 
+require_once '../vendor/autoload.php';
+
+use Pansiere\Crud\Produtos;
+
 session_start();
+
+$produtos = new Produtos();
 
 if (isset($_POST["deletar"])) {
 
-    unset($_SESSION['produtos'][$_POST['deletar']]);
+    $produtos->deletar($_POST['deletar']);
 }
 
 function listavazia()

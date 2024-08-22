@@ -1,7 +1,28 @@
 <?php
 
+require_once '../vendor/autoload.php';
+
+use Pansiere\Crud\Produtos;
+
 session_start();
 
+$produtos = new Produtos();
+
+if (isset($_POST['nome'])) {
+
+    $produtos->atualizar(
+        $_POST['key'],
+        3,
+        $_POST['nome'],
+        $_POST['sku'],
+        $_POST['udm'],
+        (float) $_POST['valor'],
+        (int) $_POST['quantidade'],
+        $_POST['categoria']
+    );
+}
+
+/*
 if (isset($_POST['editar'])) {
 
     $_SESSION['produtos'][$_POST['key']] = [
@@ -16,7 +37,7 @@ if (isset($_POST['editar'])) {
     header('Location: listagem.php');
     exit();
 }
-
+*/
 ?>
 
 <!DOCTYPE html>

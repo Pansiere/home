@@ -1,21 +1,24 @@
 <?php
 
+require_once '../vendor/autoload.php';
+
+use Pansiere\Crud\Produtos;
+
 session_start();
+
+$produtos = new Produtos();
 
 if (isset($_POST['nome'])) {
 
-    $_SESSION['produtos'][] = [
-        'id' => 3,
-        'nome' => $_POST['nome'],
-        'sku' => $_POST['sku'],
-        'udm' => $_POST['udm'],
-        'valor' => $_POST['valor'],
-        'quantidade' => $_POST['quantidade'],
-        'categoria_id' => $_POST['categoria'],
-    ];
-
-    header('Location: listagem.php');
-    exit();
+    $produtos->salvar(
+        3,
+        $_POST['nome'],
+        $_POST['sku'],
+        $_POST['udm'],
+        (float) $_POST['valor'],
+        (int) $_POST['quantidade'],
+        $_POST['categoria']
+    );
 }
 
 ?>

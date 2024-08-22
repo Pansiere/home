@@ -1,8 +1,13 @@
 <?php
-// Inicia a sessão
+
 session_start();
 
-// Define o array de categorias, unidades de medida e produtos
+require_once '../vendor/autoload.php';
+
+use Pansiere\Crud\Produtos;
+
+$produtos = new Produtos();
+
 $_SESSION['categorias'] = [
     '1' => 'Eletrônicos',
     '2' => 'Eletrodomésticos',
@@ -44,5 +49,4 @@ $_SESSION['produtos'] = [
     ]
 ];
 
-// Redireciona para a página de listagem
 header('Location: listagem.php');
