@@ -45,7 +45,7 @@ echo $produtos->listar()[1]['nome'];
 
     <div class="corpo">
 
-        <h1 class="id">Editar Item #00000<?= $_POST['key'] + 1 ?></h1>
+        <h1 class="id">Editar Item #00000<?= $key + 1 ?></h1>
 
         <form class="forma" action="#" method="post">
             <input type="hidden" name="key" value="<?= $_POST['key'] ?>">
@@ -53,7 +53,7 @@ echo $produtos->listar()[1]['nome'];
             <div class="nome_do_item">
                 <p>Nome do item</p>
 
-                <input type="text" id="nome" name="nome" value="<?= $_SESSION['produtos'][$_POST['key']]['nome'] ?>" required>
+                <input type="text" id="nome" name="nome" value="<?= $_SESSION['produtos'][$key]['nome'] ?>" required>
 
             </div>
 
