@@ -4,9 +4,9 @@ namespace Pansiere\Crud;
 
 class Produtos
 {
-    public function listar()
+    public function listar(): array
     {
-        $a = 'a';
+        return $_SESSION['produtos'];
     }
 
     public function criar() //redireciona para formulario.php
