@@ -22,10 +22,9 @@ if (isset($_SESSION['edit_key'])) {
             (int) $_POST['quantidade'],
             $_POST['categoria']
         );
+        header('Location: listagem.php');
+        exit();
     }
-} else {
-    header('Location: listagem.php');
-    exit();
 }
 
 echo $produtos->listar()[1]['nome'];
