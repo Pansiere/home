@@ -8,18 +8,24 @@ session_start();
 
 $produtos = new Produtos();
 
-if (isset($_POST['nome'])) {
+if (isset($_SESSION['edit_key'])) {
+    $key = $_SESSION['edit_key'];
 
-    $produtos->atualizar(
-        $_POST['key'],
-        3,
-        $_POST['nome'],
-        $_POST['sku'],
-        $_POST['udm'],
-        (float) $_POST['valor'],
-        (int) $_POST['quantidade'],
-        $_POST['categoria']
-    );
+    if (isset($_POST['nome'])) {
+        $produtos->atualizar(
+            $key,
+            3,
+            $_POST['nome'],
+            $_POST['sku'],
+            $_POST['udm'],
+            (float) $_POST['valor'],
+            (int) $_POST['quantidade'],
+            $_POST['categoria']
+        );
+    }
+} else {
+    header('Location: listagem.php');
+    exit();
 }
 
 echo $produtos->listar()[1]['nome'];

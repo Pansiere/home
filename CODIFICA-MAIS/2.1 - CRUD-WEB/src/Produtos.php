@@ -31,9 +31,11 @@ class Produtos
         exit();
     }
 
-    public function editar($key)
+    public function editar($editar_header_key)
     {
-        header('Location: editar.php?key=' . urlencode($key));
+        $_SESSION['editar_key'] = $editar_header_key;
+
+        header('Location: editar.php');
         exit();
     }
 
