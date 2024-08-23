@@ -8,8 +8,8 @@ session_start();
 
 $produtos = new Produtos();
 
-if (isset($_SESSION['edit_key'])) {
-    $key = $_SESSION['edit_key'];
+if (isset($_SESSION['editar_key'])) {
+    $key = $_SESSION['editar_key'];
 
     if (isset($_POST['nome'])) {
         $produtos->atualizar(
