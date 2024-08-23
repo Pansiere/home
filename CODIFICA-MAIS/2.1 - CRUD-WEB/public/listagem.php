@@ -8,9 +8,14 @@ session_start();
 
 $produtos = new Produtos();
 
-if (isset($_POST["deletar"])) {
+if (isset($_POST["deletar_key"])) {
 
-    $produtos->deletar($_POST['deletar']);
+    $produtos->deletar($_POST['deletar_key']);
+}
+
+if (isset($_POST["editar_header_key"])) {
+
+    $produtos->editar($_POST["editar_header_key"]);
 }
 
 function listavazia()
@@ -71,7 +76,7 @@ function listavazia()
 
         <div class="scroll">
 
-            <?php foreach ($_SESSION['produtos'] as $key => $value) : ?>
+            <?php foreach ($produtos->listar() as $key => $value) : ?>
 
                 <div class="produto">
 
@@ -91,9 +96,9 @@ function listavazia()
 
                         <p><?= $value['nome'] ?></p>
 
-                        <form action="editar.php" method="post" class="editar">
+                        <form action="#" method="post" class="editar">
 
-                            <input type="hidden" name="key" value="<?= $key ?>">
+                            <input type="hidden" name="editar_header_key" value="<?= $key ?>">
 
                             <button type="submit">Editar</button>
 
@@ -111,7 +116,7 @@ function listavazia()
 
                             <form action="#" method="post">
 
-                                <input type="hidden" name="deletar" value="<?= $key ?>">
+                                <input type="hidden" name="deletar_key" value="<?= $key ?>">
 
                                 <button type="submit">Deletar</button>
 

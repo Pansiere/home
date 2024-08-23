@@ -22,22 +22,8 @@ if (isset($_POST['nome'])) {
     );
 }
 
-/*
-if (isset($_POST['editar'])) {
+echo $produtos->listar()[1]['nome'];
 
-    $_SESSION['produtos'][$_POST['key']] = [
-        'nome' => $_POST['nome'],
-        'sku' => $_POST['sku'],
-        'unidade_medida_id' => $_POST['udm'],
-        'valor' => $_POST['valor'],
-        'quantidade' => $_POST['quantidade'],
-        'categoria_id' => $_POST['categoria'],
-    ];
-
-    header('Location: listagem.php');
-    exit();
-}
-*/
 ?>
 
 <!DOCTYPE html>

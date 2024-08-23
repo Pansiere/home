@@ -2,20 +2,19 @@
 
 namespace Pansiere\Crud;
 
-class Produtos
+class ProdutosBK
 {
     public function listar(): array
     {
         return $_SESSION['produtos'];
     }
 
-    public function criar()
+    public function criar() //redireciona para formulario.php
     {
-        header('Location: formulario.php');
-        exit();
+        $a = 'a';
     }
 
-    public function salvar(int $id, string $nome, string $sku, string $unidade_medida_id, float $valor, int $quantidade, string $categoria_id)
+    public function salvar(int $id, string $nome, string $sku, string $unidade_medida_id, float $valor, int $quantidade, string $categoria_id) //botao SALVAR item em formulario.php
     {
         $_SESSION['produtos'][] = [
             'id' => $id,
@@ -31,13 +30,12 @@ class Produtos
         exit();
     }
 
-    public function editar($key)
+    public function editar() //redireciona para editar.php
     {
-        header('Location: editar.php?key=' . urlencode($key));
-        exit();
+        $a = 'a';
     }
 
-    public function atualizar($key, int $id, string $nome, string $sku, string $unidade_medida_id, float $valor, int $quantidade, string $categoria_id)
+    public function atualizar($key, int $id, string $nome, string $sku, string $unidade_medida_id, float $valor, int $quantidade, string $categoria_id) //botao EDITAR/ATUALIZAR item em editar.php
     {
         $_SESSION['produtos'][$key] = [
             'id' => $id,
@@ -53,10 +51,9 @@ class Produtos
         exit();
     }
 
-    public function deletar($key)
+    public function deletar($key) //botao DELETAR item em listagem.php
     {
         unset($_SESSION['produtos'][$key]);
         header('Location: listagem.php');
-        exit();
     }
 };
