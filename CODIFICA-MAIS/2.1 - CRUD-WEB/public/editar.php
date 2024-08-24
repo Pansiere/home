@@ -27,8 +27,6 @@ if (isset($_SESSION['editar_key'])) {
     }
 }
 
-echo $produtos->listar()[1]['nome'];
-
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +51,7 @@ echo $produtos->listar()[1]['nome'];
             <div class="nome_do_item">
                 <p>Nome do item</p>
 
-                <input type="text" id="nome" name="nome" value="<?= $_SESSION['produtos'][$key]['nome'] ?>" required>
+                <input type="text" id="nome" name="nome" value="<?= $produtos->listar()[$key]['nome'] ?>" required>
 
             </div>
 
@@ -61,13 +59,13 @@ echo $produtos->listar()[1]['nome'];
                 <div class="sku">
                     <p>SKU</p>
 
-                    <input type="text" id="sku" name="sku" value="<?= $_SESSION['produtos'][$_POST['key']]['sku'] ?>" required>
+                    <input type="text" id="sku" name="sku" value="<?= $_SESSION['produtos'][$key]['sku'] ?>" required>
                 </div>
 
                 <div class="udm">
                     <p>Unidade de Medida</p>
 
-                    <input type="text" id="udm" name="udm" value="<?= $_SESSION['unidades_medidas'][$_SESSION['produtos'][$_POST['key']]['unidade_medida_id']] ?>" required>
+                    <input type="text" id="udm" name="udm" value="<?= $_SESSION['unidades_medidas'][$produtos->listar()[$key]['unidade_medida_id']] ?>" required>
                 </div>
             </div>
 
@@ -75,13 +73,13 @@ echo $produtos->listar()[1]['nome'];
                 <div class="valor">
                     <p>Valor</p>
 
-                    <input type="text" id="valor" name="valor" value="<?= $_SESSION['produtos'][$_POST['key']]['valor'] ?>" required>
+                    <input type="text" id="valor" name="valor" value="<?= $produtos->listar()[$key]['valor'] ?>" required>
                 </div>
 
                 <div class="quantidade">
                     <p>Quantidade Estoque</p>
 
-                    <input type="text" id="quantidade" name="quantidade" value="<?= $_SESSION['produtos'][$_POST['key']]['quantidade'] ?>" required>
+                    <input type="text" id="quantidade" name="quantidade" value="<?= $produtos->listar()[$key]['quantidade'] ?>" required>
                 </div>
             </div>
 
