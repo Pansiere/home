@@ -32,6 +32,10 @@ switch ($page) {
         $produtos->deletar($_POST['produto_id']);
         break;
 
+    case "/atualizar":
+        $produtos->atualizar($_POST);
+        break;
+
     default:
         $produtos->listar();
 }

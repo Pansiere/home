@@ -43,8 +43,25 @@ class Produtos
         $produtos = $this;
         require __DIR__ . "/../public/formulario.php";
     }
-    public function atualizar() # atualiza os dados que ele editou 
-    {}
+    public function atualizar(): void # atualiza os dados que ele editou 
+    {
+        var_dump($_POST);
+        // $sql = "UPDATE `produtos`
+        //     SET `nome` = ?,`sku` = ?, `valor` = ?, `quantidade` = ?, `unidade_medida_id` = ?, `categoria_id` = ?
+        //     WHERE `produtos`.`id` = ?;";
+        // $statement = $this->pdo->prepare($sql);
+        // $statement->bindValue(1, $_POST);
+        // $statement->bindValue(2, $_POST);
+        // $statement->bindValue(3, $_POST);
+        // $statement->bindValue(4, $_POST);
+        // $statement->bindValue(5, $_POST);
+        // $statement->bindValue(6, $_POST);
+        // $statement->bindValue(7, $_POST);
+        // $statement->execute();
+
+        // // header("Location: /listagem");
+        // // exit;
+    }
 
     public function deletar($id): void
     {

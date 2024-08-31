@@ -134,4 +134,5 @@ body {
 .unidade_medida_id {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
