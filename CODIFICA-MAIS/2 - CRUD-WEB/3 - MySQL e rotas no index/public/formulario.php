@@ -9,47 +9,33 @@
 </head>
 
 <body>
-
     <div class="corpo">
-
         <h1>Novo Item</h1>
-
         <form class="forma" action="/salvar" method="post">
-
             <div class="nome_do_item">
                 <p>Nome do item</p>
-
                 <input type="text" id="nome" name="nome" required>
             </div>
-
             <div class="sku_e_udm">
                 <div class="sku">
                     <p>SKU</p>
-
                     <input type="text" id="sku" name="sku" required>
                 </div>
-
                 <div class="udm">
                     <p>Unidade de Medida</p>
-
                     <input type="text" id="udm" name="udm" required>
                 </div>
             </div>
-
             <div class="valor_e_quantidade">
                 <div class="valor">
                     <p>Valor</p>
-
                     <input type="text" id="valor" name="valor" required>
                 </div>
-
                 <div class="quantidade">
                     <p>Quantidade</p>
-
                     <input type="text" id="quantidade" name="quantidade" required>
                 </div>
             </div>
-
             <div class="categoria">
                 <label for="categoria_id">Categoria</label>
                 <select name="categoria_id" id="categoria_id" required>
@@ -61,16 +47,11 @@
                     <option value="6">Outros</option>
                 </select>
             </div>
-
             <div class="botao-cadastrar">
                 <input class="input-botao-cadastrar" type="submit" name="editar" value="Criar item" />
             </div>
-
         </form>
-
-
     </div>
-
 </body>
 
 </html>
