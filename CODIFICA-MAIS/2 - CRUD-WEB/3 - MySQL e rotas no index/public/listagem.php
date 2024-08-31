@@ -29,13 +29,10 @@
             <?php foreach ($produtos->listarTodos() as $key => $value) : ?>
 
                 <?php
-
                 // var_dump($value);
                 // echo "\n\n\n";
                 // var_dump($_POST);
-
                 ?>
-
 
                 <div class="produto">
                     <div class="infos_lado_direito">
