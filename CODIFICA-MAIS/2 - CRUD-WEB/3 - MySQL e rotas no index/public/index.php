@@ -24,6 +24,10 @@ switch ($page) {
         $produtos->salvar();
         break;
 
+    case "/deletar":
+        $produtos->deletar($_POST['produto_id']);
+        break;
+
     default:
         $produtos->listar();
 }

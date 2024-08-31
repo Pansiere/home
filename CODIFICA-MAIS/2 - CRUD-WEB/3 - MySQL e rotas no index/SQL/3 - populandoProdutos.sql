@@ -1,0 +1,22 @@
+INSERT INTO `crud_web`.`produtos`(`nome`, `sku`, `valor`, `quantidade`, `unidade_medida_id`, `categoria_id`)
+VALUES
+('Smartphone', '123456', 1500, 10, 1, 1),
+('Geladeira', '1234567', 2500, 5, 2, 2),
+('Mesa PC','3124673',300,20,7,3),
+('Tapete Verde','8483743',90,25,8,4),
+('Blusa CODIFICA-MAIS','TopDasGalaxias',999,1,3,5),
+('Impressora Laser', '334455', 1500, 9, 1, 1),
+('Máquina de Lavar', '556677', 2200, 4, 2, 2),
+('Estante de Madeira', '778899', 800, 7, 7, 3),
+('Vaso de Plantas', '990011', 85, 50, 8, 4),
+('Bermuda Tactel', '223344', 130, 40, 3, 5),
+('TV 4K', '777777', 3000, 7, 1, 1),
+('Fogão 5 Bocas', '888888', 1200, 10, 2, 2),
+('Sofá 3 Lugares', '999000', 2500, 5, 7, 3),
+('Quadro Decorativo', '111222', 450, 15, 8, 4),
+('Camisa Polo', '112233', 120, 25, 3, 5),
+('Notebook Gamer', '999999', 4500, 15, 1, 1),
+('Micro-ondas', '333333', 800, 8, 2, 2),
+('Cadeira de Escritório', '444444', 700, 12, 7, 3),
+('Cortina Azul', '555555', 150, 20, 8, 4),
+('Calça Jeans', '666666', 200, 30, 3, 5);

@@ -22,3 +22,9 @@ CREATE TABLE IF NOT EXISTS `crud_web`.`produtos` (
     FOREIGN KEY (`unidade_medida_id`) REFERENCES `unidades_medidas`(`id`),
     FOREIGN KEY (`categoria_id`) REFERENCES `categorias`(`id`)
 );
+
+INSERT INTO `crud_web`.`unidades_medidas`(`unidade_medida`)
+VALUES ('Un'),('Kg'),('g'),('L'),('mm'),('cm'),('m'),('m²');
+
+INSERT INTO `crud_web`.`categorias`(`categoria`) 
+VALUES ('Eletrônicos'),('Eletrodomésticos'),('Móveis'),('Decoração'),('Vestuário'),('Outros');

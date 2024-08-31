@@ -24,15 +24,25 @@
                 </div>
             </div>
         </div>
-        <p class="msg_estoque_vazio"> <?= 'a' ?> </p>
+        <p class="msg_estoque_vazio"> <?= 'msg estoque vazio' ?> </p>
         <div class="scroll">
             <?php foreach ($produtos->listarTodos() as $key => $value) : ?>
+
+                <?php
+
+                // var_dump($value);
+                // echo "\n\n\n";
+                // var_dump($_POST);
+
+                ?>
+
+
                 <div class="produto">
                     <div class="infos_lado_direito">
                         <div class="primeira_linha">
-                            <p class="id">#00000<?= $key + 1 ?></p>
+                            <p class="id">#00000<?= $value['id'] ?></p>
                             <div class="categoria<?= $value['categoria_id'] ?>">
-                                <p><?= $value['categoria_id'] ?></p>
+                                <p><?= $value['categoria'] ?></p>
                             </div>
                         </div>
                         <p><?= $value['nome'] ?></p>
@@ -45,8 +55,8 @@
                         <p class="sku">SKU: <?= $value['sku'] ?></p>
                         <p>Quantidade: <?= $value['quantidade'] ?></p>
                         <div class="deletar">
-                            <form action="#" method="post">
-                                <input type="hidden" name="deletar_key" value="<?= $key ?>">
+                            <form action="/deletar" method="post">
+                                <input type="hidden" name="produto_id" value="<?= $value['id'] ?>">
                                 <button type="submit">Deletar</button>
                             </form>
                         </div>
