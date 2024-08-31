@@ -10,20 +10,30 @@
 
 <body>
     <div class="corpo">
-        <h1>Novo Item</h1>
+        <div class="cima">
+            <h1><?= $produto_id ? 'Editar Item' : 'Novo Item' ?></h1>
+            <a href="/listagem"> VOLTAR </a>
+        </div>
         <form class="forma" action="/salvar" method="post">
             <div class="nome_do_item">
                 <p>Nome do item</p>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" value="<?= $produto_id ? $produtos->buscarPorId($produto_id)['nome'] : '' ?>" required>
             </div>
             <div class="sku_e_udm">
                 <div class="sku">
                     <p>SKU</p>
-                    <input type="text" id="sku" name="sku" required>
+                    <input type="text" id="sku" name="sku" value="<?= $produto_id ? $produtos->buscarPorId($produto_id)['sku'] : '' ?>" required>
                 </div>
-                <div class="udm">
-                    <p>Unidade de Medida</p>
-                    <input type="text" id="udm" name="udm" required>
+                <div class="unidade_medida_id">
+                    <label for="unidade_medida_id">Unidade de medida</label>
+                    <select name="unidade_medida_id" id="unidade_medida_id" required>
+                        <option value="1">Eletrônicos</option>
+                        <option value="2">Eletrodomésticos</option>
+                        <option value="3">Móveis</option>
+                        <option value="4">Decoração</option>
+                        <option value="5">Vestuário</option>
+                        <option value="6">Outros</option>
+                    </select>
                 </div>
             </div>
             <div class="valor_e_quantidade">
@@ -55,3 +65,6 @@
 </body>
 
 </html>
+
+<?php
+var_dump($_POST);

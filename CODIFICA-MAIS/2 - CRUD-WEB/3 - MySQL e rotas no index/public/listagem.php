@@ -27,13 +27,6 @@
         <p class="msg_estoque_vazio"> <?= 'msg estoque vazio' ?> </p>
         <div class="scroll">
             <?php foreach ($produtos->listarTodos() as $key => $value) : ?>
-
-                <?php
-                // var_dump($value);
-                // echo "\n\n\n";
-                // var_dump($_POST);
-                ?>
-
                 <div class="produto">
                     <div class="infos_lado_direito">
                         <div class="primeira_linha">
@@ -43,8 +36,8 @@
                             </div>
                         </div>
                         <p><?= $value['nome'] ?></p>
-                        <form action="#" method="post" class="editar">
-                            <input type="hidden" name="editar_header_key" value="<?= $key ?>">
+                        <form action="/editar" method="post" class="editar">
+                            <input type="hidden" name="produto_id" value="<?= $value['id'] ?>">
                             <button type="submit">Editar</button>
                         </form>
                     </div>

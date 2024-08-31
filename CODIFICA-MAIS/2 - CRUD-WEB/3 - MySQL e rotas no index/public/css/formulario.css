@@ -124,3 +124,14 @@ body {
   border: 1px solid black;
   margin-bottom: 20px;
 }
+
+.cima {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.unidade_medida_id {
+  display: flex;
+  flex-direction: column;
+}

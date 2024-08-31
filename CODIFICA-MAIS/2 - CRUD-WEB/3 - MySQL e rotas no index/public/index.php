@@ -20,6 +20,10 @@ switch ($page) {
         $produtos->criar();
         break;
 
+    case "/editar":
+        $produtos->editar($_POST['produto_id']);
+        break;
+
     case "/salvar":
         $produtos->salvar();
         break;

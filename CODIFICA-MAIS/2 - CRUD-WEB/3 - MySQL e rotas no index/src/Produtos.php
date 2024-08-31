@@ -29,17 +29,22 @@ class Produtos
         return $dados;
     }
 
-    public function criar(): void
+    public function criar(): void # joga a tela de formulario para
     {
         $produtos = $this;
         require __DIR__ . "/../public/formulario.php";
     }
 
-    public function salvar() {}
+    public function salvar() # pega os dados do formulario e joga no array da session
+    {}
 
-    public function editar() {}
-
-    public function atualizar() {}
+    public function editar($produto_id): void # joga a tela de formulario, com os dados do item q ele escolheu
+    {
+        $produtos = $this;
+        require __DIR__ . "/../public/formulario.php";
+    }
+    public function atualizar() # atualiza os dados que ele editou 
+    {}
 
     public function deletar($id): void
     {
@@ -50,5 +55,14 @@ class Produtos
 
         header("Location: /listagem");
         exit;
+    }
+
+    public function buscarPorId($produto_id): array
+    {
+        $sql = "SELECT * FROM produtos WHERE id = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute([$produto_id]);
+
+        return $statement->fetch(PDO::FETCH_ASSOC);
     }
 };
