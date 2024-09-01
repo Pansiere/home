@@ -33,7 +33,7 @@ switch ($page) {
         break;
 
     case "/atualizar":
-        $produtos->atualizar($_POST);
+        $produtos->atualizar();
         break;
 
     default:
