@@ -29,38 +29,50 @@ class Produtos
         return $dados;
     }
 
-    public function criar(): void # joga a tela de formulario para
+    public function criar(): void
     {
         $produtos = $this;
         require __DIR__ . "/../public/formulario.php";
     }
 
-    public function salvar() # pega os dados do formulario e joga no array da session
-    {}
+    public function salvar(): void
+    {
+        $sql = "INSERT INTO `produtos`(`nome`, `sku`, `valor`, `quantidade`, `unidade_medida_id`, `categoria_id`) VALUES (?,?,?,?,?,?)";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1, $_POST['nome']);
+        $statement->bindValue(2, $_POST['sku']);
+        $statement->bindValue(3, $_POST['valor']);
+        $statement->bindValue(4, $_POST['quantidade']);
+        $statement->bindValue(5, $_POST['unidade_medida_id']);
+        $statement->bindValue(6, $_POST['categoria_id']);
+        $statement->execute();
 
-    public function editar($produto_id): void # joga a tela de formulario, com os dados do item q ele escolheu
+        header("Location: /listagem");
+        exit;
+    }
+
+    public function editar($produto_id): void
     {
         $produtos = $this;
         require __DIR__ . "/../public/formulario.php";
     }
-    public function atualizar(): void # atualiza os dados que ele editou 
+    public function atualizar(): void
     {
-        var_dump($_POST);
-        // $sql = "UPDATE `produtos`
-        //     SET `nome` = ?,`sku` = ?, `valor` = ?, `quantidade` = ?, `unidade_medida_id` = ?, `categoria_id` = ?
-        //     WHERE `produtos`.`id` = ?;";
-        // $statement = $this->pdo->prepare($sql);
-        // $statement->bindValue(1, $_POST);
-        // $statement->bindValue(2, $_POST);
-        // $statement->bindValue(3, $_POST);
-        // $statement->bindValue(4, $_POST);
-        // $statement->bindValue(5, $_POST);
-        // $statement->bindValue(6, $_POST);
-        // $statement->bindValue(7, $_POST);
-        // $statement->execute();
+        $sql = "UPDATE `produtos`
+            SET `nome` = ?,`sku` = ?, `valor` = ?, `quantidade` = ?, `unidade_medida_id` = ?, `categoria_id` = ?
+            WHERE `produtos`.`id` = ?;";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1, $_POST['nome']);
+        $statement->bindValue(2, $_POST['sku']);
+        $statement->bindValue(3, $_POST['valor']);
+        $statement->bindValue(4, $_POST['quantidade']);
+        $statement->bindValue(5, $_POST['unidade_medida_id']);
+        $statement->bindValue(6, $_POST['categoria_id']);
+        $statement->bindValue(7, $_POST['id']);
+        $statement->execute();
 
-        // // header("Location: /listagem");
-        // // exit;
+        header("Location: /listagem");
+        exit;
     }
 
     public function deletar($id): void
