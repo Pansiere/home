@@ -24,7 +24,9 @@
                 </div>
             </div>
         </div>
-        <p class="msg_estoque_vazio"> <?= 'msg estoque vazio' ?> </p>
+
+        <p class="msg_estoque_vazio"> <?= $produtos->checarEstoque() ?> </p>
+
         <div class="scroll">
             <?php foreach ($produtos->listarTodos() as $key => $value) : ?>
                 <div class="produto">

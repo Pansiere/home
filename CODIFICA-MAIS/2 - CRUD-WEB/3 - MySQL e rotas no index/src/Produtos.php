@@ -47,8 +47,8 @@ class Produtos
         $statement->bindValue(6, $_POST['categoria_id']);
         $statement->execute();
 
-        header("Location: /listagem");
-        exit;
+        $produtos = $this;
+        require __DIR__ . "/../public/listagem.php";
     }
 
     public function editar($produto_id): void
@@ -71,8 +71,8 @@ class Produtos
         $statement->bindValue(7, $_POST['id']);
         $statement->execute();
 
-        header("Location: /listagem");
-        exit;
+        $produtos = $this;
+        require __DIR__ . "/../public/listagem.php";
     }
 
     public function deletar($id): void
@@ -82,8 +82,8 @@ class Produtos
         $statement->bindValue(1, $id);
         $statement->execute();
 
-        header("Location: /listagem");
-        exit;
+        $produtos = $this;
+        require __DIR__ . "/../public/listagem.php";
     }
 
     public function buscarPorId($produto_id): array
@@ -94,4 +94,14 @@ class Produtos
 
         return $statement->fetch(PDO::FETCH_ASSOC);
     }
-};
+
+    public function checarEstoque(): string
+    {
+        $sql = "SELECT * FROM produtos";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return empty($result) ? "Sem produtos no estoque" : "";
+    }
+}

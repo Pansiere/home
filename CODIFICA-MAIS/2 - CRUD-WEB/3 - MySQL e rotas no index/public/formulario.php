@@ -12,7 +12,7 @@
     <div class="corpo">
         <div class="cima">
             <h1><?= $produto_id ? 'Editar Item' : 'Novo Item' ?></h1>
-            <a href="/listagem"> VOLTAR </a>
+            <a class="botoes_voltar" href="/listagem" type="submit"> VOLTAR </a>
         </div>
         <form class="forma" action="<?= $produto_id ? '/atualizar' : '/salvar' ?>" method="post">
             <div class="nome_do_item">
@@ -68,6 +68,3 @@
 </body>
 
 </html>
-
-<?php
-var_dump($_POST);

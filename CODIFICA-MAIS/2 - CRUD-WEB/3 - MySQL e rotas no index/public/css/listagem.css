@@ -45,6 +45,11 @@ body {
   color: blue;
   padding: 4px;
   margin-right: 20vh;
+  margin-top: 3vh;
+}
+
+.botoes_action_novo_item {
+  text-decoration: none;
 }
 
 .botoes_novo_item button {

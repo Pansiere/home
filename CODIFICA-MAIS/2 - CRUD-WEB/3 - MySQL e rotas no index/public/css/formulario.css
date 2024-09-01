@@ -14,6 +14,17 @@ body {
   flex-direction: column;
 }
 
+.botoes_voltar {
+  color: rgb(25, 78, 224);
+  font-size: medium;
+  background-color: none;
+  border: 1px solid rgb(25, 78, 224);
+  border-radius: 10px;
+  padding: 4px;
+  text-decoration: none;
+  margin-top: 1vh;
+}
+
 .corpo {
   display: flex;
   flex-direction: column;
@@ -45,10 +56,12 @@ body {
 .sku_e_udm {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .sku {
+  width: 45%;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -61,6 +74,7 @@ body {
 }
 
 .udm {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -76,12 +90,14 @@ body {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .valor {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 45%;
 }
 
 #valor {
@@ -94,6 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 45%;
 }
 
 #quantidade {
@@ -128,11 +145,38 @@ body {
 .cima {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .unidade_medida_id {
+  width: 45%;
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.unidade_medida_id select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background-color: white;
+}
+
+.categoria {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.categoria select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background-color: white;
 }
