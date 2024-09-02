@@ -31,6 +31,7 @@ class Produtos
 
     public function criar(): void
     {
+        $produto_id = null;
         $produtos = $this;
         require __DIR__ . "/../public/formulario.php";
     }
@@ -47,8 +48,8 @@ class Produtos
         $statement->bindValue(6, $_POST['categoria_id']);
         $statement->execute();
 
-        $produtos = $this;
-        require __DIR__ . "/../public/listagem.php";
+        header("location: /");
+        exit();
     }
 
     public function editar($produto_id): void
@@ -71,19 +72,19 @@ class Produtos
         $statement->bindValue(7, $_POST['id']);
         $statement->execute();
 
-        $produtos = $this;
-        require __DIR__ . "/../public/listagem.php";
+        header("location: /");
+        exit();
     }
 
-    public function deletar($id): void
+    public function deletar($produto_id): void
     {
         $sql = "DELETE FROM produtos WHERE id = ?";
         $statement = $this->pdo->prepare($sql);
-        $statement->bindValue(1, $id);
+        $statement->bindValue(1, $produto_id);
         $statement->execute();
 
-        $produtos = $this;
-        require __DIR__ . "/../public/listagem.php";
+        header("location: /");
+        exit();
     }
 
     public function buscarPorId($produto_id): array
