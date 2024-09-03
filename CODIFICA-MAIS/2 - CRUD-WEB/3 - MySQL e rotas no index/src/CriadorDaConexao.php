@@ -9,7 +9,7 @@ class CriadorDaConexao
     public static function createConnection(): PDO
     {
         $connection = new PDO(
-            'mysql:host=172.17.0.2;dbname=crud_web',
+            'mysql:host=172.29.0.2;dbname=crud_web',
             'root',
             'password'
         );

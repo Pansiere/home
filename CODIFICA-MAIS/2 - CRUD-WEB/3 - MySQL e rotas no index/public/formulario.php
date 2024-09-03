@@ -60,7 +60,7 @@
                 </select>
             </div>
             <div class="botao-cadastrar">
-                <input type="hidden" id="id" name="id" value="<?= $produto_id ? $produtos->buscarPorId($produto_id)['id'] : '' ?>">
+                <input type="hidden" id="produto_id" name="produto_id" value="<?= $produto_id ? $produtos->buscarPorId($produto_id)['id'] : '' ?>">
                 <input class="input-botao-cadastrar" type="submit" name="<?= $produto_id ? 'atualizar' : 'salvar' ?>" value="<?= $produto_id ? 'Atualizar' : 'Salvar' ?>" />
             </div>
         </form>
