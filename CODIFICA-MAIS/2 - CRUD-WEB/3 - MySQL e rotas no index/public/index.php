@@ -3,6 +3,7 @@ session_start();
 require_once '../vendor/autoload.php';
 
 use Pansiere\Crud\Produtos;
+use Pansiere\Crud\CriadorDaConexao;
 
 $uri = strtok($_SERVER['REQUEST_URI'], '?');
 $page = rtrim($uri, '/') ?: '/';
