@@ -38,12 +38,12 @@ body {
 }
 
 .botoes_novo_item button {
-  border: none; /* Remove a borda padrão do botão */
-  background-color: transparent; /* Torna o fundo do botão transparente, se desejar */
-  color: #000000c9; /* Cor do texto do botão, ajuste conforme necessário */
-  cursor: pointer; /* Altera o cursor para indicar que é clicável */
-  padding: 0; /* Remove o padding padrão, ajuste conforme necessário */
-  font: inherit; /* Mantém a fonte herdada do elemento pai */
+  border: none;
+  background-color: transparent;
+  color: #000000c9;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
 }
 
 .produto {
@@ -125,12 +125,12 @@ body {
 }
 
 .editar button {
-  border: none; /* Remove a borda padrão do botão */
-  background-color: transparent; /* Torna o fundo do botão transparente, se desejar */
-  color: #000000c9; /* Cor do texto do botão, ajuste conforme necessário */
-  cursor: pointer; /* Altera o cursor para indicar que é clicável */
-  padding: 0; /* Remove o padding padrão, ajuste conforme necessário */
-  font: inherit; /* Mantém a fonte herdada do elemento pai */
+  border: none;
+  background-color: transparent;
+  color: #000000c9;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
 }
 
 .deletar {
