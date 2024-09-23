@@ -2,9 +2,9 @@
 
 $arquivo = fopen('lista-cursos.txt', 'r');
 
-while (!feof($arquivo)) {
-    $curso = fgets($arquivo);
-    echo $curso;
-};
+$tamaconhoDoArquivo = filesize('lista-cursos.txt');
+$cursos = fread($arquivo, $tamaconhoDoArquivo);
+
+echo $cursos;
 
 fclose($arquivo);
