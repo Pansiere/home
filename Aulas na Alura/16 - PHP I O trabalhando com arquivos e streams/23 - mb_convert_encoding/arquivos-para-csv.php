@@ -8,7 +8,14 @@ $outrosCursos = file('cursos-php.txt');
 $arquivoCsv = fopen('cursos.csv', 'w');
 
 foreach ($meusCursos as $curso) {
-    $linha = [trim(utf8_decode($curso)), 'Sim'];
+    $linha = [
+        trim(mb_convert_encoding(
+            $curso,
+            'Windows-1252',
+            'UTF-8'
+        )),
+        'Sim'
+    ];
 
     fputcsv($arquivoCsv, $linha, ';');
 
@@ -16,7 +23,15 @@ foreach ($meusCursos as $curso) {
 }
 
 foreach ($outrosCursos as $curso) {
-    $linha = [trim(utf8_decode($curso)), utf8_decode('Não')];
+    $linha = [trim(mb_convert_encoding(
+        $curso,
+        'UTF-8',
+        'Windows-1252'
+    )), mb_convert_encoding(
+        'Não',
+        'UTF-8',
+        'Windows-1252'
+    )];
 
     fputcsv($arquivoCsv, $linha, ';');
 }
