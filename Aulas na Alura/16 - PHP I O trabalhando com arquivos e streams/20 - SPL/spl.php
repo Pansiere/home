@@ -2,6 +2,8 @@
 
 $arquivoCursos = new SplFileObject('cursos.csv');
 
+var_dump($arquivoCursos);
+
 while (!$arquivoCursos->eof()) {
     $linha = $arquivoCursos->fgetcsv(';');
 
