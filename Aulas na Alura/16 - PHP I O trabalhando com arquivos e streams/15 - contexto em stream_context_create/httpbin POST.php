@@ -7,4 +7,8 @@ $contexto = stream_context_create([
         'content' => 'Teste do corpo'
     ]
 ]);
-echo file_get_contents('http://httpbin.org/post ', false, $contexto);
+echo file_get_contents(
+    'http://httpbin.org/post ',
+    false,
+    $contexto
+);

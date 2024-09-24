@@ -6,4 +6,8 @@ $contexto = stream_context_create([
         'header' => 'X-From: PHP'
     ]
 ]);
-echo file_get_contents('http://httpbin.org/delete ', false, $contexto);
+echo file_get_contents(
+    'http://httpbin.org/delete ',
+    false,
+    $contexto
+);
