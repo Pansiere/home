@@ -1,0 +1,17 @@
+{
+    "name": "pansiere/controle_financeiro",
+    "description": "Desafio: Sistema de Controle De Despesas Pessoais com PHP e MySQL",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pansiere\\ControleFinanceiro\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Pedro V. Pansiere",
+            "email": "ojp027@gmail.com"
+        }
+    ],
+    "require": {}
+}
