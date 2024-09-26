@@ -12,5 +12,3 @@ var_dump($_FILES);
 echo is_uploaded_file($_FILES['arquivo']);
 
 var_dump(move_uploaded_file($_FILES['arquivo']['tmp_name'], __DIR__ . '/a.pdf'));
-
-echo __DIR__;
