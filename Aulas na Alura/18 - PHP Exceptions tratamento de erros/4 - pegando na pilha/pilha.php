@@ -3,19 +3,24 @@
 function funcao1(): void
 {
     echo 'Entrei na função 1' . PHP_EOL;
+
     try {
-        $arrayFixo = new SplFixedArray(2);
-        $arrayFixo[3] = 'Valor';
+        funcao2();
     } catch (RuntimeException $problema) {
-        echo "Aconteceu um erro na função 1" . PHP_EOL;
+        echo "Na função 1, eu resolvi o problema da função 2" . PHP_EOL;
     }
-    funcao2();
+
     echo 'Saindo da função 1' . PHP_EOL;
 }
 
 function funcao2(): void
 {
     echo 'Entrei na função 2' . PHP_EOL;
+
+    $divicao = intdiv(5, 0);
+    $arrayFixo = new SplFixedArray(2);
+    $arrayFixo[3] = 'Valor';
+
     for ($i = 1; $i <= 5; $i++) {
         echo $i . PHP_EOL;
     }
