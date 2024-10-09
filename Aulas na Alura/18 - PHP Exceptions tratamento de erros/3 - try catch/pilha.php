@@ -3,6 +3,12 @@
 function funcao1(): void
 {
     echo 'Entrei na função 1' . PHP_EOL;
+    try {
+        $arrayFixo = new SplFixedArray(2);
+        $arrayFixo[3] = 'Valor';
+    } catch (RuntimeException $problema) {
+        echo "Aconteceu um erro na função 1" . PHP_EOL;
+    }
     funcao2();
     echo 'Saindo da função 1' . PHP_EOL;
 }
@@ -13,7 +19,6 @@ function funcao2(): void
     for ($i = 1; $i <= 5; $i++) {
         echo $i . PHP_EOL;
     }
-    var_dump(debug_backtrace());
     echo 'Saindo da função 2' . PHP_EOL;
 }
 
