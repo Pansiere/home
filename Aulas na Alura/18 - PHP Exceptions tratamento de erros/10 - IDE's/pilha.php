@@ -6,8 +6,10 @@ function funcao1(): void
 
     try {
         funcao2();
-    } catch (RuntimeException | DivisionByZeroError $problema) {
-        echo $problema->getMessage() . PHP_EOL;
+    } catch (RuntimeException | DivisionByZeroError $erroOuExecao) {
+        echo $erroOuExecao->getMessage() . PHP_EOL;
+        echo $erroOuExecao->getLine() . PHP_EOL;
+        echo $erroOuExecao->getTraceAsString() . PHP_EOL;
     }
 
     echo 'Saindo da função 1' . PHP_EOL;
@@ -17,13 +19,11 @@ function funcao2(): void
 {
     echo 'Entrei na função 2' . PHP_EOL;
 
-    $arrayFixo = new SplFixedArray(2);
-    $arrayFixo[3] = 'Valor';
-    $divicao = intdiv(5, 0);
+    $exeption = new RuntimeException(message: 'mensagemAquiii');
+    throw $exeption;
+    // throw new RuntimeException();
 
-    for ($i = 1; $i <= 5; $i++) {
-        echo $i . PHP_EOL;
-    }
+
     echo 'Saindo da função 2' . PHP_EOL;
 }
 
