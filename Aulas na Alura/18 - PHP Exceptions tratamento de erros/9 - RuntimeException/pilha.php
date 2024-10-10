@@ -23,7 +23,6 @@ function funcao2(): void
     throw $exeption;
     // throw new RuntimeException();
 
-
     // echo 'Saindo da função 2' . PHP_EOL;
 }
 
