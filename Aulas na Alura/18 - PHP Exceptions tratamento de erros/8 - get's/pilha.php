@@ -8,6 +8,8 @@ function funcao1(): void
         funcao2();
     } catch (RuntimeException | DivisionByZeroError $problema) {
         echo $problema->getMessage() . PHP_EOL;
+        echo $problema->getLine() . PHP_EOL;
+        echo $problema->getTraceAsString() . PHP_EOL;
     }
 
     echo 'Saindo da função 1' . PHP_EOL;
