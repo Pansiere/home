@@ -24,7 +24,7 @@ function funcao2(): void
     // throw new RuntimeException();
 
 
-    echo 'Saindo da função 2' . PHP_EOL;
+    // echo 'Saindo da função 2' . PHP_EOL;
 }
 
 echo 'Iniciando o programa principal' . PHP_EOL;
