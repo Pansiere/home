@@ -1,0 +1,18 @@
+INÍCIO básico:
+    laravel new exemplo-name
+    php artisan migrate
+    php artisan make:controller SeriesControlle
+    php artisan serve --port 80
+;
+
+Criando componentes:
+    php artisan make:component Aleta
+    php artisan make:component Titulo
+;
+
+Criando componentes anônimos:
+    Se quisermos criar um componente anônimo, como nosso layout,
+    poderíamos executar: 
+        php artisan make:component layout –view
+    Como não há classe, podemos deixar o nome em minúsculo mesmo.
+;
