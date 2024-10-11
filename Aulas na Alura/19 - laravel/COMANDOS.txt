@@ -1,4 +1,0 @@
-laravel new exemplo-name
-php artisan migrate
-php artisan make:controller SeriesControlle
-php artisan serve --port 80
