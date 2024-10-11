@@ -9,6 +9,8 @@ class SeriesController extends Controller
     public function index(Request $request): string
     {
         // dd($request);
+        // dd($request->query());
+
         $series = [
             'Punisher',
             'Lost',
