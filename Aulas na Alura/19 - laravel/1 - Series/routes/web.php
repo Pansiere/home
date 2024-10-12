@@ -10,3 +10,4 @@ use App\Http\Controllers\SeriesController;
 Route::get(uri: '/ola', action: [SeriesController::class, 'index']);
 Route::get(uri: '/series', action: [SeriesController::class, 'index']);
 Route::get(uri: '/series/criar', action: [SeriesController::class, 'create']);
+Route::post(uri: '/series/salvar', action: [SeriesController::class, 'store']);
