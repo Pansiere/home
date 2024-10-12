@@ -17,6 +17,7 @@ Criando componentes anônimos:
     Como não há classe, podemos deixar o nome em minúsculo mesmo.
 ;
 
+
 Laravel mix:
     npm install laravel-mix --save-dev
     
