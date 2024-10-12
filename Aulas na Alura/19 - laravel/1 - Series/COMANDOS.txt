@@ -20,7 +20,8 @@ Criando componentes anônimos:
 Laravel mix:
     npm install laravel-mix --save-dev
     
-    Depois crie na raiz do projeto o arquivo webpack.mix.js
+    Depois crie na raiz do projeto o arquivo:
+        webpack.mix.js
     com o seguinte conteúdo:
         const mix = require('laravel-mix');
     Agora nesse arquivo você pode definir todas as configurações
