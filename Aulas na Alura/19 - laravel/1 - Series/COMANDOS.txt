@@ -5,6 +5,7 @@ INÍCIO básico:
     php artisan serve --port 80
 ;
 
+
 Criando componentes:
     php artisan make:component Aleta
     php artisan make:component Titulo
