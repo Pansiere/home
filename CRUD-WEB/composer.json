@@ -1,0 +1,16 @@
+{
+    "name": "pansiere/crud",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pansiere\\Crud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Pedro V. Pansiere",
+            "email": "ojp027@gmail.com"
+        }
+    ],
+    "require": {}
+}
