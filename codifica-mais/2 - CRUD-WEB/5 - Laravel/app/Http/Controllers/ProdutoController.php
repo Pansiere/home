@@ -11,12 +11,15 @@ class ProdutoController extends Controller
 {
     public function index()
     {
-        // dd($produtos = Produto::all());
-        $produtos = DB::table('produtos')
-            ->join('unidades_medidas', 'produtos.unidade_medida_id', '=', 'unidades_medidas.id')
-            ->join('categorias', 'produtos.categoria_id', '=', 'categorias.id')
-            ->select('produtos.*', 'unidades_medidas.unidade_medida', 'categorias.categoria')
-            ->get();
+        // dd(Produto::all());
+        dd(Produto::with('categoria')
+            ->with('unidadeMedida')
+            ->get()->toArray());
+
+        $produtos = Produto::with('categoria')
+            ->with('unidadeMedida')
+            ->get()->toArray();
+
         return view('produtos.index')->with('produtos', $produtos);
         // return redirect('/');
     }
