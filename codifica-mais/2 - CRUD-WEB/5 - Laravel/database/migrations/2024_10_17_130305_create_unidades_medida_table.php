@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 return new class extends Migration
 {
@@ -19,14 +20,46 @@ return new class extends Migration
         });
 
         DB::table('unidades_medidas')->insert([
-            ['unidade_medida' => 'Un'],
-            ['unidade_medida' => 'Kg'],
-            ['unidade_medida' => 'g'],
-            ['unidade_medida' => 'L'],
-            ['unidade_medida' => 'mm'],
-            ['unidade_medida' => 'cm'],
-            ['unidade_medida' => 'm'],
-            ['unidade_medida' => 'm²'],
+            [
+                'unidade_medida' => 'Un',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'unidade_medida' => 'Kg',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'unidade_medida' => 'g',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'unidade_medida' => 'L',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'unidade_medida' => 'mm',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'unidade_medida' => 'cm',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'unidade_medida' => 'm',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'unidade_medida' => 'm²',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
         ]);
     }
 

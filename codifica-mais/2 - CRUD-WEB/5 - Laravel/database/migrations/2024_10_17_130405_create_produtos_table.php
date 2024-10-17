@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 return new class extends Migration
 {
@@ -39,6 +40,8 @@ return new class extends Migration
                 'quantidade' => 10,
                 'unidade_medida_id' => 1,
                 'categoria_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'imagem' => 'imagem/teste',
@@ -48,6 +51,8 @@ return new class extends Migration
                 'quantidade' => 5,
                 'unidade_medida_id' => 1,
                 'categoria_id' => 2,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'imagem' => 'imagem/teste',
@@ -57,6 +62,8 @@ return new class extends Migration
                 'quantidade' => 25,
                 'unidade_medida_id' => 1,
                 'categoria_id' => 3,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'imagem' => 'imagem/teste',
@@ -66,6 +73,8 @@ return new class extends Migration
                 'quantidade' => 100,
                 'unidade_medida_id' => 1,
                 'categoria_id' => 5,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'imagem' => 'imagem/teste',
@@ -75,6 +84,8 @@ return new class extends Migration
                 'quantidade' => 12,
                 'unidade_medida_id' => 1,
                 'categoria_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
         ]);
     }
