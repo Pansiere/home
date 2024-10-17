@@ -4,19 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use Illuminate\Support\Facades\DB;
+
 
 class ProdutoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index(Request $request)
+    public function index()
     {
-        // dd($request);
-        // dd($request->input());
-        // return redirect('/');
-        $produtos = Produto::all();
+        // dd($produtos = Produto::all());
+        $produtos = DB::table('produtos')
+            ->join('unidades_medidas', 'produtos.unidade_medida_id', '=', 'unidades_medidas.id')
+            ->join('categorias', 'produtos.categoria_id', '=', 'categorias.id')
+            ->select('produtos.*', 'unidades_medidas.unidade_medida', 'categorias.categoria')
+            ->get();
         return view('produtos.index')->with('produtos', $produtos);
+        // return redirect('/');
     }
 
     /**

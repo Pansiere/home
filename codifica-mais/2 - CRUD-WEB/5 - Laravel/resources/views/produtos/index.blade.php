@@ -21,7 +21,7 @@
             <div class="produto">
                 <div class="infos_lado_direito">
                     <div class="primeira_linha">
-                        <p class="id">#00000 {{$produto->id}}</p>
+                        <p class="id">#00000{{$produto->id}}</p>
                         <div class="categoria{{$produto->categoria_id}}">
                             <p>{{$produto->categoria}}</p>
                         </div>

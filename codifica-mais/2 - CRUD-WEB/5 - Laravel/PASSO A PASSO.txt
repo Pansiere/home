@@ -7,15 +7,12 @@ FEITO NO EXERCICIO ATUL:
         composer update
         php artisan key:generate
         php artisan config:cache
-
-    3. cria um arquivo migrate para o DB(adicionar a configuracao da tabela no arquivo migration.php que foi gerado em app/migrations/_create_categorias_table.php):
-        php artisan make:migration create_categorias_table 
     
-    4. cria um arquivo migrate para o DB(adicionar a configuracao da tabela no arquivo migration.php que foi gerado em app/migrations/_create_unidades_medidas_table.php):
-        php artisan make:migration create_unidades_medidas_table
-            
-    5. cria o modelo Produto e o parametro -m ja cria o arquivo migrate para o DB(adicionar a configuracao da tabela no arquivo migration.php que foi gerado em app/migrations/_create_produtos_table.php)(configurar o modelo app/Models/Produto.php. Definir as colunas que podem ser atribuídas em massa, usando a propriedade $fillable):
+    5. cria os modelos e os migrations. O parametro -m ja cria o arquivo migrate para o DB(adicionar a configuracao da tabela no arquivo migration.php que foi gerado em app/migrations/*_create_*_table.php)(configurar o modelo app/Models/*.php. Definir as colunas que podem ser atribuídas em massa, usando a propriedade $fillable):
         php artisan make:model Produto -m
+        php artisan make:model Categoria -m
+        php artisan make:model UnidadeMedida -m
+
 
     6. faz o migrate:
         php artisan migrate
@@ -50,17 +47,4 @@ FEITO NO EXERCICIO ATUL:
         npm run dev
 
 
-
-oq sao os componentes?
-
-Criando componentes:
-    php artisan make:component Aleta
-    php artisan make:component Titulo
-;
-
-Criando componentes anônimos:
-    Se quisermos criar um componente anônimo, como nosso layout,
-    poderíamos executar: 
-        php artisan make:component layout –-view
-    Como não há classe, podemos deixar o nome em minúsculo mesmo.
-;
+ACHO QUE DEVO CRIAR UM MODELO CATEGORIAS E  UM MODELO UNIDADE_MEDIDA
