@@ -1,9 +1,33 @@
 FEITO NO EXERCICIO ATUL:
-    laravel new exemplo-name
-    php artisan migrate
-    php artisan make:model Produto -m
-        modificar o conteudo migration  foi gerado pelo parametro -m
-    php artisan make:migration create_categorias_table
+    1.
+        laravel new exemplo-name
+            (cria um projeto novo)
+    2.
+        composer update
+            (caso esteja rodando seu projeto em outra maquina)
+    3. 
+        php artisan make:migration create_categorias_table 
+            (cria um arquivo migrate para o DB)
+            (adicionar a configuracao da tabela no arquivo migration.php que foi gerado em app/migrations/_create_categorias_table.php)
+    4. 
+        php artisan make:migration create_unidades_medidas_table
+            (cria um arquivo migrate para o DB)
+            (adicionar a configuracao da tabela no arquivo migration.php que foi gerado em app/migrations/_create_unidades_medidas_table.php)
+    5.
+        php artisan make:model Produto -m
+            (cria o modelo Produto e o parametro -m ja cria o arquivo migrate para o DB)
+            (adicionar a configuracao da tabela no arquivo migration.php que foi gerado em app/migrations/_create_produtos_table.php)
+            (configurar o modelo app/Models/Produto.php. Definir as colunas que podem ser atribuídas em massa, usando a propriedade $fillable:)
+    6.
+        php artisan migrate
+            (faz o migrate)
+    7.
+        php artisan make:controller ProdutoController --resource
+            (cria o Controller para Gerenciar os Produtos, que vai lidar com as operações CRUD)
+    8. 
+        definir as Rotas no Arquivo de Rotas
+            (no arquivo routes/web.php, adicione as rotas para o controller ProdutoController)
+
 
 INÍCIO básico:
     laravel new exemplo-name
