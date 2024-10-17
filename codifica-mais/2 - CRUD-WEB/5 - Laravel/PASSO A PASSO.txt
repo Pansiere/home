@@ -31,6 +31,9 @@ FEITO NO EXERCICIO ATUL:
     14. iniciar o projeto: 
         sudo php artisan serve --port 80
 
+
+oq sao os componentes?
+
 Criando componentes:
     php artisan make:component Aleta
     php artisan make:component Titulo
