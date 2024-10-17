@@ -21,26 +21,26 @@
             <div class="produto">
                 <div class="infos_lado_direito">
                     <div class="primeira_linha">
-                        <p class="id">#00000{{$produto->id}}</p>
-                        <div class="categoria{{$produto->categoria_id}}">
-                            <p>{{$produto->categoria}}</p>
+                        <p class="id">#00000{{$produto['id']}}</p>
+                        <div class="categoria{{$produto['categoria_id']}}">
+                            <p>{{$produto['categoria']['categoria']}}</p>
                         </div>
                     </div>
-                    <p>{{$produto->nome}}</p>
+                    <p>{{$produto['nome']}}</p>
                     <form action="/editar" method="post" class="editar">
-                        <input type="hidden" name="produto_id" value="{{$produto->id}}">
+                        <input type="hidden" name="produto_id" value="{{$produto['id']}}">
                         <button type="submit">Editar</button>
                     </form>
                 </div>
                 <div class="imagem">
-                    <img src="{{$produto->imagem}}" width="100" height="100" />
+                    <img src="{{$produto['imagem']}}" width="100" height="100" />
                 </div>
                 <div class="infos_lado_esquerdo">
-                    <p class="sku">SKU: {{$produto->sku}}</p>
-                    <p>Quantidade: {{$produto->quantidade}}</p>
+                    <p class="sku">SKU: {{$produto['sku']}}</p>
+                    <p>Quantidade: {{$produto['quantidade']}}</p>
                     <div class="deletar">
                         <form action="/deletar" method="post">
-                            <input type="hidden" name="produto_id" value="{{$produto->id}}">
+                            <input type="hidden" name="produto_id" value="{{$produto['id']}}">
                             <button type="submit">Deletar</button>
                         </form>
                     </div>

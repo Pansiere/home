@@ -11,14 +11,7 @@ class ProdutoController extends Controller
 {
     public function index()
     {
-        // dd(Produto::all());
-        dd(Produto::with('categoria')
-            ->with('unidadeMedida')
-            ->get()->toArray());
-
-        $produtos = Produto::with('categoria')
-            ->with('unidadeMedida')
-            ->get()->toArray();
+        $produtos = Produto::with('categoria')->with('unidadeMedida')->get()->toArray();
 
         return view('produtos.index')->with('produtos', $produtos);
         // return redirect('/');
