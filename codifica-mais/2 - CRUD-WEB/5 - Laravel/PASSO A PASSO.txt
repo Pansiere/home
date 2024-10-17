@@ -2,6 +2,8 @@ FEITO NO EXERCICIO ATUL:
     laravel new exemplo-name
     php artisan migrate
     php artisan make:model Produto -m
+        modificar o conteudo migration  foi gerado pelo parametro -m
+    php artisan make:migration create_categorias_table
 
 INÍCIO básico:
     laravel new exemplo-name
