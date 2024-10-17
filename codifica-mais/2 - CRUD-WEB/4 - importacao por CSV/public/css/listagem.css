@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: Roboto Condensed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.corpo {
+  width: 45%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.027);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1%;
+  justify-content: center;
+  align-items: center;
+}
+
+.msg_estoque_vazio {
+  display: flex;
+  justify-content: center;
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2vh;
+}
+
+.botoes_novo_item {
+  background-color: rgba(0, 0, 255, 0.29);
+  border: 2px solid black;
+  border-color: blue;
+  border-radius: 5px;
+  color: blue;
+  padding: 4px;
+  margin-right: 20vh;
+  margin-top: 3vh;
+}
+
+.botoes_action_novo_item {
+  text-decoration: none;
+}
+
+.botoes_novo_item button {
+  border: none;
+  background-color: transparent;
+  color: #000000c9;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+.produto {
+  display: flex;
+  margin: 2vh;
+  background-color: rgba(0, 0, 0, 0.027);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.produto_linha_1_categoria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto_linha_1_categoria_categoria_e_id {
+  display: flex;
+}
+
+.produto_linha_1_espacamento {
+  display: flex;
+  padding-right: 2vh;
+}
+
+.id {
+  color: rgba(0, 0, 0, 0.363);
+}
+
+.produto_linha_2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+.produto_linha_2_espacamento {
+  display: flex;
+  padding-right: 15vh;
+}
+
+.produto_linha_3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editar {
+  background-color: rgba(77, 66, 66, 0.2);
+  border: 2px solid black;
+  border-color: rgba(77, 66, 66, 0.951);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.editar button {
+  border: none;
+  background-color: transparent;
+  color: #000000c9;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+#busca {
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.deletar {
+  display: inline-block;
+  background-color: rgba(255, 0, 0, 0.29);
+  border: 2px solid black;
+  border-color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  border-radius: 5px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.deletar button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+.deletar {
+  margin: 0;
+}
+
+.infos_lado_direito {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  gap: 10px;
+}
+
+.infos_lado_esquerdo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  width: 50%;
+  gap: 10px;
+}
+
+.primeira_linha {
+  display: flex;
+}
+
+.categoria1 {
+  display: flex;
+  border: 2px solid orange;
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(255, 166, 0, 0.315);
+  color: orange;
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.categoria2 {
+  display: flex;
+  border: 2px solid rgb(174, 0, 255);
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(174, 0, 255, 0.301);
+  color: rgb(174, 0, 255);
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.categoria3 {
+  display: flex;
+  border: 2px solid rgb(255, 0, 55);
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(255, 0, 55, 0.301);
+  color: rgba(255, 0, 55);
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.categoria4 {
+  display: flex;
+  border: 2px solid rgb(0, 140, 255);
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(0, 140, 255, 0.253);
+  color: rgb(0, 140, 255);
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.categoria5 {
+  display: flex;
+  border: 2px solid rgb(98, 238, 33);
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(98, 238, 33, 0.315);
+  color: rgba(98, 238, 33);
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.categoria6 {
+  display: flex;
+  border: 2px solid rgb(134, 134, 134);
+  margin-left: 1vh;
+  border-radius: 6px;
+  background-color: rgba(134, 134, 134, 0.123);
+  color: rgb(134, 134, 134);
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.scroll {
+  width: 95%;
+  height: 80%;
+  overflow-y: scroll;
+  padding: 10px;
+}
