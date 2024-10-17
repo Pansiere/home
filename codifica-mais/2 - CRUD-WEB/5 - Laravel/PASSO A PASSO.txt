@@ -19,10 +19,8 @@ FEITO NO EXERCICIO ATUL:
 
     6. faz o migrate:
         php artisan migrate
-    
 
-    7. criando os LAYOUT (componentes):
-        criar uma pasta chamada
+    7. criando o LAYOUT (componentes):
         php artisan make:component layout -–view
 
     7.1 criar as VIEWS (blade):
@@ -30,9 +28,7 @@ FEITO NO EXERCICIO ATUL:
         No caso desse projeto, por o HTML de:
             'listagem' em resources/views/produtos/index.blade.php
             'formulario' em resources/views/produtos/formulario.blade.php
-
-
-
+        Utilizar o VITE para estilização
 
     8. cria o Controller para Gerenciar os Produtos, que vai lidar com as operações CRUD:
         php artisan make:controller ProdutoController --resource
@@ -43,8 +39,16 @@ FEITO NO EXERCICIO ATUL:
     10. definir as Rotas:
         no arquivo routes/web.php, adicione as rotas para o controller ProdutoController
 
-    14. iniciar o projeto: 
+    11. Isntalar o Node JS e o npm:
+        https://nodejs.org/en/download/package-manager
+        npm install
+
+    12. iniciar o projeto: 
         sudo php artisan serve --port 80
+
+    13. iniciar o VITE: 
+        npm run dev
+
 
 
 oq sao os componentes?

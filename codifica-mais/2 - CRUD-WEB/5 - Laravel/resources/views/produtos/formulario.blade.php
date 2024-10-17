@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/formulario.css" />
-    <title>Formulário de Produto</title>
-</head>
-
-<body>
+<x-layout title="Formulário">
     <div class="container">
         <header class="header">
             <h1><?= $produto_id ? 'Editar Produto' : 'Cadastrar Novo Produto' ?></h1>
@@ -17,6 +7,7 @@
 
         <main class="main-content">
             <form class="form-produto" action="<?= $produto_id ? '/atualizar' : '/salvar' ?>" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="form-group">
                     <label for="nome">Nome do Produto</label>
                     <input type="text" id="nome" name="nome" value="<?= $produto_id ? $produtos->buscarPorId($produto_id)['nome'] : '' ?>" required>
@@ -86,6 +77,4 @@
             </form>
         </section>
     </div>
-</body>
-
-</html>
+</x-layout>

@@ -15,7 +15,8 @@ class ProdutoController extends Controller
         // dd($request);
         // dd($request->input());
         // return redirect('/');
-        return view('produtos.index');
+        $produtos = Produto::all();
+        return view('produtos.index')->with('produtos', $produtos);
     }
 
     /**
