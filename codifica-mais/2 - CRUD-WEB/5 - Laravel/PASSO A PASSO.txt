@@ -3,6 +3,7 @@ FEITO NO EXERCICIO ATUL:
         laravel new exemplo-name
 
     2. caso esteja rodando seu projeto em outra maquina:
+        sudo apt install php8.3-dom
         composer update
         php artisan key:generate
         php artisan config:cache
