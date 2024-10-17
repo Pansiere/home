@@ -5,6 +5,7 @@ FEITO NO EXERCICIO ATUL:
     2. caso esteja rodando seu projeto em outra maquina:
         sudo apt install php8.3-dom
         composer update
+        composer install
         php artisan key:generate
         php artisan config:cache
     
@@ -12,7 +13,6 @@ FEITO NO EXERCICIO ATUL:
         php artisan make:model Produto -m
         php artisan make:model Categoria -m
         php artisan make:model UnidadeMedida -m
-
 
     6. faz o migrate:
         php artisan migrate
@@ -45,6 +45,3 @@ FEITO NO EXERCICIO ATUL:
 
     13. iniciar o VITE: 
         npm run dev
-
-
-ACHO QUE DEVO CRIAR UM MODELO CATEGORIAS E  UM MODELO UNIDADE_MEDIDA
