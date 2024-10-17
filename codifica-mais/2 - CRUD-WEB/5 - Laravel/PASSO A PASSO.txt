@@ -31,14 +31,6 @@ FEITO NO EXERCICIO ATUL:
     14. iniciar o projeto: 
         sudo php artisan serve --port 80
 
-
-INÍCIO básico:
-    laravel new exemplo-name
-    php artisan migrate
-    php artisan make:controller SeriesControlle
-    php artisan serve --port 80
-;
-
 Criando componentes:
     php artisan make:component Aleta
     php artisan make:component Titulo
@@ -49,51 +41,4 @@ Criando componentes anônimos:
     poderíamos executar: 
         php artisan make:component layout –view
     Como não há classe, podemos deixar o nome em minúsculo mesmo.
-;
-
-Laravel mix:
-    npm install laravel-mix --save-dev
-    
-    Depois crie na raiz do projeto o arquivo:
-        webpack.mix.js
-    com o seguinte conteúdo:
-        const mix = require('laravel-mix');
-    Agora nesse arquivo você pode definir todas as configurações
-    da mesma forma que eu fizer nos vídeos.
-
-    Além disso, para executar corretamente o comando do mix,
-    adicione ao seu package.json, em "scripts", a linha "mix": "mix".
-    Então o arquivo ficará semelhante ao seguinte:
-        {
-            "private": true,
-            "scripts": {
-                "dev": "vite",
-                "build": "vite build",
-                "mix": "mix"
-            },
-            "devDependencies": {
-                // Dependências aqui
-            }
-        }
-
-    Agora em todo momento que no curso eu digitar npm run dev,
-    você vai executar npm run mix. Isso deve ser o suficiente para
-    você seguir usando o Mix como ferramenta para o front-end.
-
-    Repetindo, o Mix continua sendo uma ferramenta válida, mas o Laravel
-    agora vem com o Vite instalado por padrão que funciona de uma forma
-    relativamente semelhante. Quando você já estiver mais confortável com
-    o framework e tudo estiver funcionando, pode tentar a migração do
-    Mix para o Vite: Guia de migração
-;
-
-Making migration:
-    rodar o comando e modificar o arquivo 'migration' criado:
-        php artisan make:migration create_series_table
-    ;
-    php artisan migrate
-;
-
-Criando um MODELO:
-    php artisan make:model Serie
 ;
