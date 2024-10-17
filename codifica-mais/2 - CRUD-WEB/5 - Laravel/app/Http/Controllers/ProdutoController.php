@@ -10,9 +10,12 @@ class ProdutoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        // dd($request);
+        // dd($request->input());
+        // return redirect('/');
+        return view('produtos.index');
     }
 
     /**

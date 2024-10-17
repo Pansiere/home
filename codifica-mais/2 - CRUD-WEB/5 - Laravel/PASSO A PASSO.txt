@@ -20,13 +20,28 @@ FEITO NO EXERCICIO ATUL:
     6. faz o migrate:
         php artisan migrate
     
-    7. cria o Controller para Gerenciar os Produtos, que vai lidar com as operações CRUD:
+
+    7. criando os LAYOUT (componentes):
+        criar uma pasta chamada
+        php artisan make:component layout –view
+
+    7.1 criar as VIEWS (blade):
+        Criar os arquivos HTML(*.blade.php) em resources/views/
+        No caso desse projeto, por o HTML de:
+            'listagem' em resources/views/produtos/index.blade.php
+            'formulario' em resources/views/produtos/formulario.blade.php
+
+
+
+
+    8. cria o Controller para Gerenciar os Produtos, que vai lidar com as operações CRUD:
         php artisan make:controller ProdutoController --resource
-    
-    8. definir as Rotas no Arquivo de Rotas:
+
+    9. configurar o controller:
+        definir funcoes, return de views, etc
+
+    10. definir as Rotas:
         no arquivo routes/web.php, adicione as rotas para o controller ProdutoController
-    
-    9. criar as VIEWS:
 
     14. iniciar o projeto: 
         sudo php artisan serve --port 80
