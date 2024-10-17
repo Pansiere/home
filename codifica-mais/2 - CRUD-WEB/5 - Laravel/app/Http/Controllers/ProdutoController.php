@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
-use Illuminate\Support\Facades\DB;
-
 
 class ProdutoController extends Controller
 {
