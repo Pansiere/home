@@ -23,7 +23,7 @@ FEITO NO EXERCICIO ATUL:
 
     7. criando os LAYOUT (componentes):
         criar uma pasta chamada
-        php artisan make:component layout –view
+        php artisan make:component layout -–view
 
     7.1 criar as VIEWS (blade):
         Criar os arquivos HTML(*.blade.php) em resources/views/
@@ -57,6 +57,6 @@ Criando componentes:
 Criando componentes anônimos:
     Se quisermos criar um componente anônimo, como nosso layout,
     poderíamos executar: 
-        php artisan make:component layout –view
+        php artisan make:component layout –-view
     Como não há classe, podemos deixar o nome em minúsculo mesmo.
 ;
