@@ -21,20 +21,8 @@ class ProdutoController extends Controller
 
     public function store(Request $request)
     {
-        if ($request->hasFile('image')) {
-            $request->validate([
-                'image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
-            ]);
-
-            $imagem = $request->file('image');
-        } else {
-            $imagem = '/storage/codifica-mais.png';
-        }
-        $path = $request->file('imagem')->store('imagens_produtos');
-
-
         $produto = new Produto();
-        $produto->imagem = $imagem;
+        $produto->imagem = 'storage/codifica.png';
         $produto->nome = $request->input('nome');
         $produto->sku = $request->input('sku');
         $produto->valor = $request->input('valor');
@@ -74,9 +62,32 @@ class ProdutoController extends Controller
             'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
+
+
+
+
+
+
+
+        if ($request->hasFile('imagem')) {
+            $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg|max:2048']);
+            $path = $request->file('imagem')->store('public/images');
+        } else {
+            $path = '/storage/codifica-mais.png';
+        }
+
+        // dd($path);
+
+
+
+
+
+
+
+
         $produto = Produto::findOrFail($id);
 
-        $produto->imagem = '/storage/codifica.png';
+        $produto->imagem = $path;
         $produto->nome = $request->input('nome');
         $produto->sku = $request->input('sku');
         $produto->valor = $request->input('valor');
@@ -84,10 +95,7 @@ class ProdutoController extends Controller
         $produto->unidade_medida_id = $request->input('unidade_medida_id');
         $produto->categoria_id = $request->input('categoria_id');
 
-        // if ($request->hasFile('imagem')) {
-        //     $path = $request->file('imagem')->store('public/images');
-        //     $produto->imagem = $path;
-        // }
+
 
         $produto->save();
 

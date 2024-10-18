@@ -1,4 +1,7 @@
 FEITO NO EXERCICIO ATUL:
+
+    php artisan storage:link
+
     1. cria um projeto novo:
         laravel new exemplo-name
 

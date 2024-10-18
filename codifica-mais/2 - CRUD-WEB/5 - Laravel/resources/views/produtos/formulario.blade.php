@@ -56,7 +56,7 @@
 
                 <div class="form-group">
                     <label for="imagem" class="block text-sm font-medium text-gray-700">Imagem do Produto</label>
-                    <input type="file" id="imagem" name="image" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border file:border-gray-300">
+                    <input type="file" id="imagem" name="imagem" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border file:border-gray-300">
                 </div>
 
                 <div class="form-group">
