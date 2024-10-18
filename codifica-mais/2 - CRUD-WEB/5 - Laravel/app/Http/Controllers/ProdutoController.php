@@ -12,20 +12,13 @@ class ProdutoController extends Controller
         $produtos = Produto::with('categoria')->with('unidadeMedida')->get()->toArray();
 
         return view('produtos.index')->with('produtos', $produtos);
-        // return redirect('/');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('produtos.formulario');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([

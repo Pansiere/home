@@ -2,7 +2,7 @@
     <div class="corpo">
         <div class="botoes">
             <div class="botoes_novo_item">
-                <a href="/criar" class="botoes_action_novo_item" type="submit">Novo item</a>
+                <a href="/produtos/create" class="botoes_action_novo_item" type="submit">Novo item</a>
             </div>
             <div class="botoes_buscar_item">
                 <p>Buscar item</p>

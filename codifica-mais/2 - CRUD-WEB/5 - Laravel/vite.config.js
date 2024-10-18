@@ -7,6 +7,8 @@ export default defineConfig({
             input: [
                 "resources/css/app.css",
                 "resources/css/listagem.css",
+                "resources/css/formulario.css",
+                "resources/css/global.css",
                 "resources/js/app.js",
             ],
             refresh: true,
