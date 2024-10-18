@@ -5,4 +5,4 @@ use App\Http\Controllers\ProdutoController;
 
 Route::resource('produtos', ProdutoController::class,);
 
-Route::post('/uploadCsv', [ProdutoController::class, 'uploadCsv']);
+Route::post('uploadCsv', [ProdutoController::class, 'uploadCsv'])->name('uploadCsv');

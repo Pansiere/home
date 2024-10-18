@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use Illuminate\Support\Facades\Validator;
 
 class ProdutoController extends Controller
 {
@@ -87,6 +88,32 @@ class ProdutoController extends Controller
     public function destroy(string $id)
     {
         Produto::destroy($id);
+
+        return redirect('/produtos');
+    }
+
+    public function uploadCsv(Request $request)
+    {
+        $file = $request->file('csvFile');
+        $filePath = $file->getRealPath();
+
+        if (($handle = fopen($filePath, 'r')) !== false) {
+            $header = fgetcsv($handle, 1000, ',');
+
+            while (($linhas = fgetcsv($handle, 1000, ',')) !== false) {
+                Produto::create([
+                    'imagem' => $linhas[1],
+                    'nome' => $linhas[2],
+                    'sku' => $linhas[3],
+                    'valor' => $linhas[4],
+                    'quantidade' => $linhas[5],
+                    'unidade_medida_id' => $linhas[6],
+                    'categoria_id' => $linhas[7],
+                ]);
+            }
+
+            fclose($handle);
+        }
 
         return redirect('/produtos');
     }

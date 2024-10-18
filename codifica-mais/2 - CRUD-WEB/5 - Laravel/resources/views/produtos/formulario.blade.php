@@ -68,14 +68,15 @@
 
         <section class="mt-8 bg-white shadow-md rounded-lg p-6">
             <h2 class="text-xl font-semibold mb-4">Importar Produtos via CSV</h2>
-            <form action="/uploadCsv" method="post" enctype="multipart/form-data" class="space-y-4">
+            <form action="{{ route('uploadCsv') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="csvFile" class="block text-sm font-medium text-gray-700">Escolha o arquivo CSV:</label>
-                    <input type="file" id="csvFile" name="csvFile" accept=".csv" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border file:border-gray-300">
+                    <label for="fileToUpload">CSV File to upload</label>
+                    <input name="csvFile" type="file" class="form-control" id="fileToUpload" placeholder="Select file">
                 </div>
-                <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full" type="submit">Enviar CSV</button>
+                <button type="submit" class="btn btn-primary">Upload</button>
             </form>
+
         </section>
     </div>
 </x-layout>
