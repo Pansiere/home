@@ -34,12 +34,12 @@
 
                 <div class="form-group">
                     <label for="valor" class="block text-sm font-medium text-gray-700">Valor</label>
-                    <input type="text" id="valor" name="valor" value="{{ isset($produto) ? $produto->valor : old('valor') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                    <input type="number" id="valor" name="valor" value="{{ isset($produto) ? $produto->valor : old('valor') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
                 </div>
 
                 <div class="form-group">
                     <label for="quantidade" class="block text-sm font-medium text-gray-700">Quantidade</label>
-                    <input type="text" id="quantidade" name="quantidade" value="{{ isset($produto) ? $produto->quantidade : old('quantidade') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                    <input type="number" id="quantidade" name="quantidade" value="{{ isset($produto) ? $produto->quantidade : old('quantidade') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
                 </div>
 
                 <div class="form-group">
@@ -47,6 +47,10 @@
                     <select name="categoria_id" id="categoria_id" required class="mt-1 block w-full border border-gray-300 rounded-md">
                         <option value="1" {{ isset($produto) && $produto->categoria_id == 1 ? 'selected' : '' }}>Eletrônicos</option>
                         <option value="2" {{ isset($produto) && $produto->categoria_id == 2 ? 'selected' : '' }}>Eletrodomésticos</option>
+                        <option value="3" {{ isset($produto) && $produto->categoria_id == 2 ? 'selected' : '' }}>Móveis</option>
+                        <option value="4" {{ isset($produto) && $produto->categoria_id == 2 ? 'selected' : '' }}>Decoração</option>
+                        <option value="5" {{ isset($produto) && $produto->categoria_id == 2 ? 'selected' : '' }}>Vestuário</option>
+                        <option value="6" {{ isset($produto) && $produto->categoria_id == 2 ? 'selected' : '' }}>Outros</option>
                     </select>
                 </div>
 

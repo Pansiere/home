@@ -45,13 +45,17 @@
                 <div class="space-y-2">
                     <p class="text-sm text-gray-500">SKU: {{$produto['sku']}}</p>
                     <p class="text-sm text-gray-500">Quantidade: {{$produto['quantidade']}}</p>
-                    <form action="/produtos/delet" method="post" class="mt-2">
+                    <form action="{{ route('produtos.destroy', $produto['id']) }}" method="POST" class="mt-2">
                         @csrf
-                        <input type="hidden" name="produto_id" value="{{$produto['id']}}">
+                        @method('DELETE')
+
+                        <input type="hidden" name="id" value="{{ $produto['id'] }}">
                         <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
                             Deletar
                         </button>
                     </form>
+
+
                 </div>
             </div>
             @endforeach

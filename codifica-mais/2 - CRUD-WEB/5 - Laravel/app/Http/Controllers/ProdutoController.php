@@ -21,18 +21,20 @@ class ProdutoController extends Controller
 
     public function store(Request $request)
     {
-        // if ($request->hasFile('image')) {
-        //     $validatedData = $request->validate([
-        //         'image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
-        //     ]);
+        if ($request->hasFile('image')) {
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            ]);
 
-        //     $imagem = $request->file('image');
-        // } else {
-        //     $imagem = '/storage/codifica-mais.png';
-        // }
+            $imagem = $request->file('image');
+        } else {
+            $imagem = '/storage/codifica-mais.png';
+        }
+        $path = $request->file('imagem')->store('imagens_produtos');
+
 
         $produto = new Produto();
-        $produto->imagem = 'storage/codifica.jpg';
+        $produto->imagem = $imagem;
         $produto->nome = $request->input('nome');
         $produto->sku = $request->input('sku');
         $produto->valor = $request->input('valor');
@@ -40,16 +42,14 @@ class ProdutoController extends Controller
         $produto->unidade_medida_id = $request->input('unidade_medida_id');
         $produto->categoria_id = $request->input('categoria_id');
         $produto->save();
+
+        return redirect('/produtos');
     }
 
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+    // public function show(string $id)
+    // {
+    //     // GET /photos/{photo} show photos.show
+    // }
 
     public function edit(string $id)
     {
@@ -62,19 +62,42 @@ class ProdutoController extends Controller
         return view('produtos.formulario')->with('produto', $produto);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'nome' => 'required|string|max:255',
+            'sku' => 'required|numeric',
+            'valor' => 'required|numeric|min:0',
+            'quantidade' => 'required|numeric|min:1',
+            'unidade_medida_id' => 'required|exists:unidades_medidas,id',
+            'categoria_id' => 'required|exists:categorias,id',
+            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $produto = Produto::findOrFail($id);
+
+        $produto->imagem = '/storage/codifica.png';
+        $produto->nome = $request->input('nome');
+        $produto->sku = $request->input('sku');
+        $produto->valor = $request->input('valor');
+        $produto->quantidade = $request->input('quantidade');
+        $produto->unidade_medida_id = $request->input('unidade_medida_id');
+        $produto->categoria_id = $request->input('categoria_id');
+
+        // if ($request->hasFile('imagem')) {
+        //     $path = $request->file('imagem')->store('public/images');
+        //     $produto->imagem = $path;
+        // }
+
+        $produto->save();
+
+        return redirect('/produtos')->with('success', 'Produto atualizado com sucesso!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        Produto::destroy($id);
+
+        return redirect('/produtos');
     }
 }
