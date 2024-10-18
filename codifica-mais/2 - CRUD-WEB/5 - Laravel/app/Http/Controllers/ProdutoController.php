@@ -71,7 +71,9 @@ class ProdutoController extends Controller
 
         if ($request->hasFile('imagem')) {
             $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg|max:2048']);
-            $path = $request->file('imagem')->store('public/images');
+            dd($path = $request->file('imagem')->store('public/images'));
+
+            move_uploaded_file(from: $_FILES['image']['tmp_name'], to: './../public/storage/' . basename(path: $_FILES['image']['name']));
         } else {
             $path = '/storage/codifica-mais.png';
         }
