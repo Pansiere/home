@@ -22,7 +22,7 @@ class ProdutoController extends Controller
     public function store(Request $request)
     {
         $produto = new Produto();
-        $produto->imagem = 'storage/codifica.png';
+        $produto->imagem = 'storage/images/codificamais.png';
         $produto->nome = $request->input('nome');
         $produto->sku = $request->input('sku');
         $produto->valor = $request->input('valor');
