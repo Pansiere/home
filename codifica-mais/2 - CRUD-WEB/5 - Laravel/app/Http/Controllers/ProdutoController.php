@@ -52,6 +52,8 @@ class ProdutoController extends Controller
 
     public function update(Request $request, string $id)
     {
+        $produto = Produto::findOrFail($id);
+
         $request->validate([
             'nome' => 'required|string|max:255',
             'sku' => 'required|numeric',
@@ -68,10 +70,8 @@ class ProdutoController extends Controller
 
             move_uploaded_file(from: $request->file('imagem')->path(), to: $path);
         } else {
-            $path = '/storage/images/codificamais.png';
+            $path = $produto->imagem;
         }
-
-        $produto = Produto::findOrFail($id);
         $produto->imagem = $path;
         $produto->nome = $request->input('nome');
         $produto->sku = $request->input('sku');
