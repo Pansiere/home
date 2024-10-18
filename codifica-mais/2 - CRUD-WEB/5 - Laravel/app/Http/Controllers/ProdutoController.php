@@ -62,33 +62,16 @@ class ProdutoController extends Controller
             'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-
-
-
-
-
-
-
         if ($request->hasFile('imagem')) {
             $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg|max:2048']);
-            dd($path = $request->file('imagem')->store('public/images'));
+            $path = 'storage/images/' .  $request->file('imagem')->getClientOriginalName();
 
-            move_uploaded_file(from: $_FILES['image']['tmp_name'], to: './../public/storage/' . basename(path: $_FILES['image']['name']));
+            move_uploaded_file(from: $request->file('imagem')->path(), to: $path);
         } else {
-            $path = '/storage/codifica-mais.png';
+            $path = '/storage/images/codificamais.png';
         }
 
-        // dd($path);
-
-
-
-
-
-
-
-
         $produto = Produto::findOrFail($id);
-
         $produto->imagem = $path;
         $produto->nome = $request->input('nome');
         $produto->sku = $request->input('sku');
@@ -96,9 +79,6 @@ class ProdutoController extends Controller
         $produto->quantidade = $request->input('quantidade');
         $produto->unidade_medida_id = $request->input('unidade_medida_id');
         $produto->categoria_id = $request->input('categoria_id');
-
-
-
         $produto->save();
 
         return redirect('/produtos')->with('success', 'Produto atualizado com sucesso!');
