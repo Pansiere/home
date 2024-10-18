@@ -51,12 +51,15 @@ class ProdutoController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+        $produto = Produto::find($id);
+
+        if (!$produto) {
+            return redirect()->route('produtos.index')->with('error', 'Produto não encontrado.');
+        }
+
+        return view('produtos.formulario')->with('produto', $produto);
     }
 
     /**

@@ -30,9 +30,8 @@
                         </div>
                     </div>
                     <p class="text-lg font-semibold">{{$produto['nome']}}</p>
-                    <form action="/produtos/edit" method="GET" class="mt-2">
+                    <form action="{{ route('produtos.edit', $produto['id']) }}" method="GET" class="mt-2">
                         @csrf
-                        <input type="hidden" name="produto_id" value="{{$produto['id']}}">
                         <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
                             Editar
                         </button>

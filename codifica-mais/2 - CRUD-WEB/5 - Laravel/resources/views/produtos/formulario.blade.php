@@ -2,26 +2,26 @@
     <div class="container mx-auto p-4">
         <header class="flex justify-between items-center mb-6">
             <h1 class="text-2xl font-semibold">
-                {{ isset($produto_id) ? 'Editar Produto' : 'Cadastrar Novo Produto' }}
+                {{ isset($produto) ? 'Editar Produto' : 'Cadastrar Novo Produto' }}
             </h1>
             <a href="/produtos" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Voltar</a>
         </header>
 
         <main class="bg-white shadow-md rounded-lg p-6">
-            <form action="{{ isset($produto_id) ? route('produtos.update', $produto_id) : route('produtos.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+            <form action="{{ isset($produto) ? route('produtos.update', $produto) : route('produtos.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
                 @csrf
-                @if(isset($produto_id))
+                @if(isset($produto))
                 @method('PUT')
                 @endif
 
                 <div class="form-group">
                     <label for="nome" class="block text-sm font-medium text-gray-700">Nome do Produto</label>
-                    <input type="text" id="nome" name="nome" value="{{ isset($produto_id) ? $produto->nome : old('nome') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    <input type="text" id="nome" name="nome" value="{{ isset($produto) ? $produto->nome : old('nome') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                 </div>
 
                 <div class="form-group">
                     <label for="sku" class="block text-sm font-medium text-gray-700">SKU</label>
-                    <input type="text" id="sku" name="sku" value="{{ isset($produto_id) ? $produto->sku : old('sku') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                    <input type="text" id="sku" name="sku" value="{{ isset($produto) ? $produto->sku : old('sku') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
                 </div>
 
                 <div class="form-group">
@@ -34,12 +34,12 @@
 
                 <div class="form-group">
                     <label for="valor" class="block text-sm font-medium text-gray-700">Valor</label>
-                    <input type="text" id="valor" name="valor" value="{{ isset($produto_id) ? $produto->valor : old('valor') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                    <input type="text" id="valor" name="valor" value="{{ isset($produto) ? $produto->valor : old('valor') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
                 </div>
 
                 <div class="form-group">
                     <label for="quantidade" class="block text-sm font-medium text-gray-700">Quantidade</label>
-                    <input type="text" id="quantidade" name="quantidade" value="{{ isset($produto_id) ? $produto->quantidade : old('quantidade') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                    <input type="text" id="quantidade" name="quantidade" value="{{ isset($produto) ? $produto->quantidade : old('quantidade') }}" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
                 </div>
 
                 <div class="form-group">
@@ -56,8 +56,8 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="hidden" id="produto_id" name="produto_id" value="{{ isset($produto_id) ? $produto->id : '' }}">
-                    <input class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full" type="submit" name="{{ isset($produto_id) ? 'atualizar' : 'salvar' }}" value="{{ isset($produto_id) ? 'Atualizar Produto' : 'Cadastrar Produto' }}">
+                    <input type="hidden" id="produto" name="produto" value="{{ isset($produto) ? $produto->id : '' }}">
+                    <input class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full" type="submit" name="{{ isset($produto) ? 'atualizar' : 'salvar' }}" value="{{ isset($produto) ? 'Atualizar Produto' : 'Cadastrar Produto' }}">
                 </div>
             </form>
         </main>
