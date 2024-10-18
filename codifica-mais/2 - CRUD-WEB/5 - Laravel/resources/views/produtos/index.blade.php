@@ -1,49 +1,58 @@
 <x-layout title="Listagem">
-    <div class="corpo">
-        <div class="botoes">
-            <div class="botoes_novo_item">
-                <a href="/produtos/create" class="botoes_action_novo_item" type="submit">Novo item</a>
+    <div class="container mx-auto p-4">
+        <div class="flex justify-between items-center mb-6">
+            <div>
+                <a href="/produtos/create" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Novo item
+                </a>
             </div>
-            <div class="botoes_buscar_item">
-                <p>Buscar item</p>
-                <div class="barra-buscador">
-                    <form action="busca.php" method="POST">
-                        <input type="text" id="busca" name="busca">
-                    </form>
-                </div>
+
+            <div>
+                <p class="text-gray-700 mb-2">Buscar item</p>
+                <form action="busca.php" method="POST" class="flex">
+                    <input type="text" id="busca" name="busca" placeholder="Buscar..."
+                        class="border border-gray-300 rounded-l p-2 focus:outline-none focus:ring focus:ring-blue-300">
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600">
+                        Buscar
+                    </button>
+                </form>
             </div>
         </div>
 
-        <!-- <p class="msg_estoque_vazio"> @{{$produtos->checarEstoque()}} </p> -->
-
-        <div class="scroll">
+        <div class="space-y-4">
             @foreach ($produtos as $produto)
-            <div class="produto">
-                <div class="infos_lado_direito">
-                    <div class="primeira_linha">
-                        <p class="id">#00000{{$produto['id']}}</p>
-                        <div class="categoria{{$produto['categoria_id']}}">
-                            <p>{{$produto['categoria']['categoria']}}</p>
+            <div class="flex justify-between items-center bg-white shadow-md rounded-lg p-4">
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-4">
+                        <p class="font-bold">#00000{{$produto['id']}}</p>
+                        <div class="py-1 px-3 rounded bg-gray-200">
+                            <p class="text-sm">{{$produto['categoria']['categoria']}}</p>
                         </div>
                     </div>
-                    <p>{{$produto['nome']}}</p>
-                    <form action="/editar" method="post" class="editar">
+                    <p class="text-lg font-semibold">{{$produto['nome']}}</p>
+                    <form action="/produtos/edit" method="post" class="mt-2">
+                        @csrf
                         <input type="hidden" name="produto_id" value="{{$produto['id']}}">
-                        <button type="submit">Editar</button>
+                        <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                            Editar
+                        </button>
                     </form>
                 </div>
-                <div class="imagem">
-                    <img src="{{$produto['imagem']}}" width="100" height="100" />
+
+                <div class="w-24 h-24">
+                    <img src="{{$produto['imagem']}}" class="w-full h-full object-cover rounded-lg" />
                 </div>
-                <div class="infos_lado_esquerdo">
-                    <p class="sku">SKU: {{$produto['sku']}}</p>
-                    <p>Quantidade: {{$produto['quantidade']}}</p>
-                    <div class="deletar">
-                        <form action="/deletar" method="post">
-                            <input type="hidden" name="produto_id" value="{{$produto['id']}}">
-                            <button type="submit">Deletar</button>
-                        </form>
-                    </div>
+
+                <div class="space-y-2">
+                    <p class="text-sm text-gray-500">SKU: {{$produto['sku']}}</p>
+                    <p class="text-sm text-gray-500">Quantidade: {{$produto['quantidade']}}</p>
+                    <form action="/produtos/delet" method="post" class="mt-2">
+                        @csrf
+                        <input type="hidden" name="produto_id" value="{{$produto['id']}}">
+                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                            Deletar
+                        </button>
+                    </form>
                 </div>
             </div>
             @endforeach
