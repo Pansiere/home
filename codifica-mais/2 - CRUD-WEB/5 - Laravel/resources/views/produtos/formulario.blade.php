@@ -74,7 +74,7 @@
                     <label for="fileToUpload">CSV File to upload</label>
                     <input name="csvFile" type="file" class="form-control" id="fileToUpload" placeholder="Select file">
                 </div>
-                <button type="submit" class="btn btn-primary">Upload</button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">Upload</button>
             </form>
 
         </section>
