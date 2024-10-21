@@ -1,0 +1,29 @@
+SALVAR ISSO SOBRE DEBUGGING:
+https://stackoverflow.com/questions/6821532/php-warning-permission-denied-13-on-session-start
+https://www.youtube.com/watch?v=LDvzJ93xQ2k&ab_channel=LeandroHenriqueReis
+https://www.youtube.com/watch?v=86jaK8cGL-M&ab_channel=ClubeFull-Stack
+
+FEITO: Edição: Permita que o usuário edite uma transação existente, podendo alterar a categoria da despesa
+FEITO: Fazer pop-up de confirmação ao clicar etchm Atualizar
+FEITO: Bloquear entrada null para despesas
+FEITO: Permitir entrada null para Receita
+FEITO: Fazer os objetos Transacoes terem uma variavel do tipo objeto-categoria
+FEITO: Fazer com que os BIND do sql sejam dados vindo de um objeto ao inves de um array quando possivel?
+FEITO: RESOVLER ESSE ERRO AO SALVAR ENTRADA CUJO CATEGORIA É IGUAL A NENHUMA E TIPO É IGUAL A RECEITA
+FEITO: Permitir que o usuario pesquise baseado em filtros
+FEITO: Fazer o resumo vir baseado no filtro
+FEITO: EXCLUIR O REPOSITOR DE RECEITAS, E FAZER UM FOREACH NA VARIAVEL TRANSAÇÕES E SOMAR TODAS AS DESPESAS E RECEITAS E CHEGAR NUM RESULTADO
+FEITO: Permitir que o usuario pesquise baseado em nome
+FEITO: Fazer a página inicial vir com os periodos filtrados por padrão (mes atual) // acho q vou poder excluir a função que chama todas as trancações só, acho q n sera usada mais.
+FEITO: IMPLEMENTAR Sistema de Login
+FEITO: Fazer um try catch 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1@1' for key 'usuarios.email'' e retornar um erro adequado ao usuario.
+FEITO: Corrigir problema de pesquise no Buscar -> nao esta buscando por id_do_usuario
+FEITO: Corrigir problema do total pra aprecer negativo
+FEITO: Validações e Segurança proibir a entrada de números negativos
+FEITO: Reler o passo a passo
+FEITO: VALIDAR O CODIGO
+
+A fazer:
+    Fazer documentacao e exemplo/video de como instalar
+    Fazer diagrama no figma
+;
