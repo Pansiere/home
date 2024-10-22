@@ -51,3 +51,5 @@ FEITO NO EXERCICIO ATUL:
 
     13. iniciar o VITE: 
         npm run dev
+
+    14. php artisan make:request SeriesFormRequest
