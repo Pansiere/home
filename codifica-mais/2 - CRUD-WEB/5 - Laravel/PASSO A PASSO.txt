@@ -53,3 +53,5 @@ FEITO NO EXERCICIO ATUL:
         npm run dev
 
     14. php artisan make:request SeriesFormRequest
+	php artisan make:model Season -m
+	php artisan make:model Episode -m
