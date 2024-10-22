@@ -13,7 +13,7 @@ class SeriesFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class SeriesFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nome' => ['required', 'min:3'],
         ];
     }
+
+    // public function messages()
+    // {
+    //     return [
+    //         'nome.required' => 'O campo nome e obrigatorio',
+    //         'nome.min' => 'O campo nome precisa de pelo menos :min caracteres'
+    //     ];
+    // }
 }

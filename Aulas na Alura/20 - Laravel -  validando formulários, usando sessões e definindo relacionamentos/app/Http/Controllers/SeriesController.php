@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SeriesFormRequest;
 use App\Models\Serie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +25,7 @@ class SeriesController extends Controller
         return view('series.create');
     }
 
-    public function store(Request $request)
+    public function store(/*Request $request*/SeriesFormRequest $request)
     {
         // // $nomeSerie = $request->input('nome');
         // $nomeSerie = $request->nome;
@@ -36,9 +37,9 @@ class SeriesController extends Controller
         // Serie::create($request->all());
         // Serie::create($request->only(['nome']));
 
-        $request->validate([
-            'nome' => ['required', 'min:3']
-        ]);
+        // $request->validate([
+        //     'nome' => ['required', 'min:3']
+        // ]);
         $serie = Serie::create($request->except(['_token']));
         // session(['mensagem.sucesso' => 'Serie adicionada com sucesso']);
         // $request->session()->flash('mensagem.sucesso', "Serie '{$serie->nome}' adicionada com sucesso");
@@ -62,10 +63,11 @@ class SeriesController extends Controller
 
     public function edit(Serie $series)
     {
+        dd($series->temporadas);
         return view('series.edit')->with('serie', $series);
     }
 
-    public function update(Serie $series, Request $request)
+    public function update(/*Request $request*/Serie $series, SeriesFormRequest $request)
     {
         // $series->nome = $request->nome;
         // $series->save();
