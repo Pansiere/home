@@ -35,6 +35,10 @@ class SeriesController extends Controller
         // Serie::create(['nome' => 'Teste']);
         // Serie::create($request->all());
         // Serie::create($request->only(['nome']));
+
+        $request->validate([
+            'nome' => ['required', 'min:3']
+        ]);
         $serie = Serie::create($request->except(['_token']));
         // session(['mensagem.sucesso' => 'Serie adicionada com sucesso']);
         // $request->session()->flash('mensagem.sucesso', "Serie '{$serie->nome}' adicionada com sucesso");
