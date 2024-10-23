@@ -2,7 +2,7 @@
 
 namespace Pansiere\ControleFinanceiro\Models;
 
-use Pansiere\ControleFinanceiro\Models\{Usuario, Categoria};
+use Pansiere\ControleFinanceiro\Models\Categoria;
 
 class Transacao
 {

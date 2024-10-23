@@ -8,7 +8,13 @@ session_start();
 
 $page = rtrim(strtok($_SERVER['REQUEST_URI'],  '?'), '/') ?: '/';
 
-if (!isset($_SESSION['usuario_id']) && $page !== '/autenticacao/login' && $page !== '/autenticacao/registro' && $page !== '/autenticacao/registro/registrar' && $page !== '/autenticacao/login/validar') {
+if (
+    !isset($_SESSION['usuario_id'])
+    && $page !== '/autenticacao/login'
+    && $page !== '/autenticacao/registro'
+    && $page !== '/autenticacao/registro/registrar'
+    && $page !== '/autenticacao/login/validar'
+) {
     header('Location: /autenticacao/login');
     exit;
 }
