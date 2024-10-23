@@ -55,3 +55,6 @@ FEITO NO EXERCICIO ATUL:
     14. php artisan make:request SeriesFormRequest
 	php artisan make:model Season -m
 	php artisan make:model Episode -m
+	php artisan migration:fresh
+	php artisan make:controller SeasonsController
+	composer require barryvdh/laravel-debugbar --dev;
