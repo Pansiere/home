@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SeriesFormRequest;
-use App\Models\Serie;
+use App\Models\Series;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Season;
+use App\Models\Episode;
 
 class SeriesController extends Controller
 {
     public function index(Request $request)
     {
         // $series = Serie::query()->orderBy('nome')->get();
-        $series = Serie::all();
+        // $series = Serie::with(['temporadas'])->get();
+        $series = Series::all();
         // $request->session()->forget('mensagem.sucesso');
         // $mensagemSucesso = $request->session()->get('mensagem.sucesso');
         $mensagemSucesso = session('mensagem.sucesso');
@@ -41,7 +44,26 @@ class SeriesController extends Controller
         // $request->validate([
         //     'nome' => ['required', 'min:3']
         // ]);
-        $serie = Serie::create($request->except(['_token']));
+        // $serie = Series::create($request->except(['_token']));
+        $serie = Series::create($request->all());
+        $seasons = [];
+        for ($i = 1; $i <= $request->seasonsQty; $i++) {
+            $seasons[] = [
+                'series_id' => $serie->id,
+                'number' => $i
+            ];
+        }
+        Season::insert($seasons);
+
+        $episodes = [];
+        foreach ($serie->seasons as $season) {
+            for ($j = 1; $j <= $request->episodesPerSeason; $j++) {
+                $season->episodes()->create([
+                    'number' => $j,
+                ]);
+            }
+        }
+        Episode::insert($episodes);
         // session(['mensagem.sucesso' => 'Serie adicionada com sucesso']);
         // $request->session()->flash('mensagem.sucesso', "Serie '{$serie->nome}' adicionada com sucesso");
 
@@ -50,7 +72,7 @@ class SeriesController extends Controller
             ->with('mensagem.sucesso', "Serie '{$serie->nome}' adicionada com sucesso");
     }
 
-    public function destroy(Serie $series)
+    public function destroy(Series $series)
     {
         // $serie = Serie::find($request->series);
         // Serie::destroy($request->series);
@@ -62,13 +84,13 @@ class SeriesController extends Controller
             ->with('mensagem.sucesso', "Serie '{$series->nome}' removida com sucesso");
     }
 
-    public function edit(Serie $series)
+    public function edit(Series $series)
     {
-        dd($series->temporadas);
+        // dd($series->temporadas); 
         return view('series.edit')->with('serie', $series);
     }
 
-    public function update(/*Request $request*/Serie $series, SeriesFormRequest $request)
+    public function update(/*Request $request*/Series $series, SeriesFormRequest $request)
     {
         // $series->nome = $request->nome;
         // $series->save();
