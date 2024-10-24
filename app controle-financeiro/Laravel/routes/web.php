@@ -1,7 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{DashboardController, TransacoesController, CategoriasController};
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/', function () {
+    return redirect('/dashboard');
 });
+
+Route::resource('/dashboard', DashboardController::class);
+
+Route::resource('/transacao', TransacoesController::class);
+
+Route::resource('/categorias', CategoriasController::class);
