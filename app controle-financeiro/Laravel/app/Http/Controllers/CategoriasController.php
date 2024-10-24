@@ -8,16 +8,19 @@ class CategoriasController extends Controller
 {
     public function index()
     {
-        return view("dashboard.index");
+        $categorias = [
+            ['id' => 1, 'nome' => 'Eletrônicos'],
+            ['id' => 2, 'nome' => 'Móveis'],
+            ['id' => 3, 'nome' => 'Vestuário'],
+        ];
+
+        return view('categorias.editar', compact('categorias'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function store(Request $request) {}
 
     /**
      * Display the specified resource.

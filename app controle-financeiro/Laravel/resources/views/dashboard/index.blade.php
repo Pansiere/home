@@ -17,7 +17,7 @@
             </div>
             <div>
                 <a href="/categorias">Categorias</a>
-                <a href="/transacao/adicionar">Nova Entrada</a>
+                <a href="/transacao/create">Nova Entrada</a>
             </div>
         </div>
 
