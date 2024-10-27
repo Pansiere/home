@@ -1,31 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{
-    DashboardController,
-    TransacoesController,
-    CategoriasController,
-    UsuarioController
-};
-
-if (
-    !isset($_SESSION['usuario_id'])
-    && $_SERVER['REQUEST_URI'] !== '/autenticacao'
-    && $_SERVER['REQUEST_URI'] !== '/autenticacao/create'
-    && $_SERVER['REQUEST_URI'] !== '/autenticacao/store'
-) {
-    header(header: 'Location: /autenticacao');
-    exit;
-}
 
 Route::get('/', function () {
-    return redirect('/dashboard');
+    return view('welcome');
 });
 
-Route::resource('/autenticacao', UsuarioController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('/dashboard', DashboardController::class);
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::resource('/transacao', TransacoesController::class);
-
-Route::resource('/categorias', CategoriasController::class);
+require __DIR__.'/auth.php';
