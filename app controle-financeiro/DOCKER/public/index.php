@@ -24,10 +24,6 @@ $transacoesController = new TransacoesController();
 $categoriaController = new CategoriasController();
 
 switch ($page) {
-    case '/dashboard':
-        $transacoesController->dashboard();
-        break;
-
     case '/autenticacao/login':
         $usuarioController->paginaLogin();
         break;
@@ -45,7 +41,11 @@ switch ($page) {
         break;
 
     case '/autenticacao/registro/registrar':
-        $usuarioController->registrarUsuario($_POST['nome'], $_POST['email'], $_POST['senha']);
+        $usuarioController->registrarUsuario($_POST['nome'], $_POST['email'], $_POST['senha'],  confirmacaoSenha: $_POST['confirmacaoSenha']);
+        break;
+
+    case '/dashboard':
+        $transacoesController->dashboard();
         break;
 
     case '/transacao/adicionar':

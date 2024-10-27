@@ -24,6 +24,10 @@
         <input type="password" id="senha" name="senha" required>
         <br>
 
+        <label for="senha">Confirmação de senha:</label>
+        <input type="password" id="confirmacaoSenha" name="confirmacaoSenha" required>
+        <br>
+
         <button type="submit">Registrar</button>
     </form>
 

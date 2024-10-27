@@ -37,8 +37,16 @@ class UsuarioController extends Controller
         header("location: /autenticacao/login");
     }
 
-    public function registrarUsuario(string $nome, string $email, string $senha): void
+    public function registrarUsuario(string $nome, string $email, string $senha, string $confirmacaoSenha): void
     {
+        if ($senha !== $confirmacaoSenha) {
+            echo "<script type='text/javascript'>
+                alert('As senhas precisam ser iguais.');
+                window.location.href = '/autenticacao/registro';
+                </script>";
+            exit;
+        }
+
         $dadosUsuario = [
             'id' => null,
             'nome' => $nome,
