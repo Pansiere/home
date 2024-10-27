@@ -15,7 +15,7 @@
             <form action="{{ request('editarCategoriaId') ? route('categorias.update', request('editarCategoriaId')) : route('categorias.store') }}" method="POST" onsubmit="return confirmacarAtualizacao('{{ request('categoriaNome') }}');">
                 @csrf
                 @if(request('editarCategoriaId'))
-                    @method('PUT') <!-- Usado para indicar que estamos atualizando um recurso -->
+                    @method('PUT') 
                 @endif
                 <input type="text" name="categoriaNome" value="{{ request('categoriaNome') }}" placeholder="Categoria nova" required />
                 <input type="hidden" name="editarCategoriaId" value="{{ request('editarCategoriaId') }}" />
@@ -37,15 +37,17 @@
                         <td>{{ $categoria->nome }}</td>
                         <td class="tbody__botoes">
                             <form action="/categorias" method="GET">
-                                @csrf
                                 <input type="hidden" name="editarCategoriaId" value="{{ $categoria['id'] }}" />
                                 <input type="hidden" name="categoriaNome" value="{{ $categoria['nome'] }}" />
                                 <button type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
                             </form>
-                            <form action="/categoria/deletar" method="POST" onsubmit="return confirmacarExclucao('{{ $categoria['id'] }}');">
+                            <form action="{{ route('categorias.destroy' , $categoria->id) }}" method="POST" onsubmit="return confirmExclusao('{{ $categoria->nome }}');">                                @csrf
                                 @csrf
-                                <input type="hidden" name="categoriaId" value="{{ $categoria['id'] }}" />
-                                <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
+                                @method('DELETE')
+                                <input type="hidden" name="categoriaId" value="{{ $categoria->id }}" />
+                                <button type="submit">
+                                    <i class="fa-solid fa-trash-can"></i> Excluir
+                                </button>
                             </form>
                         </td>
                     </tr>
@@ -59,8 +61,8 @@
     </div>
 
     <script>
-        function confirmacarExclucao(descricao) {
-            return confirm('Tem certeza que deseja excluir a categoria: "' + descricao + '"?');
+        function confirmExclusao(nome) {
+            return confirm('Tem certeza que deseja excluir a categoria: "' + nome + '"?');
         }
 
         function confirmacarAtualizacao(descricao) {

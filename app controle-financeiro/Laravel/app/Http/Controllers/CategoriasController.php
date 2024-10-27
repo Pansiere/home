@@ -25,33 +25,20 @@ class CategoriasController extends Controller
         return redirect('/categorias')->with('success', 'Categoria adicionada com sucesso!');
     }
 
-    /**Display the specified resource. */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+
+        $categoria->nome = $request->categoriaNome;
+        $categoria->save();
+
+        return redirect('/categorias')->with('success', 'Categoria atualizada com sucesso!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        $categoria = Categoria::destroy($id);
+
+        return redirect('/categorias')->with('success', 'Categoria deletada com sucesso!');
     }
 }

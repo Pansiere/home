@@ -11,7 +11,7 @@ class TransacoesController extends Controller
     {
         $categorias = Categoria::all();
 
-        return view("transacao.adicionar");
+        return view("transacao.adicionar", compact('categorias'));
     }
 
     /**
@@ -19,7 +19,7 @@ class TransacoesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

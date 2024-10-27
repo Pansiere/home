@@ -3,14 +3,15 @@
         <h1>TRANSAÇÃO</h1>
     </div>
     <div class="content">
-        <a href="/dashboard">VOLTAR</a>
+        <a href="{{ route('dashboard') }}">VOLTAR</a>
         <h2>Adicionar transação</h2>
         <div class="content__formulario">
-            <form id="transacaoFormulario" action="/transacao/adicionar/salvar" method="post" onsubmit="return validarFormulario()">
+            <form id="transacaoFormulario" action="{{ route('transacao.store') }}" method="POST" onsubmit="return validarFormulario()">
+                @csrf
                 <div class="content__formulario__linha">
                     <div class="content__formulario__grupo">
                         <label for="tipo">Tipo</label>
-                        <select id="tipo" name="tipo">
+                        <select id="tipo" name="tipo" required>
                             <option value="Despesa">Despesa</option>
                             <option value="Receita">Receita</option>
                         </select>
@@ -19,26 +20,28 @@
                         <label for="categoria">Categoria</label>
                         <select id="categoriaNome" name="categoriaNome">
                             <option value="nenhuma">Nenhuma</option>
-                            <?php foreach ($categorias as $categoria): ?>
-                                <option value="<?= $categoria->getNome() ?>" <?= isset($_GET['categoria']) && $_GET['categoria'] === $categoria->getNome() ? 'selected' : '' ?>><?= $categoria->getNome() ?></option>
-                            <?php endforeach; ?>
+                            @foreach ($categorias as $categoria)
+                                <option value="{{ $categoria->nome }}" {{ old('categoriaNome') == $categoria->nome ? 'selected' : '' }}>
+                                    {{ $categoria->nome }}
+                                </option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
 
                 <div class="content__formulario__grupo">
                     <label for="descricao">Descrição</label>
-                    <input type="text" id="descricao" name="descricao" required placeholder="Descrição da transação" value="<?= $_GET['descricaoTransacao'] ?? ''; ?>">
+                    <input type="text" id="descricao" name="descricao" required placeholder="Descrição da transação" value="{{ old('descricao') }}">
                 </div>
 
                 <div class="content__formulario__linha">
                     <div class="content__formulario__grupo">
                         <label for="valor">Valor</label>
-                        <input type="number" id="valor" name="valor" required step="0.1" placeholder="Ex: 100.50" min="0">
+                        <input type="number" id="valor" name="valor" required step="0.1" placeholder="Ex: 100.50" min="0" value="{{ old('valor') }}">
                     </div>
                     <div class="content__formulario__grupo">
                         <label for="data">Data</label>
-                        <input type="date" id="data" required name="data" value="<?= date(format: 'Y-m-d'); ?>">
+                        <input type="date" id="data" name="data" required value="{{ old('data', now()->format('Y-m-d')) }}">
                     </div>
                 </div>
 
