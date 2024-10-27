@@ -24,7 +24,7 @@
         <input type="password" id="senha" name="senha" required>
         <br>
 
-        <label for="senha">Confirmação de senha:</label>
+        <label for="senha">Confirme sua senha:</label>
         <input type="password" id="confirmacaoSenha" name="confirmacaoSenha" required>
         <br>
 
