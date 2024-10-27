@@ -10,7 +10,8 @@ class DashboardController extends Controller
     public function index()
     {
         $transacoes = Transacao::all();
-
-        return view('dashboard.index', compact('transacoes'));
+        return auth()->check()
+            ? view('dashboard', compact('transacoes'))
+            : to_route('login');
     }
 }
