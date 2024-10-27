@@ -9,29 +9,22 @@ class CategoriasController extends Controller
 {
     public function index()
     {
-        $categorias = [
-            ['id' => 1, 'nome' => 'Eletrônicos'],
-            ['id' => 2, 'nome' => 'Móveis'],
-            ['id' => 3, 'nome' => 'Vestuário'],
-        ];
+        $categorias = new Categoria();
+
+        $categorias = [];
 
         return view('categorias.index', compact('categorias'));
     }
 
     public function store(Request $request)
     {
-        // Validação dos dados recebidos
-        $request->validate([
-            'categoriaNome' => 'required|string|max:255',
-        ]);
-
-        // Criação de uma nova categoria
         $categoria = new Categoria();
-        $categoria->nome = $request->input('categoriaNome'); // Atribui o nome da categoria
-        $categoria->save(); // Salva a categoria no banco de dados
 
-        // Redireciona com uma mensagem de sucesso
-        return redirect()->route('categorias.index')->with('success', 'Categoria criada com sucesso!');
+        $categoria->nome = $request->input('categoriaNome');
+        $categoria->user_id = auth()->id();
+        $categoria->save();
+
+        return redirect('/categorias')->with('success', 'Categoria adicionada com sucesso!');
     }
 
     /**
