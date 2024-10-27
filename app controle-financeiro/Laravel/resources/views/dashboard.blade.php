@@ -4,7 +4,7 @@
     </div>
 
     <div class="flex-row space-y-4">        
-        <h2 class="flex justify-center">Seja bem vindo(a), João!</h2>
+        <h2 class="flex justify-center">Seja bem vindo(a), Nome Aquis!</h2>
         <div>
             <a href="/autenticacao/logout">Logout</a>
         </div>

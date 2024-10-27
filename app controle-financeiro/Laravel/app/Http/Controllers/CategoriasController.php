@@ -9,9 +9,7 @@ class CategoriasController extends Controller
 {
     public function index()
     {
-        $categorias = new Categoria();
-
-        $categorias = [];
+        $categorias = Categoria::all();
 
         return view('categorias.index', compact('categorias'));
     }
@@ -27,9 +25,7 @@ class CategoriasController extends Controller
         return redirect('/categorias')->with('success', 'Categoria adicionada com sucesso!');
     }
 
-    /**
-     * Display the specified resource.
-     */
+    /**Display the specified resource. */
     public function show(string $id)
     {
         //

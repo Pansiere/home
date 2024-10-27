@@ -47,6 +47,14 @@ class UsuarioController extends Controller
             exit;
         }
 
+        if (strlen($senha) < 7) {
+            echo "<script type='text/javascript'>
+                alert('A senha precisa ter no mínimo 8 caractéres.');
+                window.location.href = '/autenticacao/registro';
+                </script>";
+            exit;
+        };
+
         $dadosUsuario = [
             'id' => null,
             'nome' => $nome,

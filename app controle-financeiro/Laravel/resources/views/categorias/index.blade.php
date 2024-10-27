@@ -34,7 +34,7 @@
             <tbody>
                 @foreach ($categorias as $categoria)
                     <tr>
-                        <td>{{ $categoria['nome'] }}</td>
+                        <td>{{ $categoria->nome }}</td>
                         <td class="tbody__botoes">
                             <form action="/categorias" method="GET">
                                 @csrf
