@@ -14,7 +14,7 @@ Route::resource('/transacao', TransacoesController::class)
     ->middleware(['auth', 'verified'])->name('dsad,', 'teste');
 
 Route::resource('/categorias', CategoriasController::class)
-    ->middleware(['auth', 'verified'])->name('dsad,', 'teste');;
+    ->middleware(['auth', 'verified'])->name('dsad,', 'teste');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
