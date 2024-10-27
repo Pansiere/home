@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Pansiere\ControleFinanceiro\Controller\Controller;
+use Pansiere\ControleFinanceiro\Controller\{CategoriasController, TransacoesController, UsuarioController};
 
 session_start();
 
@@ -19,67 +19,69 @@ if (
     exit;
 }
 
-$controller = new Controller();
+$usuarioController = new UsuarioController();
+$transacoesController = new TransacoesController();
+$categoriaController = new CategoriasController();
 
 switch ($page) {
     case '/dashboard':
-        $controller->dashboard();
+        $transacoesController->dashboard();
         break;
 
     case '/autenticacao/login':
-        $controller->paginaLogin();
+        $usuarioController->paginaLogin();
         break;
 
     case '/autenticacao/logout':
-        $controller->logout();
+        $usuarioController->logout();
         break;
 
     case '/autenticacao/login/validar':
-        $controller->validarLogin($_POST['email'], $_POST['senha']);
+        $usuarioController->validarLogin($_POST['email'], $_POST['senha']);
         break;
 
     case '/autenticacao/registro':
-        $controller->paginaRegistro();
+        $usuarioController->paginaRegistro();
         break;
 
     case '/autenticacao/registro/registrar':
-        $controller->registrarUsuario($_POST['nome'], $_POST['email'], $_POST['senha']);
+        $usuarioController->registrarUsuario($_POST['nome'], $_POST['email'], $_POST['senha']);
         break;
 
     case '/transacao/adicionar':
-        $controller->paginaAdicionarTransacao();
+        $transacoesController->paginaAdicionarTransacao();
         break;
 
     case '/transacao/adicionar/salvar':
-        $controller->salvarTransacao($_POST['tipo'], $_POST['categoriaNome'],  $_POST['descricao'], $_POST['valor'], $_POST['data']);
+        $transacoesController->salvarTransacao($_POST['tipo'], $_POST['categoriaNome'],  $_POST['descricao'], $_POST['valor'], $_POST['data']);
         break;
 
     case '/transacao/editar':
-        $controller->paginaEditarTransacao($_GET['transacaoId']);
+        $transacoesController->paginaEditarTransacao($_GET['transacaoId']);
         break;
 
     case '/transacao/editar/atualizar':
-        $controller->editarTransacao($_POST['categoriaId'], $_POST['transacaoId']);
+        $transacoesController->editarTransacao($_POST['categoriaId'], $_POST['transacaoId']);
         break;
 
     case '/transacao/deletar':
-        $controller->deletarTransacao($_POST['transacaoId']);
+        $transacoesController->deletarTransacao($_POST['transacaoId']);
         break;
 
     case '/categorias':
-        $controller->paginaCategorias();
+        $categoriaController->paginaCategorias();
         break;
 
     case '/categoria/salvar':
-        $controller->salvarCategoria($_POST['categoriaNome']);
+        $categoriaController->salvarCategoria($_POST['categoriaNome']);
         break;
 
     case '/categoria/deletar':
-        $controller->deletarCategoria($_POST['categoriaId']);
+        $categoriaController->deletarCategoria($_POST['categoriaId']);
         break;
 
     case '/categoria/editar':
-        $controller->editarCategoria($_POST['categoriaNome'], $_POST['editarCategoriaId']);
+        $categoriaController->editarCategoria($_POST['categoriaNome'], $_POST['editarCategoriaId']);
         break;
 
     default:
