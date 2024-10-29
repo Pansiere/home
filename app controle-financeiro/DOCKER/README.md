@@ -22,6 +22,14 @@ O sistema permite que você:
 
 ## Instruções de Uso
 
+### 1. Rode o composer
+
+Execute o seguinte comando para executar o composer:
+
+```BASH
+composer install
+```
+
 ### 1. Configurando o DB
 
 Execute os seguintes comandos em seu servidor MySQL para criar o banco de dados, as tabelas e o usuário de conexão:
