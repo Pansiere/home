@@ -9,7 +9,7 @@ class BancoDeDados
     public static function ConexaoDB(): PDO
     {
         try {
-            $config = require __DIR__ . '/../config.php';
+            $config = require __DIR__ . './../../config.php';
 
             $conexao = new PDO(
                 dsn: 'mysql:host=' . $config['DB_HOST'] . ';dbname=' . $config['DB_NAME'],
