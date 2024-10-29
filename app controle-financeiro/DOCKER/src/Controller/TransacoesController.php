@@ -2,7 +2,7 @@
 
 namespace Pansiere\ControleFinanceiro\Controller;
 
-use Pansiere\ControleFinanceiro\Repository\{TransacoesRepository, CategoriasRepository, UsuarioRepository};
+use Pansiere\ControleFinanceiro\Repository\{TransacoesRepository, CategoriasRepository};
 
 class TransacoesController extends Controller
 {
