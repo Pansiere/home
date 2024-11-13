@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SeriesFormRequest;
 use App\Models\Series;
-use App\Repositories\EloquentSeriesRepository;
 use App\Repositories\SeriesRepository;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SeriesController extends Controller
 {
@@ -14,8 +15,14 @@ class SeriesController extends Controller
     {
     }
 
+//    /**
+//     * @throws AuthenticationException
+//     */
     public function index(Request $request)
     {
+//        if (!Auth::check()){
+//            throw new AuthenticationException();
+//        };
         $series = Series::all();
         $mensagemSucesso = session('mensagem.sucesso');
 
