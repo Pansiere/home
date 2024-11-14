@@ -24,25 +24,17 @@ Route::get('/', function () {
 })->middleware(Autenticador::class);
 
 Route::resource('/series', SeriesController::class)
-    ->except(['show']);
+    ->except(['show'])
+    ->middleware(Autenticador::class); // Adicionando o middleware para rotas de séries
 
 Route::get('/series/{series}/seasons', [SeasonsController::class, 'index'])
-    ->name('seasons.index');
+    ->name('seasons.index')
+    ->middleware(Autenticador::class);
 
 Route::get('/seasons/{season}/episodes', [EpisodesController::class, 'index'])
-    ->name('episodes.index');
+    ->name('episodes.index')
+    ->middleware(Autenticador::class);
 
 Route::post('/seasons/{season}/episodes', [EpisodesController::class, 'update'])
-    ->name('episodes.update');
-
-Route::get('/login', [LoginController::class, 'index'])
-    ->name('login');
-
-Route::post('/login', [LoginController::class, 'store'])
-    ->name('sigin');
-
-Route::get('/register', [UserController::class, 'create'])
-    ->name('users.create');
-
-Route::post('/register', [UserController::class, 'store'])
-    ->name('users.store');
+    ->name('episodes.update')
+    ->middleware(Autenticador::class);
