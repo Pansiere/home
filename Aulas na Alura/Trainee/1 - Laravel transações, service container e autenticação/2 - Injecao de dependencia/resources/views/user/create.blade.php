@@ -17,8 +17,8 @@
         </div>
 
         <div class="form-group">
-            <label for="cpassword" class="form-label">Confirme sua enha</label>
-            <input type="password" name="cpassword" id="cpassword" class="form-control">
+            <label for="password_confirmation" class="form-label">Confirme sua enha</label>
+            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
         </div>
 
         <button class="btn btn-primary mt-3">

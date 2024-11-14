@@ -11,11 +11,6 @@
             <input type="password" name="password" id="password" class="form-control">
         </div>
 
-        <div class="form-group">
-            <label for="password" class="form-label">Confirme sua enha</label>
-            <input type="password" name="password" id="password" class="form-control">
-        </div>
-
         <button class="btn btn-primary mt-3">
             Enter
         </button>
