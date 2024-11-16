@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Categories extends Model
+/**
+ * @method static find(string $id)
+ */
+class Category extends Model
 {
     protected $table = 'categories';
 }

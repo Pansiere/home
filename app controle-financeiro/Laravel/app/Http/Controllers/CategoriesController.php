@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categories;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
     public function index()
     {
-        $categories = Categories::all();
+        $categories = Category::all();
 
-        return view('categories.index', compact('categories'));
+        return view('categories.pages.index', compact('categories'));
     }
 
     public function store(Request $request)
     {
-        $categories = new Categories();
+        $categories = new Category();
 
         $categories->name = $request->input('categoryName');
         $categories->user_id = auth()->id();
@@ -27,18 +27,18 @@ class CategoriesController extends Controller
 
     public function update(Request $request, string $id)
     {
-        $categories = Categories::find($id);
+        $categories = Category::find($id);
 
         $categories->nome = $request->categoriaNome;
         $categories->save();
 
-        return redirect('/categorias')->with('success', 'Categoria atualizada com sucesso!');
+        return redirect('/categories')->with('success', 'Categoria atualizada com sucesso!');
     }
 
     public function destroy(string $id)
     {
-        $categories = Categoria::destroy($id);
+        $categories = Category::destroy($id);
 
-        return redirect('/categorias')->with('success', 'Categoria deletada com sucesso!');
+        return redirect('/categories')->with('success', 'Categoria deletada com sucesso!');
     }
 }
