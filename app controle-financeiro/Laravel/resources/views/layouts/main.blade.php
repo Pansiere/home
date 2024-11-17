@@ -16,9 +16,8 @@
 
     <h2 class="font-bold text-lg">Menu de Navegação</h2>
     <ul class="mt-4">
-        <li><a href="/painel" class="text-blue-500 hover:underline">Painel</a></li>
-        <li><a href="/categorias" class="text-blue-500 hover:underline">Categorias</a></li>
         <li><a href="/transacoes" class="text-blue-500 hover:underline">Transações</a></li>
+        <li><a href="/categorias" class="text-blue-500 hover:underline">Categorias</a></li>
         <li><a href="#" class="text-blue-500 hover:underline">Configurações</a></li>
     </ul>
 
