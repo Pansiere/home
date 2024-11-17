@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class TransactionsController extends Controller
 {
+    private string $title = 'Transações';
+
+    public function index()
+    {
+        return view('transactions.pages.index', [
+            'title' => $this->title,
+            'header' => 'Transações'
+        ]);
+    }
+
     public function create()
     {
         $categories = Category::all();

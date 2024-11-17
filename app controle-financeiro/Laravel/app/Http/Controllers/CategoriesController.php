@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
+    private string $title = 'Categorias';
+
     public function index()
     {
+        $title = $this->title;
         $categories = Category::all();
+        $header = 'Categorias';
 
-        return view('categories.pages.index', compact('categories'));
+        return view('categories.pages.index', compact('categories', 'title', 'header'));
     }
 
     public function store(Request $request)

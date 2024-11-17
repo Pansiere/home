@@ -6,14 +6,15 @@ use App\Models\Transaction;
 
 class DashboardController extends Controller
 {
+    private string $title = 'Painel';
     public function index()
     {
 //        $transactions = Transaction::all();
-//        $user = auth()->user();
+//        dd($transactions);
 
-//        return auth()->check()
-//            ? view('dashboard.pages.index', compact('transactions', 'user'))
-//            : to_route('login');
-            return view('dashboard.pages.index');
+            return view('dashboard.pages.index',[
+                'title'=>$this->title,
+                'header'=>'Painel'
+            ]);
     }
 }

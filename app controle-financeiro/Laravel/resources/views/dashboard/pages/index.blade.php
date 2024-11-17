@@ -1,4 +1,7 @@
-@extends("dashboard._layout.dashboard")
+@extends("layouts.main")
 
-@section("conteudo")
+@section("content")
+    <div class="dashboard flex items-center justify-center h-full">
+        main content here
+    </div>
 @endsection
