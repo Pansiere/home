@@ -2,6 +2,6 @@
 
 @section("content")
     <div class="dashboard flex items-center justify-center h-full">
-        transactions here
+        edit transactions here
     </div>
 @endsection
