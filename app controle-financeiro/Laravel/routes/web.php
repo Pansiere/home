@@ -7,13 +7,8 @@ Route::get('/', function () {
     return to_route('painel');
 });
 
-Route::get('/painel', [DashboardController::class, 'index'])
-    ->name('painel');
+Route::get('/painel', [DashboardController::class, 'index'])->name('painel');
 
-Route::resource('/transacoes', TransactionsController::class)
-    ->name('index,', 'index');
+Route::resource('/transacoes', TransactionsController::class);
 
-Route::resource('/categorias', CategoriesController::class)
-    ->name('index', 'index');
-
-//    ->middleware(['auth', 'verified'])
+Route::resource('/categorias', CategoriesController::class);
