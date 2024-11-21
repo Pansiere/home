@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -13,6 +14,6 @@ class LoginController extends Controller
 
     public function auth(Request $request)
     {
-        dd($request);
+        dd(Auth::attempt(request()->except(['_token'])));
     }
 }

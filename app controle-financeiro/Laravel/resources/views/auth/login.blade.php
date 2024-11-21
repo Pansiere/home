@@ -11,7 +11,8 @@
 <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
     <h2 class="text-2xl font-bold text-center text-gray-800">Login</h2>
 
-    <form class="space-y-6" action="#" method="POST">
+    <form class="space-y-6" action="{{ route('login.auth') }}" method="POST">
+        @csrf
         <!-- Campo de E-mail -->
         <div>
             <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>

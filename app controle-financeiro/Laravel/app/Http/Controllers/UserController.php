@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUsuarioRequest;
 use App\Http\Requests\UpdateUsuarioRequest;
-use App\Models\Usuario;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -35,7 +35,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Usuario $usuario)
+    public function show(User $usuario)
     {
         //
     }
@@ -43,7 +43,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Usuario $usuario)
+    public function edit(User $usuario)
     {
         //
     }
@@ -51,7 +51,7 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateUsuarioRequest $request, Usuario $usuario)
+    public function update(UpdateUsuarioRequest $request, User $usuario)
     {
         //
     }
@@ -59,7 +59,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Usuario $usuario)
+    public function destroy(User $usuario)
     {
         //
     }
