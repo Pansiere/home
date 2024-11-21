@@ -16,5 +16,6 @@ Route::resource('/categorias', CategoryController::class)
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
+Route::get('/login/destroy', [LoginController::class, 'destroy'])->name('login.destroy');
 
 Route::resource('/registrar', RegisterController::class);

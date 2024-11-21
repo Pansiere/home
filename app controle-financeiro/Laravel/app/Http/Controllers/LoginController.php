@@ -20,4 +20,11 @@ class LoginController extends Controller
 
         return to_route('transacoes.index');
     }
+
+    public function destroy()
+    {
+        Auth::logout();
+
+        return to_route('login');
+    }
 }

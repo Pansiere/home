@@ -20,10 +20,11 @@
         <li><a href="/categorias" class="text-blue-500 hover:underline">Categorias</a></li>
         <li><a href="#" class="text-blue-500 hover:underline">Configurações</a></li>
     </ul>
-
-    <div class="mt-auto">
-        <button class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 focus:outline-none">Sair</button>
-    </div>
+    <a href="{{ route('login.destroy') }}" class="mt-auto">
+        <div class="w-full bg-red-500 text-white text-center py-2 rounded hover:bg-red-600 focus:outline-none">
+            Sair
+        </div>
+    </a>
 </aside>
 
 <div class="flex flex-col flex-grow h-screen">
