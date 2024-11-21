@@ -14,8 +14,8 @@ Route::resource('/transacoes', TransactionController::class)
 Route::resource('/categorias', CategoryController::class)
     ->middleware(Authenticator::class);
 
+Route::resource('/registrar', RegisterController::class);
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
 Route::get('/login/destroy', [LoginController::class, 'destroy'])->name('login.destroy');
-
-Route::resource('/registrar', RegisterController::class);
