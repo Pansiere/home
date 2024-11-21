@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return to_route('transacoes.index');
-})->middleware(Authenticator::class);
+});
 
 Route::resource('/transacoes', TransactionController::class)
     ->middleware(Authenticator::class);

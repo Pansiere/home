@@ -11,7 +11,18 @@
 <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
     <h2 class="text-2xl font-bold text-center text-gray-800">Criar Conta</h2>
 
-    <form class="space-y-6" action="#" method="POST">
+    @if ($errors->any())
+        <div class="bg-red-200 p-1 text-red-900 rounded">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form class="space-y-6" action="{{ route('registrar.store') }}" method="POST">
+        @csrf
         <!-- Campo de Nome -->
         <div>
             <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
@@ -32,8 +43,8 @@
 
         <!-- Campo de Confirmação de Senha -->
         <div>
-            <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirme a Senha</label>
-            <input type="password" id="confirm_password" name="confirm_password" required class="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+            <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirme a Senha</label>
+            <input type="password" id="password_confirmation" name="password_confirmation" required class="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
         </div>
 
         <!-- Botão de Registro -->

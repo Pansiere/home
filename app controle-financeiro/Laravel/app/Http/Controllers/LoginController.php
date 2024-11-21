@@ -14,6 +14,10 @@ class LoginController extends Controller
 
     public function auth(Request $request)
     {
-        dd(Auth::attempt(request()->except(['_token'])));
+        if (!Auth::attempt(request()->except(['_token']))) {
+            return redirect()->back()->withErrors(['Usuário ou senha inválidos']);
+        }
+
+        return to_route('transacoes.index');
     }
 }
