@@ -9,7 +9,8 @@
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
 
 <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
-    <h2 class="text-2xl font-bold text-center text-gray-800">Login</h2>
+    <h2 class="text-2xl font-bold text-center text-gray-800">Seja bem-vindo(a)</h2>
+    <h3 class="text-2xl font-bold text-center text-gray-800" >Login</h3>
 
     @if ($errors->any())
         <div class="bg-red-200 p-1 text-red-900 rounded">

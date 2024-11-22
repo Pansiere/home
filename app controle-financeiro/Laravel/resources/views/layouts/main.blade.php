@@ -18,7 +18,7 @@
     <ul class="mt-4">
         <li><a href="/transacoes" class="text-blue-500 hover:underline">Transações</a></li>
         <li><a href="/categorias" class="text-blue-500 hover:underline">Categorias</a></li>
-        <li><a href="#" class="text-blue-500 hover:underline">Configurações</a></li>
+        <li><a href="/configuracoes" class="text-blue-500 hover:underline">Configurações</a></li>
     </ul>
     <a href="{{ route('login.destroy') }}" class="mt-auto">
         <div class="w-full bg-red-500 text-white text-center py-2 rounded hover:bg-red-600 focus:outline-none">

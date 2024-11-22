@@ -1,6 +1,10 @@
 <?php
 
-use App\Http\Controllers\{RegisterController,LoginController, TransactionController, CategoryController};
+use App\Http\Controllers\{RegisterController,
+    LoginController,
+    TransactionController,
+    CategoryController,
+    UserController};
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,6 +15,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/transacoes', TransactionController::class);
 
     Route::resource('/categorias', CategoryController::class);
+
+    Route::resource('/configuracoes', UserController::class);
 });
 
 Route::resource('/registrar', RegisterController::class);

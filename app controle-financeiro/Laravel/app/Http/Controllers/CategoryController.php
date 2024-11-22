@@ -15,7 +15,15 @@ class CategoryController extends Controller
         $categories = Category::all();
         $header = 'Categorias';
 
-        return view('categories.pages.index', compact('categories', 'title', 'header'));
+        return view('pages.categories.index', compact('categories', 'title', 'header'));
+    }
+
+    public function create()
+    {
+        $title = $this->title;
+        $header = 'Criar categoria';
+
+        return view('pages.categories.form', compact('title','header'));
     }
 
     public function store(Request $request)

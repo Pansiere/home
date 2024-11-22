@@ -11,7 +11,7 @@ class TransactionController extends Controller
 
     public function index()
     {
-        return view('transactions.pages.index', [
+        return view('pages.transactions.index', [
             'title' => $this->title,
             'header' => 'Transações'
         ]);
@@ -20,7 +20,7 @@ class TransactionController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view("transactions.pages.create", compact('categories'));
+        return view("pages.transactions.form", compact('categories'));
     }
     /**
      * Store a newly created resource in storage.
@@ -35,7 +35,7 @@ class TransactionController extends Controller
     public function edit(string $id)
     {
         // $transacaoId = NULL;
-        return view("transactions.pages.edit");
+        return view("pages.transactions.edit");
     }
     /**
      * Update the specified resource in storage.

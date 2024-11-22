@@ -8,12 +8,14 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    private string $title = 'Categorias';
+
     public function index()
     {
-        //
+        $title = $this->title;
+        $header = 'Configurações do perfil';
+
+        return view('pages.user.index', compact( 'title', 'header'));
     }
 
     /**
