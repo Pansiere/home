@@ -5,110 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3351ae7b-4381-4ac0-b2e6-d98c7404738f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/.styleci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Console/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Controllers/SeasonsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Controllers/SeriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Http/Requests/SeriesFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Models/Episode.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Models/Season.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Models/Series.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Models/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/artisan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/bootstrap/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/bootstrap/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/broadcasting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/cors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/filesystems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/hashing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/logging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/queue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/sanctum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/config/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/factories/UserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/migrations/2022_02_28_230105_create_series_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/migrations/2022_03_12_201049_create_seasons_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/migrations/2022_03_12_201100_create_episodes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/lang/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/lang/en/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/lang/en/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/lang/en/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/css/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/views/components/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/views/components/series/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/views/seasons/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/views/series/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/views/series/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/views/series/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/resources/views/welcome.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/routes/channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/routes/console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/app/public/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/debugbar/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/framework/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/framework/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/framework/testing/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/framework/views/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/storage/logs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/tests/CreatesApplication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 - aula 1/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,21 +18,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Pansiere"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Pansiere&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Pansiere/Home",
-    "accountId": "a09dbe69-7814-4c67-8f19-0fb0f4e439a8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Pansiere/Home&quot;,
+    &quot;accountId&quot;: &quot;a09dbe69-7814-4c67-8f19-0fb0f4e439a8&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2ol5GqMPEDtgTafssn6zOOqnqpe" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -146,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.laravel-idea.search-composer-json": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/joaopv/Home/Aulas na Alura/Trainee/1 - Laravel transações, service container e autenticação/2 - aula 2",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/joaopv/Home/Aulas na Alura/Trainee/1 - Laravel transações, service container e autenticação/2131-laravel-aula-4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -180,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731431228663</updated>
       <workItem from="1731431229677" duration="2440000" />
+      <workItem from="1732274789669" duration="163000" />
     </task>
     <servers />
   </component>
