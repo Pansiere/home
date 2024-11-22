@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PHPUnit">
+    <option name="directories">
+      <list>
+        <option value="$PROJECT_DIR$/4 - Verificação do usuario/tests/Unit" />
+        <option value="$PROJECT_DIR$/4 - Verificação do usuario/tests/Feature" />
+        <option value="$PROJECT_DIR$/2131-laravel-aula-4/tests/Unit" />
+        <option value="$PROJECT_DIR$/2131-laravel-aula-4/tests/Feature" />
+        <option value="$PROJECT_DIR$/1 - transacoes/tests/Unit" />
+        <option value="$PROJECT_DIR$/1 - transacoes/tests/Feature" />
+        <option value="$PROJECT_DIR$/3 - sistema de login/tests/Unit" />
+        <option value="$PROJECT_DIR$/3 - sistema de login/tests/Feature" />
+      </list>
+    </option>
+  </component>
+</project>
