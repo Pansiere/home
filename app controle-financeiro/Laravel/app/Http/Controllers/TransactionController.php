@@ -20,7 +20,10 @@ class TransactionController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view("pages.transactions.form", compact('categories'));
+        return view("pages.transactions.form", [
+            'title' => $this->title,
+            'header' => 'Adicionar Transação'
+        ]);
     }
     /**
      * Store a newly created resource in storage.

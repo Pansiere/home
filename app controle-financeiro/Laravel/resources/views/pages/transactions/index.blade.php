@@ -65,7 +65,7 @@
         <div class="bg-white p-4 rounded-md shadow-md">
             <div class="w-1/2 flex justify-between items-center py-4">
                 <h3 class="text-xl font-semibold">Transações Cadastradas</h3>
-                <a href="/test" class="text-blue-500 hover:text-blue-700 font-medium">Adicionar nova transação</a>
+                <a href="{{ route('transacoes.create') }}" class="text-blue-500 hover:text-blue-700 font-medium">Adicionar nova transação</a>
             </div>
             <table class="min-w-full divide-y divide-gray-200">
                 <thead>

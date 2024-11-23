@@ -5,36 +5,44 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+/**
+ * @method hasMany(string $class)
+ */
 class CategoryController extends Controller
 {
     private string $title = 'Categorias';
 
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+
     public function index()
     {
         $title = $this->title;
-        $categories = Category::all();
         $header = 'Categorias';
+        $categories = Category::where('user_id', auth()->id())->get();
 
         return view('pages.categories.index', compact('categories', 'title', 'header'));
     }
 
     public function create()
     {
-        $title = $this->title;
-        $header = 'Criar categoria';
-
-        return view('pages.categories.form', compact('title','header'));
+        return view('pages.categories.form', [
+            'title' => $this->title,
+            'header' => 'Adicionar categoria'
+        ]);
     }
 
     public function store(Request $request)
     {
         $categories = new Category();
 
-        $categories->name = $request->input('categoryName');
+        $categories->name = $request->input('category_name');
         $categories->user_id = auth()->id();
         $categories->save();
 
-        return redirect('/categories')->with('success', 'Categoria adicionada com sucesso!');
+        return redirect('/categorias')->with('success', 'Categoria adicionada com sucesso!');
     }
 
     public function update(Request $request, string $id)
@@ -51,6 +59,6 @@ class CategoryController extends Controller
     {
         $categories = Category::destroy($id);
 
-        return redirect('/categories')->with('success', 'Categoria deletada com sucesso!');
+        return redirect('/categorias')->with('success', 'Categoria deletada com sucesso!');
     }
 }
