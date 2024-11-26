@@ -21,7 +21,7 @@ if (
 
 $usuarioController = new UsuarioController();
 $transacoesController = new TransacoesController();
-$categoriaController = new CategoriasController();
+$categoriasController = new CategoriasController();
 
 switch ($page) {
     case '/autenticacao/login':
@@ -69,19 +69,19 @@ switch ($page) {
         break;
 
     case '/categorias':
-        $categoriaController->paginaCategorias();
+        $categoriasController->paginaCategorias();
         break;
 
     case '/categoria/salvar':
-        $categoriaController->salvarCategoria($_POST['categoriaNome']);
+        $categoriasController->salvarCategoria($_POST['categoriaNome']);
         break;
 
     case '/categoria/deletar':
-        $categoriaController->deletarCategoria($_POST['categoriaId']);
+        $categoriasController->deletarCategoria($_POST['categoriaId']);
         break;
 
     case '/categoria/editar':
-        $categoriaController->editarCategoria($_POST['categoriaNome'], $_POST['editarCategoriaId']);
+        $categoriasController->editarCategoria($_POST['categoriaNome'], $_POST['editarCategoriaId']);
         break;
 
     default:
