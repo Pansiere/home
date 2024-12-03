@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 Route::resource('/series', SeriesController::class)
     ->except(['show'])
-    ->middleware(Autenticador::class); // Adicionando o middleware para rotas de séries
+    ->middleware(Autenticador::class);
 
 Route::get('/series/{series}/seasons', [SeasonsController::class, 'index'])
     ->name('seasons.index')
