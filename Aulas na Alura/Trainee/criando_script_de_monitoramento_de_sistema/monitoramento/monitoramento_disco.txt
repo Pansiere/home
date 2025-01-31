@@ -1,0 +1,55 @@
+sex 31 jan 2025 09:52:22 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+
+sex 31 jan 2025 09:52:24 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+
+sex 31 jan 2025 09:52:25 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+
+
+
+
+
+
+
+
+sex 31 jan 2025 09:52:40 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+
+sex 31 jan 2025 10:03:04 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+
+sex 31 jan 2025 10:15:03 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+
+sex 31 jan 2025 10:18:53 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+
+sex 31 jan 2025 10:21:12 -03
+drivers esta com 39% de uso.
+C:\ esta com 39% de uso.
+Uso de disco no diretorio principal:
+28G	/home/joaopv
+

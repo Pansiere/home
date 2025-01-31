@@ -1,0 +1,15 @@
+Total: 7,6Gi, Usada: 3,5Gi, Livre: 781Mi
+sex 31 jan 2025 10:15:07 -03
+Memoria RAM Total: 7,6Gi, Usada: 3,5Gi, Livre: 812Mi
+Uso da CPU: 93%
+sex 31 jan 2025 10:18:53 -03
+Memoria RAM Total: 7,6Gi, Usada: 3,5Gi, Livre: 755Mi
+Uso da CPU: 98%
+Operações de leitura e escrita:
+sex 31 jan 2025 10:21:12 -03
+Memoria RAM Total: 7,6Gi, Usada: 3,5Gi, Livre: 361Mi
+Uso da CPU: 95%
+Operações de leitura e escrita:
+Device tps kB_read/s kB_wrtn/s
+sda 0,09 6,07 0,00
+sdb 0,01 0,18 0,01

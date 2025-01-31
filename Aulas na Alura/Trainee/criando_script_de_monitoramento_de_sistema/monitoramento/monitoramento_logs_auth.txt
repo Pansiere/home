@@ -1,0 +1,2 @@
+2025-01-29T15:14:15.283845-03:00 JOAOPEDRO-PROG sudo: pam_unix(sudo:auth): authentication failure;
+2025-01-30T17:26:56.102115-03:00 JOAOPEDRO-PROG sudo: root : TTY=pts/8

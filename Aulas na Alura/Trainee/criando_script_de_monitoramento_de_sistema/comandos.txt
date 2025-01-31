@@ -1,0 +1,22 @@
+Comando para ver arquivos que sejam muito grande, porém ele não é lido todo(podendo travar o terminal):
+	less -f /var/log/syslog;
+
+Comando para ver logs em tempor real (conheço o tal do watch tbm, mas n sei a diferença):
+	tail -f /var/log/syslog;
+
+Comando pra ver logs de login:
+	sudo less -f /var/log/auth.log;
+
+Busca com REGEX:
+	grep -E "fail(ed)?|error|denied|unauthorized" /var/log/syslog;
+
+Formatando com awk:
+	grep -E "fail(ed)?|error|denied|unauthorized" /var/log/syslog | awk '{print $1, $2, $3, $4, $5, $6}'
+
+Salvando em arquvio:
+	grep -E "fail(ed)?|error|denied|unauthorized" /var/log/syslog | awk '{print $1, $2, $3, $4, $5, $6}' > monitoramento_logs_sistema.txt
+
+Verificando conectividade de uma aplicação:
+    curl --head https://secon.pansiere.cc
+    curl --head https://secon.pansiere.cc | grep "HTTP/2 200"
+    curl -s --head https://secon.pansiere.cc | grep "HTTP/2 200"
