@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-gray-100 h-screen">
+     <div class="grid grid-cols-1 sm:grid-cols-[256px_1fr] grid-rows-[auto_1fr] h-full">
+          <!-- sidebar -->
+          <div class="row-span-2 bg-blue-700">
+               <p>Sidebar</p>
+          </div>
+
+          <!-- header -->
+          <header class="col-start-1 sm:col-start-2 bg-gray-700">
+               <p>Cabeçalho</p>
+          </header>
+
+          <!-- main content -->
+          <main class="p-2 overflow-auto col-start-1 sm:col-start-2 mt-12 sm:mt-0 bg-yellow-700">
+               <p>Main content</p>
+          </main>
+     </div>
+</body>
+
+</html>
