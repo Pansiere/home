@@ -1,0 +1,1 @@
+<?php /**PATH /home/joaopv/SECON-Pansiere/resources/views/components/partials/head.blade.php ENDPATH**/ ?>
