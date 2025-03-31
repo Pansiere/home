@@ -1,1 +1,0 @@
-components.layouts.app.sidebar<?php /**PATH /home/joaopv/SECON-Pansiere/storage/framework/views/33372f6dc09df1522c2bb7db9cb7f5ef.blade.php ENDPATH**/ ?>
